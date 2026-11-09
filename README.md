@@ -1,3 +1,8 @@
+Team 6 Group members: Grant Shubin, Charlize Villanueva, Kiya Gedamu, Mashequr Khan
+
+This project is in progress, and will be completed by December 4th, 2026.
+
+
 # COSI 116A Final Project Template
 
 This template will help you get started with your project. Please look through all these materials so you know how to organize your project.
