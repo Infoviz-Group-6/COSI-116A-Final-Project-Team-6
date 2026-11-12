@@ -61,6 +61,20 @@ As you work with your team, you may have issues merging your changes. We recomme
 
 Instead of all working directly out of the main branch, you can try adopting a Git branching model for development. See, e.g., [this article by Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 
+## Team 6 dashboard structure
+
+The project page now provides stable containers and a small shared state store so feature branches can be developed separately:
+
+* `js/visualization.js` starts the dashboard and connects shared controls.
+* `js/app-state.js` stores the selected contextual layer, year, states, facility, and search query.
+* `js/map.js` owns the map container (`#map-view`).
+* `js/timeline.js` owns the time controls and expandable timeline (`#timeline-view`).
+* `js/details.js` owns the treemap, pie chart, and scatterplot containers.
+
+Views should call `Team6App.setState(...)` when a user action changes a shared selection. Other views can subscribe with `Team6App.subscribe(...)` or listen for the `team6:statechange` browser event.
+
+Create feature branches using the convention `name/feature-name`, update them from `origin/main`, and open a pull request instead of pushing implementation work directly to `main`.
+
 
 ## Grading
 
@@ -75,4 +89,4 @@ Make sure to check these aspects of your work, which are important for every sub
 * Your visualization works as required:
     * Styles are consistent across views.
     * None of the visualizations change size or move on the screen as you interact with them.
-    
+

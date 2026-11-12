@@ -30,22 +30,151 @@
       </p>
     </section>
 
-    <section class="dashboard-shell" aria-labelledby="visualization-heading">
+    <section id="dashboard" class="dashboard-shell" aria-labelledby="visualization-heading">
       <div class="dashboard-shell__heading">
         <div>
           <p class="project-eyebrow">Interactive visualization</p>
           <h2 id="visualization-heading">Project dashboard</h2>
         </div>
-        <p class="build-status">Initial setup</p>
+        <p id="app-status" class="build-status" role="status">Starting dashboard…</p>
       </div>
 
-      <div id="visualization" class="visualization-placeholder">
-        <p>The Team 6 visualization will be built here.</p>
+      <div class="pa4-workspace">
+        <aside class="filter-rail" aria-labelledby="controls-heading">
+          <div>
+            <p class="control-kicker">Toggle filters</p>
+            <h3 id="controls-heading">State context</h3>
+          </div>
+          <div class="layer-controls" aria-label="State-level map layer">
+            <button class="layer-button" type="button" data-layer="electricity" aria-pressed="false">Electricity usage</button>
+            <button class="layer-button" type="button" data-layer="population" aria-pressed="false">Population</button>
+            <button class="layer-button" type="button" data-layer="poverty" aria-pressed="false">Poverty</button>
+            <button class="layer-button" type="button" data-layer="claude" aria-pressed="false">Claude usage</button>
+          </div>
+          <p class="filter-note">Data-center circles stay visible on the geographic map.</p>
+        </aside>
+
+        <div class="workspace-stage">
+          <section id="geographic-view" aria-labelledby="map-heading">
+            <form id="city-search" class="city-search" role="search">
+              <label for="city-query">Enter a city name</label>
+              <div class="city-search__row">
+                <input id="city-query" name="city" type="search" placeholder="Richmond, VA" autocomplete="off">
+                <button type="submit">Find city</button>
+              </div>
+              <p id="city-search-status" class="section-note" aria-live="polite">Search will zoom to a city and identify the closest listed data center.</p>
+            </form>
+
+            <div class="map-composition">
+              <section class="view-panel map-panel" aria-labelledby="map-heading">
+                <div class="view-panel__heading">
+                  <div>
+                    <p class="control-kicker">Main view</p>
+                    <h3 id="map-heading">United States data-center map</h3>
+                    <p id="map-summary" class="section-note">Neutral state view with data-center capacity circles.</p>
+                  </div>
+                </div>
+                <div id="map-view" class="view-canvas map-canvas" aria-label="Interactive United States map"></div>
+              </section>
+
+              <aside class="legend-stack" aria-label="Map legends">
+                <section class="view-panel capacity-legend" aria-labelledby="capacity-legend-heading">
+                  <h3 id="capacity-legend-heading">Estimated capacity</h3>
+                  <p class="legend-unit">Megawatts (MW)</p>
+                  <div class="size-key"><span class="capacity-circle capacity-circle--small"></span><span>&lt; 200</span></div>
+                  <div class="size-key"><span class="capacity-circle capacity-circle--medium"></span><span>200–800</span></div>
+                  <div class="size-key"><span class="capacity-circle capacity-circle--large"></span><span>800+</span></div>
+                </section>
+
+                <section id="color-legend" class="view-panel color-legend" aria-labelledby="color-legend-heading" hidden>
+                  <h3 id="color-legend-heading">State color</h3>
+                  <p id="color-legend-label" class="legend-unit"></p>
+                  <div class="color-ramp" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="color-ramp-labels"><span>Lower</span><span>Higher</span></div>
+                </section>
+              </aside>
+            </div>
+
+            <section class="view-panel timeline-panel" aria-labelledby="timeline-heading">
+              <div class="view-panel__heading">
+                <div>
+                  <p class="control-kicker">Build progress</p>
+                  <h3 id="timeline-heading">Data centers over time</h3>
+                </div>
+                <button id="expand-models" class="secondary-button" type="button" aria-expanded="false" aria-controls="model-release-panel">Expand model releases</button>
+              </div>
+              <div id="timeline-view" class="timeline-view" aria-label="Data-center year slider"></div>
+
+              <section id="model-release-panel" class="expandable-panel" aria-labelledby="model-release-heading" hidden>
+                <div class="view-panel__heading">
+                  <div>
+                    <h4 id="model-release-heading">Model releases by developer</h4>
+                    <p class="section-note">Developers will appear on separate rows with releases positioned over time.</p>
+                  </div>
+                  <button id="expand-lines" class="secondary-button" type="button" aria-expanded="false" aria-controls="line-chart-panel">Show related trends</button>
+                </div>
+                <div id="model-release-view" class="view-canvas view-canvas--short"></div>
+                <div id="line-chart-panel" class="line-chart-grid" hidden>
+                  <div id="model-line-one" class="view-canvas view-canvas--detail"></div>
+                  <div id="model-line-two" class="view-canvas view-canvas--detail"></div>
+                </div>
+              </section>
+            </section>
+          </section>
+
+          <section id="claude-view" class="claude-view" aria-labelledby="claude-heading" hidden>
+            <div class="view-panel__heading claude-heading">
+              <div>
+                <p class="control-kicker">Claude usage per capita</p>
+                <h3 id="claude-heading">Usage across the United States</h3>
+                <p class="section-note">Select one or more states to update the linked views.</p>
+              </div>
+            </div>
+
+            <div class="claude-analysis-grid">
+              <div class="claude-primary">
+                <div class="claude-overview-grid">
+                  <section class="view-panel" aria-labelledby="tile-map-heading">
+                    <h4 id="tile-map-heading">State tile map</h4>
+                    <div id="tile-map-view" class="view-canvas tile-map-canvas"></div>
+                  </section>
+                  <aside class="view-panel selected-states-panel" aria-labelledby="selected-states-heading">
+                    <h4 id="selected-states-heading">States in selection</h4>
+                    <p id="selected-states">None selected</p>
+                    <p class="section-note">Multiple-state calculation still requires a group decision.</p>
+                  </aside>
+                </div>
+
+                <div class="claude-detail-grid">
+                  <section class="view-panel" aria-labelledby="treemap-heading">
+                    <h4 id="treemap-heading">What topics were Claude chats about?</h4>
+                    <div id="treemap-view" class="view-canvas view-canvas--detail"></div>
+                  </section>
+                  <section class="view-panel" aria-labelledby="pie-heading">
+                    <h4 id="pie-heading">General use case</h4>
+                    <div id="pie-view" class="view-canvas view-canvas--detail"></div>
+                  </section>
+                </div>
+              </div>
+
+              <section class="view-panel scatter-panel" aria-labelledby="scatter-heading">
+                <h4 id="scatter-heading">Usage percent versus proportional use</h4>
+                <div id="scatter-view" class="view-canvas scatter-canvas"></div>
+              </section>
+            </div>
+          </section>
+        </div>
       </div>
     </section>
   </main>
 
   <script src="lib/d3.v7/d3.v7.min.js"></script>
+  <script src="js/app-state.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/details.js"></script>
   <script src="js/visualization.js"></script>
 </body>
 </html>
