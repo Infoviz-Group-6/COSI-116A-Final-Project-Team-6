@@ -77,3 +77,115 @@ h1, h2, h3 {
 		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
 	}
 }
+
+/* Team 6 project landing page */
+:root {
+	color-scheme: light;
+	--ink: #172033;
+	--muted: #596579;
+	--surface: #ffffff;
+	--surface-soft: #f3f6fa;
+	--border: #d8e0ea;
+	--accent: #2257d6;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.project-header {
+	margin: 0 -10px;
+	padding: 48px 24px;
+	color: #ffffff;
+	background: linear-gradient(135deg, #16223b 0%, #234e91 100%);
+}
+
+.project-header__content,
+.dashboard-shell {
+	width: min(1180px, calc(100% - 32px));
+	margin: 0 auto;
+}
+
+.project-header h1 {
+	margin: 8px 0 12px;
+	font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.project-eyebrow {
+	margin: 0;
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.project-team {
+	max-width: 800px;
+	color: #dbe6ff;
+}
+
+.reference-link {
+	display: inline-block;
+	margin-top: 14px;
+	padding: 10px 14px;
+	border: 1px solid rgba(255, 255, 255, 0.55);
+	border-radius: 8px;
+	color: #ffffff;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.reference-link:hover,
+.reference-link:focus-visible {
+	background: rgba(255, 255, 255, 0.12);
+}
+
+.content-column h2,
+.dashboard-shell h2 {
+	margin-top: 0;
+	color: var(--ink);
+}
+
+.dashboard-shell {
+	margin-bottom: 56px;
+	padding: 24px;
+	border: 1px solid var(--border);
+	border-radius: 14px;
+	background: var(--surface);
+	box-shadow: 0 12px 36px rgba(23, 32, 51, 0.08);
+}
+
+.dashboard-shell__heading {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 24px;
+	margin-bottom: 20px;
+}
+
+.build-status {
+	margin: 0;
+	padding: 6px 10px;
+	border-radius: 999px;
+	color: var(--accent);
+	background: #e9efff;
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+.visualization-placeholder {
+	display: grid;
+	min-height: 480px;
+	place-items: center;
+	border: 2px dashed var(--border);
+	border-radius: 10px;
+	color: var(--muted);
+	background: var(--surface-soft);
+	text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+	.dashboard-shell__heading {
+		flex-direction: column;
+	}
+}
