@@ -730,6 +730,19 @@ h1, h2, h3 {
 	}
 }
 
+/* Treemap SVG container adjustments */
+#treemap-view {
+	padding: 4px;
+	border-style: solid;
+	background: var(--surface);
+	text-align: left;
+}
+
+#treemap-view svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
 /* US map */
 #map-view {
   position: relative;
