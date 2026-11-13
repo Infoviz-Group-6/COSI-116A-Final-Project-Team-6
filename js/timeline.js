@@ -5,11 +5,11 @@
   const app = window.Team6App;
 
   let modelReleaseView;
+  const MODEL_DISPLAY_START = new Date("2010-01-01T00:00:00Z");
 
   app.views.timeline = {
     init() {
       const container = document.querySelector("#timeline-view");
-      const modelReleaseView = document.querySelector("#model-release-view");
 
       container.innerHTML = `
         <div class="timeline-control">
@@ -49,7 +49,7 @@
       }
 
       const organizations = d3.rollups(
-        releases,
+        releases.filter(row => row.date >= MODEL_DISPLAY_START),
         values => values.length,
         row => row.organization
       )
@@ -65,11 +65,12 @@
   }
 
   function renderModelLanes(releases, organizations) {
+    const displayedReleases = releases.filter(row => row.date >= MODEL_DISPLAY_START);
     const margin = { top: 28, right: 24, bottom: 48, left: 150 };
     const width = 1000;
     const rowHeight = 34;
     const height = margin.top + margin.bottom + organizations.length * rowHeight;
-    const extent = d3.extent(releases, row => row.date);
+    const extent = d3.extent(displayedReleases, row => row.date);
     const x = d3.scaleTime()
       .domain(extent)
       .range([margin.left, width - margin.right]);
@@ -81,7 +82,7 @@
       .domain(organizations)
       .range(d3.schemeTableau10);
 
-    const visible = releases.filter(row => organizations.includes(row.organization));
+    const visible = displayedReleases.filter(row => organizations.includes(row.organization));
     const svg = d3.select(modelReleaseView)
       .html("")
       .append("svg")
@@ -93,7 +94,7 @@
       .attr("class", "model-lane-note")
       .attr("x", margin.left)
       .attr("y", 16)
-      .text("Epoch curated notable-model records; top eight exact organization labels");
+      .text("Epoch curated records, 2010 onward; top eight exact organization labels");
 
     svg.append("g")
       .attr("transform", `translate(0,${height - margin.bottom})`)
