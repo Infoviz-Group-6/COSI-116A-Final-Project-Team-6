@@ -20,11 +20,12 @@
 
       try {
         // 1. Load map, center locations, and historical data
-        const [us, rawCenters, rawTimelines] =
+        const [us, rawCenters, rawTimelines, rawUnmatched] =
           await Promise.all([
             d3.json("data/us-states.topojson"),
             d3.csv("data/epoch-us-geocoded.csv"),
-            d3.csv("data/epoch-data-center-timelines.csv")
+            d3.csv("data/epoch-data-center-timelines.csv"),
+            d3.csv("data/epoch-us-unmatched.csv")
           ]);
 
         // 2. Prepare US state boundaries
@@ -89,6 +90,12 @@
             };
           })
           .filter(d => d.position !== null);
+
+        const coverage = document.querySelector("#map-coverage");
+        if (coverage) {
+          const total = rawCenters.length + rawUnmatched.length;
+          coverage.textContent = `${centers.length} of ${total} U.S. facilities have mapped coordinates.`;
+        }
 
         // 5. Prepare historical capacity records
         const parsePower = value => {
@@ -229,32 +236,55 @@
           .attr("class", "dc-tooltip")
           .style("display", "none");
 
-        function moveTooltip(event) {
+        function positionTooltip(left, top) {
           const mapNode = container.node();
           const tipNode = tooltip.node();
-
-          const [x, y] = d3.pointer(event, mapNode);
           const padding = 8;
 
-          const left = Math.max(
+          const boundedLeft = Math.max(
             padding,
             Math.min(
-              x + 12,
+              left,
               mapNode.clientWidth - tipNode.offsetWidth - padding
             )
           );
 
-          const top = Math.max(
+          const boundedTop = Math.max(
             padding,
             Math.min(
-              y + 12,
+              top,
               mapNode.clientHeight - tipNode.offsetHeight - padding
             )
           );
 
           tooltip
-            .style("left", `${left}px`)
-            .style("top", `${top}px`);
+            .style("left", `${boundedLeft}px`)
+            .style("top", `${boundedTop}px`);
+        }
+
+        function moveTooltip(event) {
+          const [x, y] = d3.pointer(event, container.node());
+          positionTooltip(x + 12, y + 12);
+        }
+
+        function showTooltip(d) {
+          tooltip
+            .text(
+              `${d.name}\n` +
+              `Owner: ${d.owner || "Not listed"}\n` +
+              `Estimated IT power: ${d.power.toLocaleString()} MW\n` +
+              `Record date: ${d.date}`
+            )
+            .style("display", "block");
+        }
+
+        function positionTooltipForCircle(element) {
+          const mapRect = container.node().getBoundingClientRect();
+          const circleRect = element.getBoundingClientRect();
+          positionTooltip(
+            circleRect.left - mapRect.left + circleRect.width / 2 + 12,
+            circleRect.top - mapRect.top + circleRect.height / 2 + 12
+          );
         }
 
         // Facilities currently drawn on the map (updated by renderYear)
@@ -262,7 +292,13 @@
 
         // 8. Display facilities for the selected year
         function renderYear(year) {
-          const cutoff = `${year}-12-31`;
+          const selectedYear = Number(year);
+          const today = new Date();
+          const currentYear = today.getFullYear();
+          const todayISO = today.toISOString().slice(0, 10);
+          const cutoff = selectedYear === currentYear
+            ? todayISO
+            : `${selectedYear}-12-31`;
 
           const visible = centers.flatMap(center => {
             const records = timelines.get(
@@ -301,24 +337,30 @@
             )
             .attr("stroke", "#263348")
             .attr("stroke-width", 2)
+            .attr("tabindex", 0)
+            .attr("role", "img")
+            .attr("aria-label", d =>
+              `${d.name}, ${d.power.toLocaleString()} megawatts estimated IT power, record date ${d.date}`
+            )
             .style("cursor", "pointer")
 
             .on("pointerenter", (event, d) => {
-              tooltip
-                .text(
-                  `${d.name}\n` +
-                  `Owner: ${d.owner || "Not listed"}\n` +
-                  `Estimated IT power: ${d.power.toLocaleString()} MW\n` +
-                  `Record date: ${d.date}`
-                )
-                .style("display", "block");
-
+              showTooltip(d);
               moveTooltip(event);
             })
 
             .on("pointermove", moveTooltip)
 
             .on("pointerleave", () => {
+              tooltip.style("display", "none");
+            })
+
+            .on("focus", (event, d) => {
+              showTooltip(d);
+              positionTooltipForCircle(event.currentTarget);
+            })
+
+            .on("blur", () => {
               tooltip.style("display", "none");
             });
 

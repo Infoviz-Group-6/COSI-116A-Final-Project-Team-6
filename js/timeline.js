@@ -29,7 +29,11 @@
   };
 
   function renderYear(state) {
-    document.querySelector("#timeline-current").textContent = `Showing facilities through ${state.year}`;
+    const currentYear = new Date().getFullYear();
+    const label = Number(state.year) === currentYear
+      ? `Showing facilities through today (${new Date().toISOString().slice(0, 10)})`
+      : `Showing facilities through ${state.year}`;
+    document.querySelector("#timeline-current").textContent = label;
   }
 
   function toggleModelPanel(event) {
