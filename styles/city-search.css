@@ -1,0 +1,84 @@
+
+.city-search {
+	width: min(520px, 100%);
+	margin: 0 auto 18px;
+	text-align: center;
+}
+
+.city-search label {
+	display: block;
+	margin-bottom: 7px;
+	color: var(--ink);
+	font-weight: 800;
+}
+
+.city-search__row {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 8px;
+}
+
+.city-search input,
+.city-search button,
+.secondary-button {
+	min-height: 42px;
+	border: 1px solid var(--border);
+	border-radius: 7px;
+	font: inherit;
+}
+
+.city-search input {
+	width: 100%;
+	min-width: 0;
+	padding: 8px 12px;
+	background: #ffffff;
+}
+
+/* Wrapper that anchors the autocomplete dropdown under the input */
+.city-search__field {
+	position: relative;
+	min-width: 0;
+}
+
+.city-suggestions {
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	right: 0;
+	z-index: 20;
+	max-height: 260px;
+	margin: 0;
+	padding: 4px 0;
+	overflow-y: auto;
+	border: 1px solid var(--border);
+	border-radius: 7px;
+	background: #ffffff;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+	list-style: none;
+	text-align: left;
+}
+
+.city-suggestions[hidden] {
+	display: none;
+}
+
+.city-suggestions li {
+	padding: 8px 12px;
+	color: var(--ink);
+	cursor: pointer;
+}
+
+.city-suggestions li:hover,
+.city-suggestions li.is-active {
+	background: color-mix(in srgb, var(--accent) 12%, #ffffff);
+}
+
+.city-search button {
+	padding: 8px 16px;
+	border-color: var(--accent);
+	color: #ffffff;
+	background: var(--accent);
+	font-weight: 700;
+	cursor: pointer;
+}
+

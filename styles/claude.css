@@ -1,0 +1,40 @@
+
+.claude-heading {
+	margin-bottom: 16px;
+}
+
+.claude-analysis-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+	gap: 18px;
+}
+
+.claude-primary,
+.claude-overview-grid,
+.claude-detail-grid {
+	display: grid;
+	gap: 18px;
+}
+
+.claude-overview-grid {
+	grid-template-columns: minmax(0, 3fr) minmax(180px, 1fr);
+}
+
+.claude-detail-grid {
+	grid-template-columns: minmax(0, 3fr) minmax(230px, 2fr);
+}
+
+.tile-map-canvas {
+	min-height: 400px;
+}
+
+.selected-states-panel p:not(.section-note) {
+	color: var(--ink);
+	font-weight: 700;
+	line-height: 1.6;
+}
+
+.scatter-canvas {
+	min-height: 620px;
+}
+
