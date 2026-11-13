@@ -1,0 +1,14 @@
+/* Treemap SVG container adjustments */
+#treemap-view {
+	padding: 4px;
+	border-style: solid;
+	background: var(--surface);
+	text-align: left;
+}
+
+#treemap-view svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+

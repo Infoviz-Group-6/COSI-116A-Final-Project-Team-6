@@ -1,0 +1,97 @@
+/* PA4 submitted-design layout */
+[hidden] {
+	display: none !important;
+}
+
+.pa4-workspace {
+	display: grid;
+	grid-template-columns: 180px minmax(0, 1fr);
+	gap: 18px;
+}
+
+.filter-rail {
+	align-self: start;
+	padding: 18px 14px;
+	border: 1px solid var(--border);
+	border-radius: 10px;
+	background: var(--surface-soft);
+}
+
+.filter-rail h3,
+.legend-stack h3,
+.claude-view h3,
+.claude-view h4,
+.expandable-panel h4 {
+	margin: 0;
+	color: var(--ink);
+}
+
+.control-kicker {
+	margin: 0 0 4px;
+	color: var(--accent);
+	font-size: 0.72rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.layer-controls {
+	display: grid;
+	gap: 10px;
+	margin-top: 18px;
+}
+
+.layer-button {
+	position: relative;
+	width: 100%;
+	padding: 10px 10px 10px 34px;
+	border: 1px solid var(--border);
+	border-radius: 7px;
+	color: var(--ink);
+	background: var(--surface);
+	font: inherit;
+	font-size: 0.82rem;
+	text-align: left;
+	cursor: pointer;
+}
+
+.layer-button::before {
+	position: absolute;
+	top: 50%;
+	left: 11px;
+	width: 12px;
+	height: 12px;
+	border: 2px solid #8a96a8;
+	border-radius: 3px;
+	content: "";
+	transform: translateY(-50%);
+}
+
+.layer-button:hover,
+.layer-button:focus-visible {
+	border-color: var(--accent);
+}
+
+.layer-button.is-active {
+	border-color: var(--accent);
+	color: #173b91;
+	background: #edf2ff;
+}
+
+.layer-button.is-active::before {
+	border-color: var(--accent);
+	background: var(--accent);
+	box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.filter-note {
+	margin: 18px 0 0;
+	color: var(--muted);
+	font-size: 0.72rem;
+	line-height: 1.4;
+}
+
+.workspace-stage {
+	min-width: 0;
+}
+

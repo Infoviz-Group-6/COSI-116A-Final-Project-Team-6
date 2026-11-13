@@ -1,0 +1,88 @@
+
+.timeline-panel {
+	margin-top: 18px;
+}
+
+.timeline-view {
+	margin-top: 18px;
+	padding: 16px 8px 4px;
+}
+
+.timeline-control {
+	display: grid;
+	gap: 6px;
+}
+
+.timeline-control input {
+	width: 100%;
+	accent-color: var(--accent);
+}
+
+.timeline-labels {
+	display: flex;
+	justify-content: space-between;
+	color: var(--muted);
+	font-size: 0.75rem;
+}
+
+.timeline-current {
+	margin: 0;
+	color: var(--ink);
+	font-size: 0.85rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.secondary-button {
+	padding: 7px 12px;
+	color: var(--accent);
+	background: #ffffff;
+	font-size: 0.78rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.expandable-panel {
+	margin-top: 18px;
+	padding-top: 18px;
+	border-top: 1px solid var(--border);
+}
+
+.line-chart-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px;
+	margin-top: 14px;
+}
+
+#model-release-view {
+	display: block;
+	overflow-x: auto;
+	padding: 12px;
+	text-align: left;
+}
+
+#model-release-view svg {
+	display: block;
+	width: 100%;
+	min-width: 760px;
+	height: auto;
+}
+
+.model-lane-note {
+	fill: var(--muted);
+	font-size: 12px;
+}
+
+.model-release-marks circle {
+	stroke: #ffffff;
+	stroke-width: 1.5;
+	cursor: pointer;
+}
+
+.model-release-marks circle:focus {
+	stroke: var(--ink);
+	stroke-width: 3;
+	outline: none;
+}
+

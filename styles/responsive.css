@@ -1,0 +1,42 @@
+
+@media screen and (max-width: 980px) {
+	.pa4-workspace,
+	.map-composition,
+	.claude-analysis-grid,
+	.claude-overview-grid,
+	.claude-detail-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.layer-controls {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.legend-stack {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.scatter-canvas {
+		min-height: 360px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.layer-controls,
+	.legend-stack,
+	.line-chart-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.city-search__row {
+		grid-template-columns: 1fr;
+	}
+
+	.map-canvas {
+		min-height: 380px;
+	}
+}
+
+
+
+

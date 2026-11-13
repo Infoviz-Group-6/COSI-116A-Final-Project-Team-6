@@ -1,0 +1,68 @@
+/* Team 6 project landing page */
+:root {
+	color-scheme: light;
+	--ink: #172033;
+	--muted: #596579;
+	--surface: #ffffff;
+	--surface-soft: #f3f6fa;
+	--border: #d8e0ea;
+	--accent: #2257d6;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.project-header {
+	margin: 0 -10px;
+	padding: 48px 24px;
+	color: #ffffff;
+	background: linear-gradient(135deg, #16223b 0%, #234e91 100%);
+}
+
+.project-header__content,
+.dashboard-shell {
+	width: min(1180px, calc(100% - 32px));
+	margin: 0 auto;
+}
+
+.project-header h1 {
+	margin: 8px 0 12px;
+	font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.project-eyebrow {
+	margin: 0;
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.project-team {
+	max-width: 800px;
+	color: #dbe6ff;
+}
+
+.reference-link {
+	display: inline-block;
+	margin-top: 14px;
+	padding: 10px 14px;
+	border: 1px solid rgba(255, 255, 255, 0.55);
+	border-radius: 8px;
+	color: #ffffff;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.reference-link:hover,
+.reference-link:focus-visible {
+	background: rgba(255, 255, 255, 0.12);
+}
+
+.content-column h2,
+.dashboard-shell h2 {
+	margin-top: 0;
+	color: var(--ink);
+}
+
