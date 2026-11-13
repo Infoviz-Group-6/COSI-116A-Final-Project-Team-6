@@ -42,13 +42,24 @@
         const path = d3.geoPath(projection);
 
         // 3. Keep states and circles in separate layers
-        const stateLayer = svg
+        // Everything inside zoomLayer pans and zooms together
+        const zoomLayer = svg
+          .append("g")
+          .attr("class", "zoom-layer");
+
+        const stateLayer = zoomLayer
           .append("g")
           .attr("class", "state-layer");
 
-        const centerLayer = svg
+        const centerLayer = zoomLayer
           .append("g")
           .attr("class", "data-center-layer");
+
+        // City search marker + connector line sit above the circles
+        const searchLayer = zoomLayer
+          .append("g")
+          .attr("class", "search-layer")
+          .style("pointer-events", "none");
 
         // Draw the states
         stateLayer
@@ -72,6 +83,8 @@
                 .replace(/\s*#(?:confident|likely|uncertain)\b/gi, "")
                 .trim(),
               address: d.address,
+              latitude,
+              longitude,
               position: projection([longitude, latitude])
             };
           })
@@ -124,6 +137,92 @@
           return 22;
         }
 
+        // Current zoom scale; marks are divided by it so they keep
+        // the same on-screen size while the geography grows
+        let zoomScale = 1;
+
+        function applyZoomScale() {
+          const k = zoomScale;
+
+          centerLayer
+            .selectAll("circle")
+            .attr("r", d => circleRadius(d.power) / k);
+
+          searchLayer
+            .selectAll(".search-city-marker")
+            .attr("r", 6 / k);
+
+          searchLayer
+            .selectAll(".search-distance-label")
+            .attr("y", d => d.y - 8 / k)
+            .style("font-size", `${14 / k}px`);
+        }
+
+        const zoom = d3.zoom()
+          .scaleExtent([1, 12])
+          .translateExtent([[0, 0], [width, height]])
+          .on("zoom", event => {
+            zoomLayer.attr("transform", event.transform);
+            zoomScale = event.transform.k;
+            applyZoomScale();
+          });
+
+        svg.call(zoom);
+
+        // Smoothly zoom so that every given [x, y] point is in view
+        function zoomToPoints(points, maxScale = 6) {
+          const [[x0, y0], [x1, y1]] = [
+            [d3.min(points, p => p[0]), d3.min(points, p => p[1])],
+            [d3.max(points, p => p[0]), d3.max(points, p => p[1])]
+          ];
+          const padding = 80;
+          const k = Math.max(1, Math.min(
+            maxScale,
+            (width - 2 * padding) / Math.max(x1 - x0, 1),
+            (height - 2 * padding) / Math.max(y1 - y0, 1)
+          ));
+          const transform = d3.zoomIdentity
+            .translate(width / 2, height / 2)
+            .scale(k)
+            .translate(-(x0 + x1) / 2, -(y0 + y1) / 2);
+
+          // zoom.transform skips the pan limits, so clamp explicitly
+          const clamped = zoom.constrain()(
+            transform,
+            [[0, 0], [width, height]],
+            zoom.translateExtent()
+          );
+
+          svg.transition().duration(900).call(zoom.transform, clamped);
+        }
+
+        function resetZoom() {
+          svg.transition().duration(750).call(zoom.transform, d3.zoomIdentity);
+        }
+
+        // On-map zoom buttons
+        const zoomControls = container
+          .append("div")
+          .attr("class", "map-zoom-controls");
+
+        zoomControls.append("button")
+          .attr("type", "button")
+          .attr("aria-label", "Zoom in")
+          .text("+")
+          .on("click", () => svg.transition().duration(300).call(zoom.scaleBy, 1.6));
+
+        zoomControls.append("button")
+          .attr("type", "button")
+          .attr("aria-label", "Zoom out")
+          .text("−")
+          .on("click", () => svg.transition().duration(300).call(zoom.scaleBy, 1 / 1.6));
+
+        zoomControls.append("button")
+          .attr("type", "button")
+          .attr("aria-label", "Reset zoom")
+          .text("Reset")
+          .on("click", resetZoom);
+
         // 7. Create hover tooltip
         const tooltip = container
           .append("div")
@@ -158,6 +257,9 @@
             .style("top", `${top}px`);
         }
 
+        // Facilities currently drawn on the map (updated by renderYear)
+        let visibleCenters = [];
+
         // 8. Display facilities for the selected year
         function renderYear(year) {
           const cutoff = `${year}-12-31`;
@@ -191,7 +293,7 @@
             .join("circle")
             .attr("cx", d => d.position[0])
             .attr("cy", d => d.position[1])
-            .attr("r", d => circleRadius(d.power))
+            .attr("r", d => circleRadius(d.power) / zoomScale)
             .attr("fill", d =>
               d.power === 0
                 ? "white"
@@ -221,18 +323,131 @@
             });
 
           tooltip.style("display", "none");
+          visibleCenters = visible;
 
           console.log(
             `Year ${year}: ${visible.length} Epoch centers displayed`
           );
         }
 
-        // 9. Initial render
-        renderYear(Number(app.getState().year));
+        // 9. Closest data center to a searched city
+        // Great-circle (haversine) distance in miles
+        function distanceMiles(lat1, lon1, lat2, lon2) {
+          const toRad = deg => deg * Math.PI / 180;
+          const dLat = toRad(lat2 - lat1);
+          const dLon = toRad(lon2 - lon1);
+          const a =
+            Math.sin(dLat / 2) ** 2 +
+            Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+            Math.sin(dLon / 2) ** 2;
+          return 3958.8 * 2 * Math.asin(Math.sqrt(a));
+        }
 
-        // 10. React to the existing time slider
+        const searchStatus = d3.select("#city-search-status");
+
+        let lastZoomedLocation = null;
+
+        function renderSearch(state) {
+          const location = state.searchLocation;
+          searchLayer.selectAll("*").remove();
+          centerLayer.selectAll("circle").classed("is-nearest", false);
+
+          if (!location) {
+            // Search cleared: return to the full US view
+            if (lastZoomedLocation) {
+              lastZoomedLocation = null;
+              resetZoom();
+            }
+            return;
+          }
+
+          const cityPoint = projection([location.longitude, location.latitude]);
+          const cityName = state.searchQuery || location.label;
+
+          // Only compare against facilities shown for the selected year
+          const nearest = d3.least(
+            visibleCenters.map(center => ({
+              center,
+              miles: distanceMiles(
+                location.latitude, location.longitude,
+                center.latitude, center.longitude
+              )
+            })),
+            d => d.miles
+          );
+
+          if (!nearest) {
+            searchStatus.text(
+              `No listed data centers are shown for ${state.year}, so there is nothing to compare with ${cityName}.`
+            );
+          } else {
+            const { center, miles } = nearest;
+            searchStatus.text(
+              `Closest data center to ${cityName}: ${center.name}` +
+              `${center.owner ? ` (${center.owner})` : ""}, ` +
+              `about ${Math.round(miles).toLocaleString()} miles away` +
+              `${center.address ? ` in ${center.address}` : ""}.`
+            );
+
+            centerLayer
+              .selectAll("circle")
+              .classed("is-nearest", d => d.name === center.name);
+
+            if (cityPoint) {
+              searchLayer
+                .append("line")
+                .attr("class", "search-connector")
+                .attr("x1", cityPoint[0])
+                .attr("y1", cityPoint[1])
+                .attr("x2", center.position[0])
+                .attr("y2", center.position[1]);
+
+              // Distance label at the midpoint of the connector
+              const midpoint = {
+                x: (cityPoint[0] + center.position[0]) / 2,
+                y: (cityPoint[1] + center.position[1]) / 2
+              };
+
+              searchLayer
+                .append("text")
+                .datum(midpoint)
+                .attr("class", "search-distance-label")
+                .attr("x", midpoint.x)
+                .attr("y", midpoint.y - 8 / zoomScale)
+                .style("font-size", `${14 / zoomScale}px`)
+                .attr("text-anchor", "middle")
+                .text(`${Math.round(miles).toLocaleString()} mi`);
+            }
+          }
+
+          if (cityPoint) {
+            searchLayer
+              .append("circle")
+              .attr("class", "search-city-marker")
+              .attr("cx", cityPoint[0])
+              .attr("cy", cityPoint[1])
+              .attr("r", 6 / zoomScale);
+          }
+
+          // Zoom only when a new search arrives, not on year changes
+          if (location !== lastZoomedLocation) {
+            lastZoomedLocation = location;
+            if (cityPoint) {
+              zoomToPoints(
+                nearest ? [cityPoint, nearest.center.position] : [cityPoint]
+              );
+            }
+          }
+        }
+
+        // 10. Initial render
+        renderYear(Number(app.getState().year));
+        renderSearch(app.getState());
+
+        // 11. React to the time slider and city search
         app.subscribe(state => {
           renderYear(Number(state.year));
+          renderSearch(state);
         });
 
         console.log(

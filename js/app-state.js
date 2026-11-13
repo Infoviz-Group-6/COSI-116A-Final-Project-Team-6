@@ -8,7 +8,9 @@
     year: 2026,
     selectedStates: [],
     selectedFacility: null,
-    searchQuery: ""
+    searchQuery: "",
+    // Geocoded result of the city search: { label, latitude, longitude } or null.
+    searchLocation: null
   });
 
   window.Team6App = {
