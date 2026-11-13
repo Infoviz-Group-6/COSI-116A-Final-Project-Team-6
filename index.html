@@ -59,7 +59,11 @@
             <form id="city-search" class="city-search" role="search">
               <label for="city-query">Enter a city name</label>
               <div class="city-search__row">
-                <input id="city-query" name="city" type="search" placeholder="Richmond, VA" autocomplete="off">
+                <div class="city-search__field">
+                  <input id="city-query" name="city" type="search" placeholder="Richmond, VA" autocomplete="off"
+                    role="combobox" aria-autocomplete="list" aria-controls="city-suggestions" aria-expanded="false">
+                  <ul id="city-suggestions" class="city-suggestions" role="listbox" aria-label="City suggestions" hidden></ul>
+                </div>
                 <button type="submit">Find city</button>
               </div>
               <p id="city-search-status" class="section-note" aria-live="polite">Search will zoom to a city and identify the closest listed data center.</p>

@@ -468,9 +468,49 @@ h1, h2, h3 {
 }
 
 .city-search input {
+	width: 100%;
 	min-width: 0;
 	padding: 8px 12px;
 	background: #ffffff;
+}
+
+/* Wrapper that anchors the autocomplete dropdown under the input */
+.city-search__field {
+	position: relative;
+	min-width: 0;
+}
+
+.city-suggestions {
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	right: 0;
+	z-index: 20;
+	max-height: 260px;
+	margin: 0;
+	padding: 4px 0;
+	overflow-y: auto;
+	border: 1px solid var(--border);
+	border-radius: 7px;
+	background: #ffffff;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+	list-style: none;
+	text-align: left;
+}
+
+.city-suggestions[hidden] {
+	display: none;
+}
+
+.city-suggestions li {
+	padding: 8px 12px;
+	color: var(--ink);
+	cursor: pointer;
+}
+
+.city-suggestions li:hover,
+.city-suggestions li.is-active {
+	background: color-mix(in srgb, var(--accent) 12%, #ffffff);
 }
 
 .city-search button {
