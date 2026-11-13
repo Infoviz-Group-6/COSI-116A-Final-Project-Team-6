@@ -330,19 +330,7 @@
           );
         }
 
-        // 9. Closest data center to a searched city
-        // Great-circle (haversine) distance in miles
-        function distanceMiles(lat1, lon1, lat2, lon2) {
-          const toRad = deg => deg * Math.PI / 180;
-          const dLat = toRad(lat2 - lat1);
-          const dLon = toRad(lon2 - lon1);
-          const a =
-            Math.sin(dLat / 2) ** 2 +
-            Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
-            Math.sin(dLon / 2) ** 2;
-          return 3958.8 * 2 * Math.asin(Math.sqrt(a));
-        }
-
+        // 9. Draw the closest data center to a searched city
         const searchStatus = d3.select("#city-search-status");
 
         let lastZoomedLocation = null;
@@ -365,16 +353,7 @@
           const cityName = state.searchQuery || location.label;
 
           // Only compare against facilities shown for the selected year
-          const nearest = d3.least(
-            visibleCenters.map(center => ({
-              center,
-              miles: distanceMiles(
-                location.latitude, location.longitude,
-                center.latitude, center.longitude
-              )
-            })),
-            d => d.miles
-          );
+          const nearest = app.views.citySearch.findNearest(location, visibleCenters);
 
           if (!nearest) {
             searchStatus.text(

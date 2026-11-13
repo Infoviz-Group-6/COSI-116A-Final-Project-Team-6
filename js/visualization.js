@@ -16,7 +16,6 @@
     Object.values(app.views).forEach((view) => view.init?.());
     app.subscribe(renderInterfaceState);
     bindLayerControls();
-    bindCitySearch();
     renderInterfaceState(app.getState());
 
     status.textContent = "PA4 layout ready";
@@ -41,66 +40,6 @@
 
         app.setState({ layer: selectedLayer });
       });
-    });
-  }
-
-  // Geocodes the typed city with OpenStreetMap Nominatim (US results only).
-  // The map view reacts to state.searchLocation and finds the closest data center.
-  async function geocodeCity(query) {
-    const params = new URLSearchParams({
-      q: query,
-      format: "jsonv2",
-      countrycodes: "us",
-      limit: "1"
-    });
-    const response = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
-      headers: { Accept: "application/json" }
-    });
-    if (!response.ok) throw new Error(`Geocoder responded with ${response.status}`);
-
-    const [match] = await response.json();
-    if (!match) return null;
-
-    return {
-      label: match.display_name,
-      latitude: Number(match.lat),
-      longitude: Number(match.lon)
-    };
-  }
-
-  function bindCitySearch() {
-    const form = document.querySelector("#city-search");
-    const status = document.querySelector("#city-search-status");
-    const submitButton = form.querySelector("button[type='submit']");
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const searchQuery = document.querySelector("#city-query").value.trim();
-
-      if (!searchQuery) {
-        app.setState({ searchQuery: "", searchLocation: null });
-        status.textContent = "Enter a city to find the closest listed data center.";
-        return;
-      }
-
-      status.textContent = `Searching for ${searchQuery}…`;
-      submitButton.disabled = true;
-
-      try {
-        const searchLocation = await geocodeCity(searchQuery);
-        if (!searchLocation) {
-          app.setState({ searchQuery, searchLocation: null });
-          status.textContent = `Could not find "${searchQuery}" in the United States. Try "City, ST".`;
-          return;
-        }
-        // The map view writes the closest-facility result into the status line.
-        app.setState({ searchQuery, searchLocation });
-      } catch (error) {
-        console.error("City search error:", error);
-        status.textContent = "City lookup failed. Check your connection and try again.";
-      } finally {
-        submitButton.disabled = false;
-      }
     });
   }
 
