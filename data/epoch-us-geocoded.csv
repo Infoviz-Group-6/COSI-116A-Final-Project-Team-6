@@ -1,0 +1,35 @@
+name,owner,address,latitude,longitude,current_power_mw
+Colossus 2,SpaceXAI #confident,"5420 Tulane Rd, Memphis, TN 38109",34.9994880087,-90.042976440198,946
+Anthropic-Amazon New Carlisle,Amazon #confident,"55001 Larrison Blvd, New Carlisle, IN 46552",41.693774125775,-86.460524297175,1037
+Microsoft Fairwater Atlanta,Microsoft #confident,"1435 Hwy 54 W, Fayetteville, GA 30214",33.445340546204,-84.525446609061,636
+Microsoft Fairwater Wisconsin,Microsoft #confident,"4800 90th St, Mount Pleasant, WI 53403",42.674891499261,-87.894853580498,369
+Anthropic Lake Mariner,AI XPV Platform #confident,"7725 Lake Rd, Barker, NY 14012",43.348940357577,-78.603357217695,210
+Google Council Bluffs (East),Google #confident,"10410 Bunge Ave, Council Bluffs, IA 51503",41.167418141276,-95.793107634728,237
+Google Bristow,Google,"13001 Rollins Ford Road, Bristow, VA 20136",38.782544165202,-77.57971701769,238
+Meta Jeffersonville,Meta #confident,"500 8th St, Jeffersonville, IN 47130, USA",38.279118096229,-85.739096631921,178
+Google Omaha,Google #confident,"11110 State St, Omaha, NE 68142",41.335728085545,-96.088471406098,237
+Meta Montgomery,Meta #confident,"Co Rd 42, Montgomery, AL 36105, USA",32.26499674362,-86.363511872502,153
+Meta Kuna,Meta #confident,"601 Kuna Mora Rd,  Kuna ID 83634",43.459233402117,-116.421077193242,152
+Amazon Ridgeland,Amazon #confident,"1626 County Line Road Ridgeland, Mississippi",32.399543508385,-90.120485603023,228
+Coreweave Helios,CoreWeave #confident,"984 County Road 112, Afton, TX 79220",33.780638980867,-100.867098637288,132
+Google Lancaster,Google #confident,"105 Whiley Rd, Lancaster, OH 43130",39.727031372056,-82.683111290507,137
+Meta-QTS Hillsboro 2,Meta #likely,"4755 NE Huffman St, Hillsboro, OR 97124",45.556953477024,-122.931942381381,180
+Google Red Oak,Google #confident,"330 Austin Blvd, Red Oak, TX 75154",32.529975790363,-96.799787783078,77
+CoreWeave Ellendale ND,CoreWeave #confident,"9685 87th Ave SE, Ellendale, ND 58436",46.00614270139,-98.568735689845,68
+Meta Sarpy,Meta #confident,"14436-14998 Fairview Rd, Springfield, NE 68059, USA",41.103572416149,-96.147913090146,80
+CoreWeave Chester VA,CoreWeave #confident,"1401 Meadowville Technology Parkway, Chester, VA",37.361745240614,-77.325259396826,82
+CoreWeave Marble NC,CoreWeave #confident,"155 Palmer Ln, Marble, NC 28905",35.184986531552,-83.914091369842,65
+Core42 Lake Mariner,Core42 #confident,"7725 Lake Rd, Barker, NY 14012",43.348940357577,-78.603357217695,58
+STACK Infrastructure NVA02,,"9590 Hornbaker Rd, Manassas, VA 20109",38.749819262609,-77.535848480473,85
+Microsoft-Nebius New Jersey,Nebius #confident,"3963 S Lincoln Ave, Vineland, New Jersey",39.428192532649,-75.018457282871,50
+Stream Phoenix,,2950 S. Litchfield Road,33.479282344597,-112.35932850694,64
+Microsoft SAT14,Microsoft #confident,"3545 Wiseman Boulevard, San Antonio, TX 78251",29.473182459994,-98.681508657437,47
+Vantage TX1,,"14720 Omicron Dr, San Antonio, TX 78245",29.416683531254,-98.788564103486,32
+CoreWeave Dalton 1 & 2,CoreWeave #confident,"2205 Industrial South Rd, Dalton, GA, 30721",34.713506892783,-84.952184746212,28
+xAI QTS Atlanta,SpaceXAI #confident,"1025 Jefferson Street NW, Atlanta, GA 30318",33.775662280728,-84.422576064561,17.32971
+CoreWeave Lancaster Greenfield site,CoreWeave #confident,"216 Greenfield Rd, Lancaster, PA",40.048690305089,-76.256089835306,0
+Google Cedar Rapids,Google #confident,"5800 EDGEWOOD RD SW CEDAR RAPIDS, IA 52404",41.921946128019,-91.715629615019,0
+Google Fort Wayne,Google #confident,"6015 Adams Center Road, Fort Wayne, IN 46806",41.031166579954,-85.057768391974,0
+Meta Bowling Green,Meta #confident,"12356 Middleton Pike, Bowling Green, OH 43402",41.45826725086,-83.636217439419,0
+OpenAI Stargate Lordstown,Softbank #confident,"2300 Hallock Young Rd, Warren, OH 44481",41.143721220025,-80.883293483213,0
+QTS Cedar Rapids,Meta #speculative,"6200 76th Ave SW, Fairfax, IA 52228",41.905594293137,-91.751082222284,0

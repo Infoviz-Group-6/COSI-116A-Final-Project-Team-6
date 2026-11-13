@@ -689,3 +689,65 @@ h1, h2, h3 {
 		min-height: 380px;
 	}
 }
+
+/* US map */
+#map-view {
+  position: relative;
+  overflow: hidden;
+}
+
+#map-view svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#map-view {
+  position: relative;
+  overflow: hidden;
+}
+
+#map-view svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dc-tooltip {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  padding: 10px 12px;
+  max-width: 260px;
+  background: white;
+  color: #263348;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Data-center legend: zero capacity */
+.capacity-circle--zero {
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+}
+
+.legend-note {
+  margin: 8px 0 0;
+  color: #596579;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* Cleaner data-center tooltip */
+.dc-tooltip {
+  white-space: pre-line;
+  max-width: 240px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+}
