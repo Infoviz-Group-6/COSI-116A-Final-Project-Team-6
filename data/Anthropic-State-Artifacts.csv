@@ -1,0 +1,3329 @@
+state,artifact,value
+Missouri,Academic Paper Or Thesis,0.57
+Maryland,Academic Paper Or Thesis,0.78
+Kansas,Academic Paper Or Thesis,0.75
+Rhode Island,Academic Paper Or Thesis,1.96
+New York,Academic Paper Or Thesis,0.94
+North Carolina,Academic Paper Or Thesis,0.56
+South Dakota,Advice Or Recommendation,12.75
+Hawaii,Advice Or Recommendation,15.12
+Arizona,Advice Or Recommendation,15.03
+Oklahoma,Advice Or Recommendation,15.22
+North Carolina,Advice Or Recommendation,15.44
+Arkansas,Advice Or Recommendation,14.55
+Arizona,Analysis Or Summary,5.69
+Maryland,Analysis Or Summary,5.56
+California,Analysis Or Summary,6.34
+Michigan,Academic Paper Or Thesis,0.64
+Vermont,Academic Paper Or Thesis,1.65
+Nebraska,Academic Paper Or Thesis,0.84
+Texas,Academic Paper Or Thesis,0.47
+Indiana,Academic Paper Or Thesis,0.84
+Delaware,Academic Paper Or Thesis,1.02
+Arizona,Academic Paper Or Thesis,0.56
+Florida,Academic Paper Or Thesis,0.34
+Puerto Rico,Academic Paper Or Thesis,0.7
+Iowa,Academic Paper Or Thesis,0.91
+Alabama,Academic Paper Or Thesis,0.5
+New Mexico,Advice Or Recommendation,14.0
+Maine,Advice Or Recommendation,15.38
+Tennessee,Advice Or Recommendation,14.94
+Puerto Rico,Advice Or Recommendation,12.19
+Michigan,Advice Or Recommendation,16.04
+Pennsylvania,Advice Or Recommendation,15.36
+Alaska,Advice Or Recommendation,13.82
+Colorado,Advice Or Recommendation,16.15
+Texas,Advice Or Recommendation,15.1
+Idaho,Advice Or Recommendation,14.49
+Utah,Analysis Or Summary,6.08
+Missouri,Analysis Or Summary,5.69
+Georgia,Analysis Or Summary,5.76
+Pennsylvania,Analysis Or Summary,5.72
+West Virginia,Analysis Or Summary,7.26
+Virginia,Analysis Or Summary,5.78
+Rhode Island,Analysis Or Summary,6.24
+Tennessee,Analysis Or Summary,6.11
+North Dakota,Analysis Or Summary,6.48
+Arkansas,Analysis Or Summary,5.96
+Massachusetts,Analysis Or Summary,6.41
+Colorado,Academic Paper Or Thesis,0.47
+Oregon,Academic Paper Or Thesis,0.48
+Arkansas,Academic Paper Or Thesis,0.73
+Wyoming,Academic Paper Or Thesis,0.67
+Massachusetts,Academic Paper Or Thesis,1.33
+Pennsylvania,Academic Paper Or Thesis,0.98
+Wisconsin,Academic Paper Or Thesis,0.75
+South Carolina,Academic Paper Or Thesis,0.46
+Mississippi,Academic Paper Or Thesis,0.66
+West Virginia,Academic Paper Or Thesis,0.68
+Idaho,Academic Paper Or Thesis,0.19
+Montana,Academic Paper Or Thesis,0.45
+Illinois,Advice Or Recommendation,15.7
+North Dakota,Advice Or Recommendation,13.54
+Missouri,Advice Or Recommendation,15.29
+Georgia,Advice Or Recommendation,14.28
+Nebraska,Advice Or Recommendation,15.94
+New Jersey,Advice Or Recommendation,14.99
+Iowa,Analysis Or Summary,5.77
+Alabama,Analysis Or Summary,5.5
+Kentucky,Analysis Or Summary,6.23
+Louisiana,Analysis Or Summary,5.47
+District of Columbia,Analysis Or Summary,6.94
+Indiana,Analysis Or Summary,5.14
+Wisconsin,Analysis Or Summary,5.5
+North Carolina,App Or Website,3.67
+Pennsylvania,App Or Website,3.5
+Washington,App Or Website,2.59
+Michigan,App Or Website,3.64
+Iowa,App Or Website,3.63
+Rhode Island,App Or Website,3.47
+Texas,Audio Or Music,0.02
+Tennessee,Audio Or Music,0.03
+Nevada,Audio Or Music,0.02
+Wisconsin,Audio Or Music,0.02
+Wyoming,Audio Or Music,0.0
+Kansas,Audio Or Music,0.0
+Rhode Island,Audio Or Music,0.0
+New Jersey,Audio Or Music,0.03
+District of Columbia,Audio Or Music,0.0
+West Virginia,Audio Or Music,0.0
+South Carolina,Audio Or Music,0.03
+South Carolina,Blog Or Article,0.54
+Kentucky,Blog Or Article,0.5
+Missouri,Blog Or Article,0.45
+New Hampshire,Blog Or Article,0.44
+Arkansas,Blog Or Article,0.62
+Hawaii,Blog Or Article,0.44
+Massachusetts,Blog Or Article,0.46
+West Virginia,Blog Or Article,0.77
+Alaska,Blog Or Article,0.45
+New Hampshire,Chart Or Visualization,1.69
+Kansas,Chart Or Visualization,1.2
+Kentucky,Chart Or Visualization,1.05
+Connecticut,Chart Or Visualization,1.81
+Washington,Chart Or Visualization,1.7
+New York,Chart Or Visualization,1.63
+Oregon,Code Fix Or Debug,2.31
+Montana,Code Fix Or Debug,1.88
+Tennessee,Code Fix Or Debug,2.23
+South Dakota,Code Fix Or Debug,2.15
+Arizona,Code Fix Or Debug,2.36
+New Mexico,Code Fix Or Debug,2.73
+Tennessee,Academic Paper Or Thesis,0.42
+New Hampshire,Academic Paper Or Thesis,0.91
+Oklahoma,Academic Paper Or Thesis,0.56
+South Dakota,Academic Paper Or Thesis,0.38
+Washington,Academic Paper Or Thesis,0.47
+South Carolina,Advice Or Recommendation,13.9
+Indiana,Advice Or Recommendation,13.99
+Rhode Island,Advice Or Recommendation,13.55
+Wisconsin,Advice Or Recommendation,15.77
+Utah,Advice Or Recommendation,14.99
+California,Advice Or Recommendation,14.85
+Massachusetts,Advice Or Recommendation,15.2
+Iowa,Advice Or Recommendation,13.97
+Oklahoma,Analysis Or Summary,5.94
+Idaho,Analysis Or Summary,5.79
+Minnesota,Analysis Or Summary,5.37
+Alaska,Analysis Or Summary,5.73
+Nevada,Analysis Or Summary,5.95
+Kansas,Analysis Or Summary,5.11
+Florida,Analysis Or Summary,5.93
+New Hampshire,Analysis Or Summary,6.57
+South Dakota,Analysis Or Summary,6.69
+Vermont,Analysis Or Summary,6.75
+Hawaii,Analysis Or Summary,6.42
+Maine,Analysis Or Summary,6.52
+Hawaii,App Or Website,2.94
+North Dakota,App Or Website,3.89
+West Virginia,App Or Website,3.39
+Montana,App Or Website,3.11
+Arkansas,App Or Website,3.67
+South Carolina,App Or Website,3.87
+Tennessee,App Or Website,3.69
+Florida,App Or Website,4.13
+Nebraska,App Or Website,3.4
+Idaho,App Or Website,4.13
+Delaware,App Or Website,3.22
+Arkansas,Audio Or Music,0.07
+Hawaii,Audio Or Music,0.05
+Florida,Audio Or Music,0.02
+Colorado,Audio Or Music,0.04
+Utah,Audio Or Music,0.06
+Ohio,Audio Or Music,0.04
+Minnesota,Audio Or Music,0.04
+Indiana,Audio Or Music,0.01
+Alaska,Audio Or Music,0.11
+Maryland,Audio Or Music,0.02
+Alabama,Blog Or Article,0.26
+Wisconsin,Blog Or Article,0.51
+Texas,Blog Or Article,0.38
+Mississippi,Blog Or Article,0.41
+Utah,Blog Or Article,0.32
+Iowa,Blog Or Article,0.45
+Michigan,Blog Or Article,0.41
+Wyoming,Blog Or Article,0.17
+Arizona,Blog Or Article,0.45
+Texas,Chart Or Visualization,1.69
+Massachusetts,Chart Or Visualization,1.78
+Idaho,Chart Or Visualization,1.53
+Virginia,Chart Or Visualization,1.76
+Michigan,Chart Or Visualization,1.41
+Hawaii,Chart Or Visualization,1.84
+Maryland,Chart Or Visualization,1.58
+Indiana,Chart Or Visualization,1.4
+Pennsylvania,Chart Or Visualization,1.65
+New Mexico,Chart Or Visualization,1.67
+Arizona,Chart Or Visualization,1.56
+Rhode Island,Chart Or Visualization,1.77
+Colorado,Chart Or Visualization,1.58
+Mississippi,Chart Or Visualization,1.84
+Arkansas,Code Fix Or Debug,2.22
+Maryland,Code Fix Or Debug,2.24
+California,Code Fix Or Debug,2.07
+Maine,Code Fix Or Debug,1.88
+Alaska,Code Fix Or Debug,1.91
+North Dakota,Code Fix Or Debug,2.16
+Missouri,Code Fix Or Debug,2.32
+Mississippi,Code Fix Or Debug,2.71
+Iowa,Code Fix Or Debug,2.62
+Utah,Code Fix Or Debug,1.87
+Colorado,App Or Website,2.91
+Utah,App Or Website,3.62
+Vermont,App Or Website,2.93
+Nevada,App Or Website,3.84
+Mississippi,App Or Website,4.75
+Oklahoma,App Or Website,3.6
+California,App Or Website,2.94
+North Carolina,Audio Or Music,0.04
+New York,Audio Or Music,0.02
+Alabama,Audio Or Music,0.05
+Michigan,Audio Or Music,0.03
+Puerto Rico,Audio Or Music,0.0
+Illinois,Audio Or Music,0.03
+Massachusetts,Audio Or Music,0.02
+California,Audio Or Music,0.02
+Nebraska,Blog Or Article,0.37
+District of Columbia,Blog Or Article,0.83
+Montana,Blog Or Article,0.13
+New Jersey,Blog Or Article,0.43
+North Carolina,Blog Or Article,0.49
+Idaho,Blog Or Article,0.56
+Pennsylvania,Blog Or Article,0.45
+Colorado,Blog Or Article,0.54
+Louisiana,Chart Or Visualization,1.44
+Vermont,Chart Or Visualization,1.58
+Illinois,Chart Or Visualization,1.6
+Iowa,Chart Or Visualization,1.39
+West Virginia,Chart Or Visualization,0.77
+Ohio,Chart Or Visualization,1.6
+Maine,Chart Or Visualization,1.74
+Delaware,Chart Or Visualization,1.22
+Minnesota,Chart Or Visualization,1.73
+Florida,Chart Or Visualization,1.45
+California,Chart Or Visualization,1.72
+Kentucky,Code Fix Or Debug,2.62
+Alabama,Code Fix Or Debug,2.04
+South Carolina,Code Fix Or Debug,2.41
+New Jersey,Code Fix Or Debug,2.05
+Washington,Code Fix Or Debug,2.18
+Illinois,Code Fix Or Debug,2.31
+New York,Code Fix Or Debug,1.71
+Minnesota,Academic Paper Or Thesis,0.58
+Nevada,Academic Paper Or Thesis,0.97
+Georgia,Academic Paper Or Thesis,0.6
+New Mexico,Academic Paper Or Thesis,1.1
+Ohio,Academic Paper Or Thesis,0.77
+California,Academic Paper Or Thesis,0.85
+Virginia,Academic Paper Or Thesis,0.79
+Hawaii,Academic Paper Or Thesis,0.63
+Utah,Academic Paper Or Thesis,0.27
+New Jersey,Academic Paper Or Thesis,0.78
+Maine,Academic Paper Or Thesis,0.52
+Maryland,Advice Or Recommendation,14.8
+Alabama,Advice Or Recommendation,15.48
+Ohio,Advice Or Recommendation,15.24
+Virginia,Advice Or Recommendation,14.79
+Florida,Advice Or Recommendation,14.14
+Nevada,Advice Or Recommendation,14.61
+Connecticut,Advice Or Recommendation,16.28
+Kentucky,Advice Or Recommendation,14.16
+Vermont,Advice Or Recommendation,15.45
+Montana,Advice Or Recommendation,14.4
+Nebraska,Analysis Or Summary,6.54
+Mississippi,Analysis Or Summary,5.93
+Oregon,Analysis Or Summary,5.95
+Puerto Rico,Analysis Or Summary,5.49
+Texas,Analysis Or Summary,5.77
+Wyoming,Analysis Or Summary,7.08
+New York,Analysis Or Summary,6.26
+Massachusetts,App Or Website,2.84
+Minnesota,App Or Website,3.19
+Maine,App Or Website,3.33
+South Dakota,App Or Website,3.28
+Arizona,App Or Website,3.49
+Connecticut,App Or Website,3.26
+Virginia,App Or Website,3.45
+Missouri,Audio Or Music,0.03
+Vermont,Audio Or Music,0.0
+Mississippi,Audio Or Music,0.05
+Delaware,Audio Or Music,0.04
+Virginia,Audio Or Music,0.03
+Connecticut,Audio Or Music,0.01
+Louisiana,Audio Or Music,0.0
+Maine,Blog Or Article,0.98
+Vermont,Blog Or Article,0.45
+Virginia,Blog Or Article,0.54
+Ohio,Blog Or Article,0.42
+New York,Blog Or Article,0.45
+Indiana,Blog Or Article,0.34
+Kansas,Blog Or Article,0.39
+Connecticut,Blog Or Article,0.4
+Oregon,Blog Or Article,0.44
+Nevada,Blog Or Article,0.58
+California,Blog Or Article,0.47
+Wyoming,Chart Or Visualization,1.69
+Alabama,Chart Or Visualization,1.24
+Oregon,Chart Or Visualization,1.39
+North Carolina,Chart Or Visualization,1.58
+Puerto Rico,Chart Or Visualization,1.49
+Idaho,Code Fix Or Debug,1.94
+Texas,Code Fix Or Debug,2.11
+Colorado,Code Fix Or Debug,2.15
+Wyoming,Code Fix Or Debug,3.54
+Indiana,Code Fix Or Debug,2.7
+Delaware,Code Fix Or Debug,1.84
+Wisconsin,Code Fix Or Debug,2.0
+Minnesota,Code Fix Or Debug,2.18
+North Dakota,Academic Paper Or Thesis,0.86
+Alaska,Academic Paper Or Thesis,0.34
+Louisiana,Academic Paper Or Thesis,1.01
+District of Columbia,Academic Paper Or Thesis,1.49
+Connecticut,Academic Paper Or Thesis,1.3
+Kentucky,Academic Paper Or Thesis,0.5
+Illinois,Academic Paper Or Thesis,0.74
+District of Columbia,Advice Or Recommendation,13.25
+Louisiana,Advice Or Recommendation,14.04
+Mississippi,Advice Or Recommendation,12.62
+Wyoming,Advice Or Recommendation,14.17
+New Hampshire,Advice Or Recommendation,14.87
+New York,Advice Or Recommendation,15.99
+Washington,Advice Or Recommendation,16.27
+Delaware,Advice Or Recommendation,16.83
+Kansas,Advice Or Recommendation,15.07
+Minnesota,Advice Or Recommendation,16.1
+West Virginia,Advice Or Recommendation,12.1
+Oregon,Advice Or Recommendation,15.77
+New Mexico,Analysis Or Summary,6.02
+Delaware,Analysis Or Summary,5.65
+Michigan,Analysis Or Summary,5.85
+North Carolina,Analysis Or Summary,5.74
+Washington,Analysis Or Summary,5.99
+Illinois,Analysis Or Summary,5.85
+South Carolina,Analysis Or Summary,6.64
+Ohio,Analysis Or Summary,5.34
+Montana,Analysis Or Summary,6.03
+Connecticut,Analysis Or Summary,5.56
+Colorado,Analysis Or Summary,5.73
+New Jersey,Analysis Or Summary,6.17
+Tennessee,Config Or Infra,1.35
+Arizona,Config Or Infra,1.37
+Maryland,Config Or Infra,1.31
+Indiana,Config Or Infra,1.32
+Arizona,Creative Writing,1.45
+Missouri,Creative Writing,2.41
+Michigan,Creative Writing,2.15
+Oklahoma,Creative Writing,2.81
+Nevada,Creative Writing,2.07
+Florida,Creative Writing,1.52
+Rhode Island,Creative Writing,1.89
+Louisiana,Creative Writing,2.22
+South Carolina,Creative Writing,2.18
+Kansas,Creative Writing,2.56
+Maine,Creative Writing,2.35
+Arkansas,Data Or Spreadsheet,3.01
+Michigan,Data Or Spreadsheet,2.56
+Delaware,Data Or Spreadsheet,2.24
+Mississippi,Data Or Spreadsheet,3.01
+Pennsylvania,Data Or Spreadsheet,2.64
+Connecticut,Document Or Report,13.32
+Oregon,Document Or Report,14.49
+District of Columbia,Document Or Report,16.36
+New Mexico,Document Or Report,15.99
+Maine,Document Or Report,13.74
+Pennsylvania,Document Or Report,12.89
+Wisconsin,Document Or Report,12.82
+New York,Document Or Report,13.08
+Michigan,Document Or Report,13.3
+Maryland,Document Or Report,14.18
+Illinois,Document Or Report,12.92
+North Dakota,Document Or Report,13.98
+New Hampshire,Educational Material,2.02
+Hawaii,Educational Material,1.43
+Alaska,Educational Material,1.24
+Wyoming,Educational Material,1.52
+Puerto Rico,Educational Material,2.67
+Minnesota,Educational Material,1.51
+West Virginia,Educational Material,1.26
+Georgia,Educational Material,1.63
+Alabama,Educational Material,1.43
+Maryland,Educational Material,2.16
+Idaho,Educational Material,1.25
+Louisiana,Educational Material,2.03
+Vermont,Config Or Infra,1.28
+South Dakota,Config Or Infra,1.64
+Washington,Config Or Infra,1.37
+Minnesota,Config Or Infra,1.46
+West Virginia,Config Or Infra,1.94
+Oregon,Config Or Infra,1.14
+Nevada,Config Or Infra,1.33
+Idaho,Config Or Infra,1.78
+North Carolina,Config Or Infra,1.48
+New Mexico,Config Or Infra,1.87
+Virginia,Config Or Infra,1.31
+Pennsylvania,Creative Writing,1.98
+North Carolina,Creative Writing,2.02
+South Dakota,Creative Writing,1.26
+Alabama,Creative Writing,3.27
+Kansas,Data Or Spreadsheet,2.98
+New Jersey,Data Or Spreadsheet,2.98
+Puerto Rico,Data Or Spreadsheet,3.49
+Minnesota,Data Or Spreadsheet,2.21
+Vermont,Data Or Spreadsheet,2.93
+Utah,Data Or Spreadsheet,3.32
+Oregon,Data Or Spreadsheet,2.42
+Mississippi,Document Or Report,15.64
+Minnesota,Document Or Report,12.49
+Iowa,Document Or Report,14.13
+Utah,Document Or Report,14.69
+Montana,Document Or Report,17.38
+California,Document Or Report,13.75
+Texas,Document Or Report,14.15
+Georgia,Document Or Report,14.27
+Oklahoma,Educational Material,1.86
+Florida,Educational Material,1.37
+Connecticut,Educational Material,1.91
+Michigan,Educational Material,1.4
+Nevada,Educational Material,1.3
+Washington,Educational Material,1.43
+Oregon,Educational Material,1.46
+Illinois,Educational Material,1.83
+Ohio,Educational Material,1.71
+South Carolina,Educational Material,1.52
+Arkansas,Educational Material,1.98
+Arizona,Educational Material,1.55
+Louisiana,App Or Website,3.83
+Ohio,App Or Website,4.23
+Georgia,App Or Website,3.84
+Kansas,App Or Website,4.18
+Alaska,App Or Website,4.27
+New Jersey,App Or Website,3.55
+New York,App Or Website,2.92
+Missouri,App Or Website,3.52
+Wyoming,App Or Website,2.7
+Texas,App Or Website,3.55
+Maine,Audio Or Music,0.0
+South Dakota,Audio Or Music,0.0
+New Hampshire,Audio Or Music,0.1
+New Mexico,Audio Or Music,0.04
+Nebraska,Audio Or Music,0.0
+Oklahoma,Audio Or Music,0.04
+Arizona,Audio Or Music,0.04
+Georgia,Audio Or Music,0.04
+Pennsylvania,Audio Or Music,0.03
+North Dakota,Audio Or Music,0.0
+Oregon,Audio Or Music,0.02
+Florida,Blog Or Article,0.42
+New Mexico,Blog Or Article,0.45
+New Jersey,Chart Or Visualization,1.78
+District of Columbia,Chart Or Visualization,2.01
+Nebraska,Chart Or Visualization,1.35
+Utah,Chart Or Visualization,1.43
+Wisconsin,Chart Or Visualization,1.6
+Alaska,Chart Or Visualization,1.8
+Florida,Code Fix Or Debug,2.2
+Virginia,Code Fix Or Debug,2.21
+Rhode Island,Code Fix Or Debug,2.08
+Ohio,Code Fix Or Debug,2.26
+Oklahoma,Code Fix Or Debug,2.58
+Louisiana,Code Fix Or Debug,2.43
+Michigan,Code Fix Or Debug,2.54
+Hawaii,Code Fix Or Debug,1.59
+Colorado,Config Or Infra,1.44
+Florida,Config Or Infra,1.42
+Missouri,Config Or Infra,1.64
+Texas,Config Or Infra,1.39
+Puerto Rico,Config Or Infra,1.18
+Louisiana,Config Or Infra,1.46
+Massachusetts,Config Or Infra,1.14
+South Carolina,Config Or Infra,1.44
+North Dakota,Config Or Infra,1.01
+Rhode Island,Config Or Infra,0.96
+New Mexico,Creative Writing,2.03
+Idaho,Creative Writing,2.16
+Georgia,Creative Writing,1.93
+West Virginia,Creative Writing,3.68
+Utah,Creative Writing,1.61
+Puerto Rico,Creative Writing,1.79
+Massachusetts,Creative Writing,1.33
+Maryland,Creative Writing,2.0
+Connecticut,Data Or Spreadsheet,2.67
+Colorado,Data Or Spreadsheet,2.85
+California,Data Or Spreadsheet,2.71
+Florida,Data Or Spreadsheet,3.08
+Nevada,Data Or Spreadsheet,2.13
+Wisconsin,Data Or Spreadsheet,2.46
+Maryland,Data Or Spreadsheet,2.36
+New Hampshire,Data Or Spreadsheet,2.02
+Tennessee,Document Or Report,14.77
+Nevada,Document Or Report,14.65
+Alabama,Document Or Report,14.41
+West Virginia,Document Or Report,15.0
+Vermont,Document Or Report,16.8
+Puerto Rico,Document Or Report,17.4
+Indiana,Document Or Report,13.53
+Kentucky,Document Or Report,13.8
+Virginia,Document Or Report,14.35
+Maine,Educational Material,2.06
+Delaware,Educational Material,1.33
+Vermont,Educational Material,1.05
+Mississippi,Educational Material,2.55
+Pennsylvania,Educational Material,1.87
+South Dakota,Educational Material,0.51
+Indiana,Educational Material,2.14
+District of Columbia,App Or Website,2.32
+Oregon,App Or Website,2.83
+Puerto Rico,App Or Website,3.88
+New Mexico,App Or Website,3.34
+Kentucky,App Or Website,3.66
+Alabama,App Or Website,4.13
+Indiana,App Or Website,3.05
+Illinois,App Or Website,3.15
+Maryland,App Or Website,3.29
+New Hampshire,App Or Website,3.47
+Wisconsin,App Or Website,2.94
+Kentucky,Audio Or Music,0.07
+Washington,Audio Or Music,0.02
+Iowa,Audio Or Music,0.0
+Montana,Audio Or Music,0.0
+Idaho,Audio Or Music,0.06
+Oklahoma,Blog Or Article,0.48
+Minnesota,Blog Or Article,0.49
+Rhode Island,Blog Or Article,0.54
+North Dakota,Blog Or Article,0.14
+Tennessee,Blog Or Article,0.43
+Louisiana,Blog Or Article,0.49
+Illinois,Blog Or Article,0.44
+Delaware,Blog Or Article,0.67
+Georgia,Blog Or Article,0.38
+South Dakota,Blog Or Article,0.76
+Washington,Blog Or Article,0.51
+Puerto Rico,Blog Or Article,0.3
+Maryland,Blog Or Article,0.37
+Missouri,Chart Or Visualization,1.32
+Nevada,Chart Or Visualization,1.61
+Arkansas,Chart Or Visualization,1.21
+North Dakota,Chart Or Visualization,2.02
+Georgia,Chart Or Visualization,1.61
+Tennessee,Chart Or Visualization,1.45
+South Dakota,Chart Or Visualization,1.52
+Oklahoma,Chart Or Visualization,1.36
+Montana,Chart Or Visualization,1.82
+South Carolina,Chart Or Visualization,1.5
+Vermont,Code Fix Or Debug,2.25
+Puerto Rico,Code Fix Or Debug,1.82
+West Virginia,Code Fix Or Debug,2.03
+District of Columbia,Code Fix Or Debug,1.73
+Georgia,Code Fix Or Debug,2.09
+Nebraska,Code Fix Or Debug,2.36
+Nevada,Code Fix Or Debug,2.49
+North Carolina,Code Fix Or Debug,2.03
+Massachusetts,Code Fix Or Debug,2.07
+New Hampshire,Code Fix Or Debug,2.23
+Pennsylvania,Code Fix Or Debug,2.34
+Connecticut,Code Fix Or Debug,2.19
+Kansas,Code Fix Or Debug,2.02
+District of Columbia,Config Or Infra,0.89
+Connecticut,Config Or Infra,1.05
+Kansas,Config Or Infra,1.14
+Nebraska,Config Or Infra,1.01
+Wisconsin,Config Or Infra,1.54
+Illinois,Config Or Infra,1.18
+Alaska,Config Or Infra,2.36
+Arkansas,Creative Writing,3.05
+Montana,Creative Writing,2.27
+New York,Creative Writing,1.46
+Kentucky,Creative Writing,2.86
+Indiana,Creative Writing,1.94
+Vermont,Creative Writing,1.43
+Oregon,Creative Writing,2.03
+Minnesota,Creative Writing,2.07
+Montana,Data Or Spreadsheet,3.37
+New York,Data Or Spreadsheet,2.87
+Massachusetts,Data Or Spreadsheet,2.73
+Oklahoma,Data Or Spreadsheet,2.56
+Alabama,Data Or Spreadsheet,2.66
+Missouri,Data Or Spreadsheet,2.52
+Virginia,Data Or Spreadsheet,2.61
+Illinois,Data Or Spreadsheet,2.67
+Indiana,Data Or Spreadsheet,2.46
+West Virginia,Data Or Spreadsheet,2.71
+South Carolina,Data Or Spreadsheet,2.81
+South Dakota,Document Or Report,15.28
+Alaska,Document Or Report,16.74
+Washington,Document Or Report,13.25
+Kansas,Document Or Report,13.02
+New Jersey,Document Or Report,13.66
+Idaho,Document Or Report,15.99
+Rhode Island,Document Or Report,12.51
+Kentucky,Educational Material,1.4
+North Carolina,Educational Material,1.68
+Tennessee,Educational Material,1.24
+Nebraska,Educational Material,1.35
+Missouri,Educational Material,1.56
+Montana,Educational Material,1.17
+Texas,Educational Material,1.71
+Delaware,Config Or Infra,1.1
+Maine,Config Or Infra,1.13
+Oklahoma,Config Or Infra,1.74
+Utah,Config Or Infra,1.48
+California,Config Or Infra,1.13
+Hawaii,Config Or Infra,1.12
+Kentucky,Config Or Infra,1.95
+Alabama,Config Or Infra,1.81
+Montana,Config Or Infra,1.69
+Alaska,Creative Writing,2.13
+Washington,Creative Writing,1.57
+Illinois,Creative Writing,1.41
+District of Columbia,Creative Writing,1.46
+New Hampshire,Creative Writing,1.62
+Texas,Creative Writing,1.65
+Ohio,Creative Writing,2.46
+California,Creative Writing,1.42
+North Dakota,Creative Writing,2.45
+Connecticut,Creative Writing,1.49
+Wyoming,Creative Writing,2.87
+Delaware,Creative Writing,2.43
+Wisconsin,Creative Writing,2.17
+Washington,Data Or Spreadsheet,2.28
+North Carolina,Data Or Spreadsheet,2.78
+Rhode Island,Data Or Spreadsheet,2.5
+Wyoming,Data Or Spreadsheet,2.7
+Tennessee,Data Or Spreadsheet,2.9
+Louisiana,Data Or Spreadsheet,2.66
+Texas,Data Or Spreadsheet,3.03
+Idaho,Data Or Spreadsheet,3.22
+Nebraska,Data Or Spreadsheet,2.43
+Iowa,Data Or Spreadsheet,2.53
+New Mexico,Data Or Spreadsheet,2.24
+South Dakota,Data Or Spreadsheet,3.03
+Massachusetts,Document Or Report,13.08
+Louisiana,Document Or Report,14.12
+Ohio,Document Or Report,12.83
+Delaware,Document Or Report,12.99
+Colorado,Document Or Report,14.79
+Florida,Document Or Report,15.34
+Missouri,Document Or Report,13.62
+Wyoming,Document Or Report,15.35
+Utah,Educational Material,1.25
+Massachusetts,Educational Material,2.01
+Colorado,Educational Material,1.04
+Kansas,Educational Material,1.68
+Iowa,Educational Material,2.62
+New Jersey,Educational Material,1.98
+Wisconsin,Educational Material,1.78
+California,Educational Material,1.8
+Puerto Rico,Email Or Message,4.3
+Pennsylvania,Email Or Message,5.6
+Wyoming,Email Or Message,5.4
+Oregon,Email Or Message,5.36
+New Mexico,Email Or Message,4.72
+Florida,Email Or Message,6.31
+Iowa,Email Or Message,4.31
+California,Email Or Message,6.35
+Delaware,Email Or Message,5.26
+Colorado,Email Or Message,6.2
+Mississippi,Email Or Message,3.88
+New Jersey,Email Or Message,6.29
+New Jersey,Explanation Or Answer,17.19
+Rhode Island,Explanation Or Answer,18.56
+New Mexico,Explanation Or Answer,18.39
+Nebraska,Explanation Or Answer,18.57
+Puerto Rico,Explanation Or Answer,17.25
+Arkansas,Explanation Or Answer,16.32
+Illinois,Game Or Interactive,0.36
+Washington,Game Or Interactive,0.35
+Montana,Game Or Interactive,0.71
+New Jersey,Game Or Interactive,0.33
+District of Columbia,Game Or Interactive,0.37
+Utah,Game Or Interactive,0.36
+Maryland,Game Or Interactive,0.31
+Alabama,Game Or Interactive,0.59
+Vermont,Game Or Interactive,0.53
+West Virginia,Idea Or Brainstorm,1.26
+Utah,Idea Or Brainstorm,0.96
+Pennsylvania,Idea Or Brainstorm,0.82
+Tennessee,Idea Or Brainstorm,0.97
+Oregon,Idea Or Brainstorm,0.93
+Kentucky,Idea Or Brainstorm,1.02
+Kansas,Idea Or Brainstorm,0.69
+Puerto Rico,Idea Or Brainstorm,0.45
+Massachusetts,Idea Or Brainstorm,0.88
+Wisconsin,Image Or Graphic,0.72
+Nebraska,Image Or Graphic,0.61
+Maryland,Image Or Graphic,0.88
+Puerto Rico,Image Or Graphic,1.39
+Oregon,Image Or Graphic,0.69
+Oklahoma,Image Or Graphic,0.74
+New Jersey,Image Or Graphic,0.79
+Utah,Email Or Message,6.0
+Missouri,Email Or Message,5.18
+Kentucky,Email Or Message,4.62
+Wisconsin,Email Or Message,4.86
+Tennessee,Email Or Message,5.44
+Oklahoma,Email Or Message,4.38
+Massachusetts,Email Or Message,6.08
+South Carolina,Email Or Message,6.4
+Colorado,Explanation Or Answer,17.86
+Arizona,Explanation Or Answer,17.17
+Missouri,Explanation Or Answer,17.17
+Connecticut,Explanation Or Answer,18.25
+Utah,Explanation Or Answer,17.96
+West Virginia,Explanation Or Answer,18.3
+Mississippi,Explanation Or Answer,15.69
+Oklahoma,Explanation Or Answer,18.18
+Kentucky,Explanation Or Answer,17.46
+Georgia,Explanation Or Answer,16.97
+Alabama,Explanation Or Answer,18.01
+Hawaii,Explanation Or Answer,16.98
+Florida,Explanation Or Answer,15.81
+Hawaii,Game Or Interactive,0.25
+North Carolina,Game Or Interactive,0.44
+New York,Game Or Interactive,0.31
+Louisiana,Game Or Interactive,0.47
+Maine,Game Or Interactive,0.47
+North Dakota,Game Or Interactive,0.43
+New Jersey,Config Or Infra,1.19
+Ohio,Config Or Infra,1.28
+Pennsylvania,Config Or Infra,1.21
+Iowa,Config Or Infra,1.85
+Wyoming,Config Or Infra,1.35
+Michigan,Config Or Infra,1.33
+Arkansas,Config Or Infra,1.94
+New Hampshire,Config Or Infra,1.21
+Georgia,Config Or Infra,1.39
+New York,Config Or Infra,1.0
+Mississippi,Config Or Infra,1.58
+Mississippi,Creative Writing,3.22
+Colorado,Creative Writing,1.33
+Nebraska,Creative Writing,2.22
+Virginia,Creative Writing,1.91
+New Jersey,Creative Writing,1.37
+Hawaii,Creative Writing,2.28
+Tennessee,Creative Writing,2.15
+Iowa,Creative Writing,2.37
+Arizona,Data Or Spreadsheet,2.56
+Alaska,Data Or Spreadsheet,2.47
+North Dakota,Data Or Spreadsheet,3.03
+Maine,Data Or Spreadsheet,2.81
+District of Columbia,Data Or Spreadsheet,2.84
+Kentucky,Data Or Spreadsheet,2.45
+Ohio,Data Or Spreadsheet,2.7
+Hawaii,Data Or Spreadsheet,2.91
+Georgia,Data Or Spreadsheet,2.87
+Oklahoma,Document Or Report,13.77
+South Carolina,Document Or Report,15.15
+Arkansas,Document Or Report,14.66
+Nebraska,Document Or Report,13.38
+North Carolina,Document Or Report,14.04
+Hawaii,Document Or Report,15.64
+Arizona,Document Or Report,14.26
+New Hampshire,Document Or Report,14.67
+Virginia,Educational Material,1.86
+New Mexico,Educational Material,1.46
+North Dakota,Educational Material,1.3
+Rhode Island,Educational Material,2.35
+District of Columbia,Educational Material,2.08
+New York,Educational Material,1.99
+Pennsylvania,Game Or Interactive,0.47
+Rhode Island,Game Or Interactive,0.46
+Wisconsin,Game Or Interactive,0.45
+Connecticut,Game Or Interactive,0.33
+Nevada,Game Or Interactive,0.37
+New Mexico,Game Or Interactive,0.33
+California,Idea Or Brainstorm,0.83
+Michigan,Idea Or Brainstorm,0.98
+Alaska,Idea Or Brainstorm,1.12
+Arkansas,Idea Or Brainstorm,0.83
+Montana,Idea Or Brainstorm,1.3
+Ohio,Idea Or Brainstorm,0.94
+North Carolina,Idea Or Brainstorm,0.98
+Nebraska,Idea Or Brainstorm,1.01
+Delaware,Idea Or Brainstorm,0.9
+Wyoming,Image Or Graphic,1.18
+Massachusetts,Image Or Graphic,0.55
+Pennsylvania,Image Or Graphic,0.76
+Missouri,Image Or Graphic,0.7
+Iowa,Image Or Graphic,0.71
+South Dakota,Image Or Graphic,0.88
+Louisiana,Image Or Graphic,1.1
+South Carolina,Image Or Graphic,0.83
+New York,Image Or Graphic,0.67
+Utah,Marketing Or Social Content,2.59
+Maine,Marketing Or Social Content,1.83
+Oregon,Marketing Or Social Content,2.32
+North Carolina,Marketing Or Social Content,2.69
+Iowa,Marketing Or Social Content,2.33
+Indiana,Marketing Or Social Content,2.63
+Florida,Marketing Or Social Content,3.2
+Pennsylvania,Marketing Or Social Content,2.1
+Connecticut,Marketing Or Social Content,2.01
+Florida,Math Or Calculation,1.15
+Rhode Island,Math Or Calculation,2.31
+District of Columbia,Math Or Calculation,1.41
+Oklahoma,Math Or Calculation,1.43
+Kentucky,Math Or Calculation,1.36
+Colorado,Math Or Calculation,1.23
+Arizona,Math Or Calculation,1.33
+Kansas,Math Or Calculation,1.32
+Wisconsin,Ml Or Ai System,0.24
+Arizona,Ml Or Ai System,0.41
+Pennsylvania,Ml Or Ai System,0.24
+Massachusetts,Ml Or Ai System,0.25
+New York,Ml Or Ai System,0.25
+Nebraska,Ml Or Ai System,0.2
+Michigan,Ml Or Ai System,0.31
+Mississippi,Ml Or Ai System,0.31
+Montana,Ml Or Ai System,0.39
+North Dakota,Ml Or Ai System,0.14
+District of Columbia,None,6.44
+Texas,None,6.75
+Idaho,None,6.48
+North Dakota,None,5.62
+New Jersey,None,6.78
+Virginia,None,6.62
+Colorado,Marketing Or Social Content,2.39
+Nevada,Marketing Or Social Content,2.96
+Washington,Marketing Or Social Content,1.69
+Massachusetts,Marketing Or Social Content,1.71
+Hawaii,Marketing Or Social Content,3.13
+New Hampshire,Marketing Or Social Content,2.53
+Alabama,Marketing Or Social Content,2.45
+Alaska,Marketing Or Social Content,2.02
+Maryland,Marketing Or Social Content,2.32
+Arkansas,Marketing Or Social Content,2.39
+Ohio,Math Or Calculation,1.33
+Vermont,Math Or Calculation,1.35
+West Virginia,Math Or Calculation,1.36
+Nevada,Math Or Calculation,1.19
+California,Math Or Calculation,1.67
+Iowa,Math Or Calculation,1.59
+South Dakota,Math Or Calculation,1.01
+Minnesota,Math Or Calculation,1.44
+Kansas,Email Or Message,5.2
+South Dakota,Email Or Message,5.18
+North Carolina,Email Or Message,5.73
+Idaho,Email Or Message,4.97
+District of Columbia,Email Or Message,6.63
+Hawaii,Email Or Message,6.69
+Texas,Email Or Message,5.83
+Ohio,Email Or Message,5.36
+Alabama,Email Or Message,4.82
+New Hampshire,Email Or Message,5.33
+Virginia,Email Or Message,5.56
+Michigan,Email Or Message,5.21
+Illinois,Email Or Message,5.71
+Idaho,Explanation Or Answer,16.68
+Kansas,Explanation Or Answer,20.0
+Michigan,Explanation Or Answer,18.75
+Louisiana,Explanation Or Answer,18.24
+Washington,Explanation Or Answer,20.04
+New York,Explanation Or Answer,18.12
+Wisconsin,Explanation Or Answer,20.35
+Georgia,Game Or Interactive,0.37
+Arkansas,Game Or Interactive,0.52
+Texas,Game Or Interactive,0.37
+Kentucky,Game Or Interactive,0.88
+Massachusetts,Game Or Interactive,0.37
+Idaho,Game Or Interactive,0.34
+Colorado,Game Or Interactive,0.27
+Alaska,Game Or Interactive,0.22
+Missouri,Game Or Interactive,0.58
+Georgia,Idea Or Brainstorm,0.76
+Alabama,Idea Or Brainstorm,0.92
+Louisiana,Idea Or Brainstorm,1.01
+Iowa,Idea Or Brainstorm,0.94
+Rhode Island,Idea Or Brainstorm,0.89
+Washington,Idea Or Brainstorm,0.92
+Maryland,Idea Or Brainstorm,0.81
+Maine,Idea Or Brainstorm,1.08
+Texas,Idea Or Brainstorm,0.8
+New Jersey,Idea Or Brainstorm,0.69
+Illinois,Idea Or Brainstorm,0.86
+Alabama,Image Or Graphic,1.18
+New Mexico,Image Or Graphic,0.81
+Alaska,Image Or Graphic,1.01
+Tennessee,Image Or Graphic,0.73
+Colorado,Image Or Graphic,0.68
+Minnesota,Image Or Graphic,0.82
+Texas,Image Or Graphic,0.77
+West Virginia,Image Or Graphic,1.06
+Florida,Image Or Graphic,0.99
+Mississippi,Image Or Graphic,1.02
+Rhode Island,Image Or Graphic,0.5
+Virginia,Image Or Graphic,0.72
+Vermont,Image Or Graphic,0.15
+North Carolina,Image Or Graphic,0.8
+Ohio,None,6.82
+Oregon,Other,0.11
+New Hampshire,Other,0.0
+Texas,Other,0.13
+Arizona,Other,0.09
+New Jersey,Other,0.14
+Illinois,Ml Or Ai System,0.26
+Utah,Ml Or Ai System,0.32
+California,Ml Or Ai System,0.3
+Hawaii,Ml Or Ai System,0.25
+Oregon,Ml Or Ai System,0.22
+Alabama,Ml Or Ai System,0.26
+Alaska,Ml Or Ai System,0.22
+Washington,Ml Or Ai System,0.27
+Idaho,Ml Or Ai System,0.25
+North Carolina,Ml Or Ai System,0.29
+New Hampshire,None,6.37
+Hawaii,None,7.02
+Missouri,None,7.25
+Oklahoma,None,7.34
+Oregon,None,6.9
+Ohio,Other,0.16
+Mississippi,Other,0.2
+Nebraska,Other,0.17
+South Carolina,Other,0.14
+Alaska,Other,0.0
+Montana,Other,0.13
+Indiana,Other,0.12
+Illinois,Other,0.25
+New York,Other,0.19
+Colorado,Other,0.14
+Tennessee,Other,0.13
+Connecticut,Email Or Message,6.05
+New York,Email Or Message,6.72
+Washington,Email Or Message,5.36
+Nebraska,Email Or Message,4.89
+Minnesota,Email Or Message,5.69
+Vermont,Email Or Message,5.4
+Rhode Island,Email Or Message,5.43
+Alaska,Email Or Message,5.17
+Nevada,Email Or Message,5.29
+Maine,Email Or Message,5.3
+Alaska,Explanation Or Answer,19.33
+Illinois,Explanation Or Answer,18.62
+North Dakota,Explanation Or Answer,15.42
+Pennsylvania,Explanation Or Answer,18.75
+District of Columbia,Explanation Or Answer,16.63
+Ohio,Game Or Interactive,0.5
+Mississippi,Game Or Interactive,0.56
+California,Game Or Interactive,0.29
+Arizona,Game Or Interactive,0.32
+West Virginia,Game Or Interactive,0.58
+South Dakota,Game Or Interactive,0.88
+Oklahoma,Game Or Interactive,0.48
+Virginia,Game Or Interactive,0.37
+Indiana,Game Or Interactive,0.59
+Puerto Rico,Game Or Interactive,0.39
+Wyoming,Idea Or Brainstorm,1.01
+North Dakota,Idea Or Brainstorm,0.86
+Wisconsin,Idea Or Brainstorm,0.99
+Mississippi,Idea Or Brainstorm,1.12
+Vermont,Idea Or Brainstorm,0.38
+Idaho,Idea Or Brainstorm,0.69
+South Carolina,Idea Or Brainstorm,0.86
+Nevada,Idea Or Brainstorm,0.83
+Missouri,Idea Or Brainstorm,0.86
+Arizona,Idea Or Brainstorm,0.91
+Minnesota,Idea Or Brainstorm,1.04
+Arizona,Image Or Graphic,0.83
+Kansas,Image Or Graphic,0.78
+Delaware,Image Or Graphic,0.43
+North Dakota,Image Or Graphic,1.01
+Kentucky,Image Or Graphic,1.12
+Ohio,Marketing Or Social Content,2.32
+Texas,Marketing Or Social Content,2.4
+West Virginia,Marketing Or Social Content,2.13
+Missouri,Marketing Or Social Content,2.56
+Nebraska,Marketing Or Social Content,2.63
+Vermont,Marketing Or Social Content,1.58
+South Carolina,Marketing Or Social Content,2.93
+Montana,Marketing Or Social Content,2.92
+Virginia,Math Or Calculation,1.63
+Pennsylvania,Math Or Calculation,1.5
+Alabama,Math Or Calculation,1.07
+North Carolina,Math Or Calculation,1.34
+Mississippi,Math Or Calculation,1.74
+North Dakota,Math Or Calculation,1.44
+Michigan,Math Or Calculation,1.35
+Utah,Math Or Calculation,0.93
+Montana,Math Or Calculation,0.97
+Indiana,Ml Or Ai System,0.24
+Nevada,Ml Or Ai System,0.33
+Oklahoma,Ml Or Ai System,0.21
+Georgia,Ml Or Ai System,0.27
+Kentucky,Ml Or Ai System,0.24
+Rhode Island,Ml Or Ai System,0.19
+New Hampshire,Ml Or Ai System,0.27
+South Carolina,Ml Or Ai System,0.32
+Maine,Ml Or Ai System,0.23
+Texas,Ml Or Ai System,0.36
+Michigan,None,6.44
+West Virginia,None,7.74
+Colorado,None,7.22
+Illinois,None,7.07
+Connecticut,None,6.95
+New York,None,6.71
+Utah,None,7.49
+Wisconsin,None,6.73
+Maine,None,6.52
+Puerto Rico,None,6.52
+Pennsylvania,None,6.38
+Wyoming,None,7.25
+Alabama,None,6.74
+Florida,Other,0.13
+West Virginia,Other,0.1
+Washington,Other,0.24
+New Mexico,Other,0.16
+California,Other,0.14
+Vermont,Other,0.38
+Delaware,Other,0.12
+Connecticut,Other,0.17
+South Dakota,Marketing Or Social Content,3.41
+Rhode Island,Marketing Or Social Content,1.58
+Mississippi,Marketing Or Social Content,2.15
+Illinois,Marketing Or Social Content,2.11
+New York,Marketing Or Social Content,2.19
+Kentucky,Marketing Or Social Content,3.21
+Wyoming,Marketing Or Social Content,2.36
+Puerto Rico,Marketing Or Social Content,2.82
+Oklahoma,Marketing Or Social Content,2.3
+Virginia,Marketing Or Social Content,2.08
+Hawaii,Math Or Calculation,1.32
+Indiana,Math Or Calculation,1.72
+Illinois,Math Or Calculation,1.76
+South Carolina,Math Or Calculation,0.97
+New Jersey,Math Or Calculation,1.4
+Texas,Math Or Calculation,1.38
+New York,Math Or Calculation,1.53
+Wisconsin,Math Or Calculation,1.6
+Missouri,Ml Or Ai System,0.33
+Vermont,Ml Or Ai System,0.23
+Colorado,Ml Or Ai System,0.33
+West Virginia,Ml Or Ai System,0.39
+Puerto Rico,Ml Or Ai System,0.36
+South Dakota,Ml Or Ai System,0.0
+Connecticut,Ml Or Ai System,0.26
+New Mexico,Ml Or Ai System,0.33
+Washington,None,6.94
+Arizona,None,6.99
+Alaska,None,6.74
+Tennessee,None,7.36
+Rhode Island,None,6.24
+Iowa,None,6.42
+Massachusetts,None,6.54
+Montana,None,5.64
+Arkansas,None,6.93
+Georgia,None,6.84
+Kentucky,None,7.23
+Minnesota,None,7.2
+Iowa,Other,0.1
+Maine,Other,0.09
+South Dakota,Other,0.25
+Wisconsin,Other,0.16
+Kansas,Other,0.12
+Puerto Rico,Other,0.12
+District of Columbia,Other,0.15
+Pennsylvania,Other,0.15
+Nevada,Other,0.17
+Massachusetts,Other,0.15
+Arkansas,Email Or Message,4.82
+North Dakota,Email Or Message,5.48
+Indiana,Email Or Message,5.01
+Georgia,Email Or Message,6.12
+Louisiana,Email Or Message,5.9
+Maryland,Email Or Message,6.02
+Ohio,Explanation Or Answer,18.15
+Montana,Explanation Or Answer,16.6
+Maryland,Explanation Or Answer,17.68
+California,Explanation Or Answer,18.39
+Texas,Explanation Or Answer,17.14
+Delaware,Explanation Or Answer,20.67
+Oregon,Explanation Or Answer,19.81
+Massachusetts,Explanation Or Answer,18.83
+Vermont,Explanation Or Answer,17.18
+Minnesota,Explanation Or Answer,19.84
+Wyoming,Explanation Or Answer,17.2
+Virginia,Explanation Or Answer,17.45
+South Carolina,Game Or Interactive,0.41
+Nebraska,Game Or Interactive,0.57
+Michigan,Game Or Interactive,0.47
+Oregon,Game Or Interactive,0.39
+Wyoming,Game Or Interactive,0.17
+South Dakota,Idea Or Brainstorm,0.51
+New Mexico,Idea Or Brainstorm,0.73
+Connecticut,Idea Or Brainstorm,0.67
+Indiana,Idea Or Brainstorm,0.79
+Oklahoma,Idea Or Brainstorm,1.14
+Virginia,Idea Or Brainstorm,0.84
+New York,Idea Or Brainstorm,0.8
+California,Image Or Graphic,0.67
+District of Columbia,Image Or Graphic,0.62
+Nevada,Image Or Graphic,0.77
+Maine,Image Or Graphic,0.56
+Indiana,Image Or Graphic,0.89
+Hawaii,Image Or Graphic,0.58
+New Hampshire,Image Or Graphic,0.67
+Idaho,Marketing Or Social Content,3.47
+District of Columbia,Marketing Or Social Content,1.98
+New Mexico,Marketing Or Social Content,2.52
+New Jersey,Marketing Or Social Content,2.2
+Wisconsin,Marketing Or Social Content,2.14
+North Dakota,Marketing Or Social Content,2.31
+Michigan,Marketing Or Social Content,2.39
+Kansas,Marketing Or Social Content,2.17
+Tennessee,Marketing Or Social Content,2.85
+Minnesota,Marketing Or Social Content,2.2
+Louisiana,Marketing Or Social Content,2.14
+Nebraska,Math Or Calculation,1.62
+Maryland,Math Or Calculation,1.74
+Alaska,Math Or Calculation,0.79
+Oregon,Math Or Calculation,1.64
+Delaware,Math Or Calculation,1.49
+Tennessee,Math Or Calculation,1.35
+Massachusetts,Math Or Calculation,1.75
+Missouri,Math Or Calculation,1.44
+Maryland,Ml Or Ai System,0.25
+Louisiana,Ml Or Ai System,0.28
+Virginia,Ml Or Ai System,0.27
+Arkansas,Ml Or Ai System,0.31
+Tennessee,Ml Or Ai System,0.38
+South Carolina,None,6.94
+Maryland,None,6.32
+Nevada,None,7.08
+New Mexico,None,6.71
+Oklahoma,Other,0.12
+Arkansas,Other,0.17
+West Virginia,Email Or Message,3.0
+Arizona,Email Or Message,5.84
+Montana,Email Or Message,5.97
+South Carolina,Explanation Or Answer,16.31
+New Hampshire,Explanation Or Answer,18.31
+Iowa,Explanation Or Answer,19.51
+Tennessee,Explanation Or Answer,17.19
+South Dakota,Explanation Or Answer,17.68
+North Carolina,Explanation Or Answer,16.63
+Indiana,Explanation Or Answer,18.04
+Nevada,Explanation Or Answer,17.0
+Maine,Explanation Or Answer,18.57
+Delaware,Game Or Interactive,0.39
+Tennessee,Game Or Interactive,0.42
+New Hampshire,Game Or Interactive,0.34
+Iowa,Game Or Interactive,0.52
+Minnesota,Game Or Interactive,0.43
+Florida,Game Or Interactive,0.36
+Kansas,Game Or Interactive,0.36
+District of Columbia,Idea Or Brainstorm,0.7
+New Hampshire,Idea Or Brainstorm,0.74
+Colorado,Idea Or Brainstorm,0.88
+Florida,Idea Or Brainstorm,0.77
+Hawaii,Idea Or Brainstorm,0.52
+Connecticut,Image Or Graphic,0.78
+Georgia,Image Or Graphic,0.87
+Ohio,Image Or Graphic,0.92
+Illinois,Image Or Graphic,0.62
+Utah,Image Or Graphic,0.6
+Michigan,Image Or Graphic,0.74
+Idaho,Image Or Graphic,0.69
+Arkansas,Image Or Graphic,0.76
+Montana,Image Or Graphic,0.52
+Washington,Image Or Graphic,0.65
+Michigan,Other,0.15
+Utah,Other,0.15
+Wyoming,Other,0.17
+Colorado,Plan Or Strategy,4.38
+Utah,Plan Or Strategy,4.46
+Indiana,Plan Or Strategy,3.52
+South Dakota,Plan Or Strategy,3.66
+Puerto Rico,Plan Or Strategy,4.79
+Illinois,Plan Or Strategy,4.25
+Missouri,Plan Or Strategy,4.45
+Connecticut,Plan Or Strategy,4.34
+Arkansas,Presentation Or Slides,0.9
+Georgia,Presentation Or Slides,1.64
+Louisiana,Presentation Or Slides,1.08
+Delaware,Presentation Or Slides,1.1
+Alabama,Presentation Or Slides,0.93
+Maryland,Presentation Or Slides,1.61
+Texas,Presentation Or Slides,1.43
+New Mexico,Presentation Or Slides,1.42
+Kansas,Presentation Or Slides,1.05
+Pennsylvania,Presentation Or Slides,1.49
+New York,Presentation Or Slides,1.63
+New York,Recipe Or Meal Plan,0.87
+Idaho,Recipe Or Meal Plan,1.25
+Illinois,Recipe Or Meal Plan,0.94
+Pennsylvania,Recipe Or Meal Plan,0.97
+Missouri,Recipe Or Meal Plan,1.12
+Indiana,Recipe Or Meal Plan,0.79
+West Virginia,Recipe Or Meal Plan,0.77
+Arizona,Recipe Or Meal Plan,0.88
+Iowa,Recipe Or Meal Plan,1.0
+Massachusetts,Recipe Or Meal Plan,0.88
+Georgia,Recipe Or Meal Plan,0.89
+New Jersey,Resume Or Job Application,2.43
+West Virginia,Resume Or Job Application,1.65
+New Mexico,Resume Or Job Application,1.14
+Hawaii,Resume Or Job Application,1.02
+Connecticut,Resume Or Job Application,1.89
+Puerto Rico,Resume Or Job Application,0.73
+Connecticut,Script Or Snippet,2.04
+Iowa,Script Or Snippet,1.88
+Alabama,Script Or Snippet,2.18
+Maryland,Script Or Snippet,2.43
+Wyoming,Script Or Snippet,2.36
+Vermont,Script Or Snippet,2.7
+New Hampshire,Script Or Snippet,2.33
+Louisiana,Script Or Snippet,2.64
+Kentucky,Plan Or Strategy,4.71
+Washington,Plan Or Strategy,4.29
+Delaware,Plan Or Strategy,4.16
+Michigan,Plan Or Strategy,4.36
+North Dakota,Plan Or Strategy,4.9
+Maryland,Plan Or Strategy,4.27
+Alabama,Plan Or Strategy,3.85
+Missouri,Presentation Or Slides,1.35
+Alaska,Presentation Or Slides,0.79
+Hawaii,Presentation Or Slides,1.1
+Maine,Presentation Or Slides,1.22
+New Jersey,Presentation Or Slides,1.64
+Illinois,Presentation Or Slides,1.54
+Nebraska,Presentation Or Slides,1.31
+Ohio,Presentation Or Slides,1.34
+Nevada,Presentation Or Slides,1.2
+Arizona,Presentation Or Slides,1.19
+Delaware,Recipe Or Meal Plan,0.78
+Hawaii,Recipe Or Meal Plan,0.66
+Tennessee,Recipe Or Meal Plan,1.03
+Virginia,Recipe Or Meal Plan,0.89
+North Dakota,Recipe Or Meal Plan,1.73
+Michigan,Recipe Or Meal Plan,0.78
+Washington,Recipe Or Meal Plan,1.16
+District of Columbia,Recipe Or Meal Plan,0.91
+Alabama,Recipe Or Meal Plan,0.83
+Rhode Island,Recipe Or Meal Plan,0.65
+Kentucky,Recipe Or Meal Plan,0.95
+Iowa,Resume Or Job Application,1.46
+Michigan,Resume Or Job Application,1.85
+Montana,Resume Or Job Application,1.04
+Arkansas,Resume Or Job Application,1.77
+Texas,Resume Or Job Application,2.37
+Utah,Resume Or Job Application,1.21
+Missouri,Resume Or Job Application,2.15
+California,Resume Or Job Application,1.85
+North Dakota,Resume Or Job Application,2.02
+Minnesota,Resume Or Job Application,1.83
+Indiana,Script Or Snippet,2.1
+Pennsylvania,Script Or Snippet,2.16
+California,Script Or Snippet,2.24
+West Virginia,Script Or Snippet,3.58
+Michigan,Script Or Snippet,2.47
+Delaware,Script Or Snippet,2.08
+Wisconsin,Script Or Snippet,2.34
+Arkansas,Script Or Snippet,1.94
+New Jersey,Script Or Snippet,2.11
+Montana,Script Or Snippet,2.33
+California,Marketing Or Social Content,2.21
+Georgia,Marketing Or Social Content,2.63
+Arizona,Marketing Or Social Content,3.04
+Delaware,Marketing Or Social Content,2.12
+Connecticut,Math Or Calculation,1.37
+Wyoming,Math Or Calculation,0.84
+Idaho,Math Or Calculation,1.35
+Georgia,Math Or Calculation,1.24
+Maine,Math Or Calculation,1.59
+New Hampshire,Math Or Calculation,1.62
+New Mexico,Math Or Calculation,1.51
+Puerto Rico,Math Or Calculation,1.88
+Louisiana,Math Or Calculation,1.23
+Washington,Math Or Calculation,1.53
+Arkansas,Math Or Calculation,1.04
+Iowa,Ml Or Ai System,0.19
+Minnesota,Ml Or Ai System,0.28
+New Jersey,Ml Or Ai System,0.32
+Florida,Ml Or Ai System,0.35
+Ohio,Ml Or Ai System,0.21
+Wyoming,Ml Or Ai System,0.17
+District of Columbia,Ml Or Ai System,0.24
+Delaware,Ml Or Ai System,0.24
+Kansas,Ml Or Ai System,0.33
+Indiana,None,10.41
+California,None,6.76
+Louisiana,None,7.06
+Delaware,None,6.51
+Vermont,None,6.83
+Mississippi,None,7.61
+Kansas,None,6.98
+Nebraska,None,6.91
+Florida,None,7.18
+South Dakota,None,8.96
+North Carolina,None,6.8
+North Dakota,Other,0.43
+Virginia,Other,0.19
+Rhode Island,Other,0.31
+Idaho,Other,0.09
+Minnesota,Other,0.12
+North Carolina,Other,0.18
+Georgia,Other,0.16
+Hawaii,Other,0.14
+Kentucky,Other,0.21
+Louisiana,Other,0.19
+Maryland,Other,0.09
+Alabama,Other,0.1
+Missouri,Other,0.17
+Wisconsin,Plan Or Strategy,4.24
+Montana,Plan Or Strategy,3.89
+Minnesota,Plan Or Strategy,4.28
+New Jersey,Plan Or Strategy,4.54
+Rhode Island,Plan Or Strategy,4.51
+Iowa,Presentation Or Slides,1.49
+Kentucky,Presentation Or Slides,1.09
+Wyoming,Presentation Or Slides,0.84
+Rhode Island,Presentation Or Slides,1.58
+West Virginia,Presentation Or Slides,1.65
+Massachusetts,Presentation Or Slides,1.59
+Florida,Presentation Or Slides,1.3
+Maine,Recipe Or Meal Plan,0.98
+Texas,Recipe Or Meal Plan,0.88
+Minnesota,Recipe Or Meal Plan,1.1
+Alaska,Recipe Or Meal Plan,0.9
+Nevada,Recipe Or Meal Plan,0.83
+Connecticut,Recipe Or Meal Plan,0.77
+Oklahoma,Recipe Or Meal Plan,1.2
+New Jersey,Recipe Or Meal Plan,0.74
+Oregon,Recipe Or Meal Plan,1.11
+Maryland,Resume Or Job Application,2.52
+Delaware,Resume Or Job Application,1.41
+Florida,Resume Or Job Application,1.71
+Wyoming,Resume Or Job Application,1.18
+Washington,Resume Or Job Application,2.04
+South Dakota,Resume Or Job Application,1.77
+Pennsylvania,Resume Or Job Application,1.95
+New York,Resume Or Job Application,2.15
+Tennessee,Resume Or Job Application,1.52
+Nebraska,Resume Or Job Application,1.35
+Nevada,Resume Or Job Application,1.3
+Tennessee,Script Or Snippet,2.09
+Puerto Rico,Script Or Snippet,1.7
+Mississippi,Script Or Snippet,2.35
+Virginia,Script Or Snippet,2.23
+Kansas,Script Or Snippet,2.26
+Colorado,Script Or Snippet,2.03
+Massachusetts,Script Or Snippet,2.31
+New York,Script Or Snippet,1.95
+Nebraska,Script Or Snippet,2.22
+Nevada,Plan Or Strategy,5.17
+Arizona,Plan Or Strategy,4.76
+Arkansas,Plan Or Strategy,4.99
+New Mexico,Plan Or Strategy,3.99
+North Carolina,Plan Or Strategy,4.56
+California,Plan Or Strategy,4.3
+Pennsylvania,Plan Or Strategy,4.57
+Louisiana,Plan Or Strategy,4.14
+Oklahoma,Plan Or Strategy,4.22
+Kansas,Plan Or Strategy,3.94
+Oregon,Presentation Or Slides,1.18
+Connecticut,Presentation Or Slides,1.64
+North Dakota,Presentation Or Slides,2.02
+Colorado,Presentation Or Slides,1.24
+South Carolina,Presentation Or Slides,1.21
+Wisconsin,Presentation Or Slides,1.49
+Puerto Rico,Presentation Or Slides,2.06
+North Carolina,Recipe Or Meal Plan,1.13
+South Dakota,Recipe Or Meal Plan,0.63
+Mississippi,Recipe Or Meal Plan,1.02
+Arkansas,Recipe Or Meal Plan,1.14
+Puerto Rico,Recipe Or Meal Plan,0.85
+Florida,Recipe Or Meal Plan,0.84
+Arizona,Resume Or Job Application,2.13
+New Hampshire,Resume Or Job Application,1.79
+Illinois,Resume Or Job Application,2.3
+Colorado,Resume Or Job Application,1.76
+Mississippi,Resume Or Job Application,1.48
+North Carolina,Script Or Snippet,2.03
+Idaho,Script Or Snippet,2.41
+Texas,Script Or Snippet,2.19
+District of Columbia,Script Or Snippet,1.93
+South Dakota,Script Or Snippet,4.42
+Maine,Script Or Snippet,2.06
+Hawaii,Script Or Snippet,2.03
+Iowa,Sql Or Database Query,0.52
+Rhode Island,Sql Or Database Query,0.12
+Michigan,Sql Or Database Query,0.26
+Washington,Sql Or Database Query,0.26
+South Carolina,Sql Or Database Query,0.23
+Texas,Sql Or Database Query,0.33
+Kansas,Sql Or Database Query,0.51
+New York,Sql Or Database Query,0.25
+Missouri,Translation,0.27
+Georgia,Translation,0.28
+Wyoming,Translation,0.51
+Louisiana,Translation,0.23
+Indiana,Translation,0.21
+Colorado,Translation,0.21
+Wisconsin,Ui Or Design Mockup,0.72
+North Dakota,Ui Or Design Mockup,0.86
+South Dakota,Ui Or Design Mockup,0.25
+Virginia,Ui Or Design Mockup,0.7
+Hawaii,Ui Or Design Mockup,0.66
+Mississippi,Ui Or Design Mockup,0.46
+Tennessee,Ui Or Design Mockup,0.7
+Utah,Video Or Animation,0.15
+Vermont,Video Or Animation,0.08
+Kentucky,Video Or Animation,0.1
+South Dakota,Video Or Animation,0.0
+Florida,Video Or Animation,0.2
+Montana,Video Or Animation,0.39
+Louisiana,Video Or Animation,0.09
+Minnesota,Video Or Animation,0.12
+Missouri,Video Or Animation,0.16
+West Virginia,Video Or Animation,0.1
+North Carolina,Video Or Animation,0.2
+New Mexico,Sql Or Database Query,0.16
+Delaware,Sql Or Database Query,0.47
+District of Columbia,Sql Or Database Query,0.31
+South Dakota,Sql Or Database Query,0.51
+Florida,Translation,0.29
+Nevada,Translation,0.41
+South Carolina,Translation,0.12
+Puerto Rico,Translation,0.55
+Delaware,Translation,0.51
+Kansas,Translation,0.36
+Maine,Translation,0.23
+Mississippi,Translation,0.1
+Texas,Translation,0.3
+Wisconsin,Translation,0.17
+Alabama,Ui Or Design Mockup,0.85
+Puerto Rico,Ui Or Design Mockup,0.91
+Illinois,Ui Or Design Mockup,0.61
+Rhode Island,Ui Or Design Mockup,0.89
+Minnesota,Ui Or Design Mockup,0.63
+Montana,Ui Or Design Mockup,0.71
+Utah,Ui Or Design Mockup,0.57
+Ohio,Ui Or Design Mockup,0.75
+Arizona,Ui Or Design Mockup,0.79
+Delaware,Ui Or Design Mockup,0.67
+Texas,Video Or Animation,0.16
+New Hampshire,Video Or Animation,0.07
+New Mexico,Video Or Animation,0.04
+Oklahoma,Video Or Animation,0.08
+Wyoming,Video Or Animation,0.17
+Alaska,Video Or Animation,0.34
+Arizona,Video Or Animation,0.19
+Puerto Rico,Video Or Animation,0.24
+Texas,Plan Or Strategy,4.68
+District of Columbia,Plan Or Strategy,3.71
+West Virginia,Plan Or Strategy,4.16
+South Carolina,Plan Or Strategy,4.54
+Georgia,Plan Or Strategy,4.85
+Tennessee,Plan Or Strategy,4.16
+Maine,Plan Or Strategy,4.13
+New York,Plan Or Strategy,4.17
+Idaho,Plan Or Strategy,4.29
+Virginia,Plan Or Strategy,4.43
+Florida,Plan Or Strategy,4.83
+Oklahoma,Presentation Or Slides,0.77
+Indiana,Presentation Or Slides,1.24
+Michigan,Presentation Or Slides,1.08
+Mississippi,Presentation Or Slides,0.97
+District of Columbia,Presentation Or Slides,1.65
+Vermont,Presentation Or Slides,1.58
+Idaho,Presentation Or Slides,1.03
+Utah,Presentation Or Slides,1.17
+Wyoming,Recipe Or Meal Plan,1.01
+Kansas,Recipe Or Meal Plan,0.78
+Utah,Recipe Or Meal Plan,1.22
+South Carolina,Recipe Or Meal Plan,0.87
+Ohio,Recipe Or Meal Plan,1.01
+Oregon,Resume Or Job Application,1.5
+Kansas,Resume Or Job Application,2.2
+Louisiana,Resume Or Job Application,1.25
+Vermont,Resume Or Job Application,1.58
+Maine,Resume Or Job Application,1.59
+Indiana,Resume Or Job Application,1.91
+District of Columbia,Resume Or Job Application,3.11
+Kentucky,Script Or Snippet,2.28
+Oklahoma,Script Or Snippet,2.17
+Oregon,Script Or Snippet,2.21
+Illinois,Script Or Snippet,2.21
+Rhode Island,Script Or Snippet,2.7
+Minnesota,Script Or Snippet,2.11
+South Carolina,Script Or Snippet,2.03
+Missouri,Script Or Snippet,2.37
+Ohio,Script Or Snippet,2.26
+North Dakota,Script Or Snippet,4.03
+New Mexico,Script Or Snippet,2.24
+New Hampshire,Sql Or Database Query,0.37
+Nevada,Sql Or Database Query,0.46
+Maine,Sql Or Database Query,0.61
+North Dakota,Sql Or Database Query,0.14
+Alaska,Sql Or Database Query,0.34
+California,Sql Or Database Query,0.26
+Hawaii,Sql Or Database Query,0.14
+Arkansas,Sql Or Database Query,0.35
+Wisconsin,Sql Or Database Query,0.31
+Montana,Sql Or Database Query,0.39
+North Dakota,Translation,0.0
+Ohio,Translation,0.28
+Hawaii,Translation,0.27
+Nebraska,Translation,0.24
+Vermont,Translation,0.3
+Iowa,Translation,0.23
+Rhode Island,Translation,0.35
+Texas,Ui Or Design Mockup,0.69
+Louisiana,Ui Or Design Mockup,0.72
+Oregon,Ui Or Design Mockup,0.44
+Iowa,Ui Or Design Mockup,0.65
+Massachusetts,Ui Or Design Mockup,0.57
+Michigan,Ui Or Design Mockup,0.66
+Nebraska,Ui Or Design Mockup,0.57
+Maryland,Ui Or Design Mockup,0.65
+District of Columbia,Ui Or Design Mockup,0.52
+Connecticut,Ui Or Design Mockup,0.55
+West Virginia,Sql Or Database Query,0.19
+Missouri,Sql Or Database Query,0.32
+Illinois,Sql Or Database Query,0.26
+Connecticut,Sql Or Database Query,0.23
+Arizona,Sql Or Database Query,0.35
+North Carolina,Sql Or Database Query,0.23
+Maryland,Sql Or Database Query,0.2
+Arkansas,Translation,0.14
+Illinois,Translation,0.36
+Oregon,Translation,0.26
+New Hampshire,Translation,0.4
+West Virginia,Translation,0.1
+Massachusetts,Translation,0.29
+Michigan,Translation,0.28
+New York,Video Or Animation,0.14
+Nevada,Video Or Animation,0.24
+Connecticut,Video Or Animation,0.19
+Alabama,Video Or Animation,0.19
+Kansas,Ui Or Design Mockup,0.75
+Wyoming,Ui Or Design Mockup,0.84
+Idaho,Ui Or Design Mockup,0.78
+Pennsylvania,Ui Or Design Mockup,0.75
+Washington,Ui Or Design Mockup,0.58
+Florida,Ui Or Design Mockup,0.77
+Alaska,Ui Or Design Mockup,0.34
+California,Ui Or Design Mockup,0.65
+Colorado,Ui Or Design Mockup,0.62
+New Hampshire,Ui Or Design Mockup,0.67
+Nebraska,Video Or Animation,0.0
+Michigan,Video Or Animation,0.18
+Ohio,Video Or Animation,0.16
+Colorado,Video Or Animation,0.15
+Idaho,Video Or Animation,0.16
+Mississippi,Video Or Animation,0.0
+District of Columbia,Video Or Animation,0.18
+South Carolina,Video Or Animation,0.14
+Massachusetts,Video Or Animation,0.12
+Kansas,Video Or Animation,0.09
+Alaska,Plan Or Strategy,4.16
+Nebraska,Plan Or Strategy,4.58
+Wyoming,Plan Or Strategy,3.2
+Massachusetts,Plan Or Strategy,4.14
+Oregon,Plan Or Strategy,3.89
+Vermont,Plan Or Strategy,3.6
+Hawaii,Plan Or Strategy,4.69
+Ohio,Plan Or Strategy,4.51
+Iowa,Plan Or Strategy,3.79
+New Hampshire,Plan Or Strategy,4.35
+Mississippi,Plan Or Strategy,4.29
+Virginia,Presentation Or Slides,1.6
+Washington,Presentation Or Slides,1.29
+Montana,Presentation Or Slides,1.36
+South Dakota,Presentation Or Slides,0.76
+California,Presentation Or Slides,1.57
+North Carolina,Presentation Or Slides,1.33
+Minnesota,Presentation Or Slides,1.14
+Tennessee,Presentation Or Slides,1.24
+New Hampshire,Presentation Or Slides,1.15
+Wisconsin,Recipe Or Meal Plan,1.11
+New Hampshire,Recipe Or Meal Plan,0.88
+Louisiana,Recipe Or Meal Plan,0.76
+Montana,Recipe Or Meal Plan,0.97
+Colorado,Recipe Or Meal Plan,1.08
+New Mexico,Recipe Or Meal Plan,1.06
+Vermont,Recipe Or Meal Plan,0.9
+Maryland,Recipe Or Meal Plan,0.9
+California,Recipe Or Meal Plan,0.88
+Nebraska,Recipe Or Meal Plan,0.91
+Idaho,Resume Or Job Application,1.41
+Ohio,Resume Or Job Application,1.73
+Alaska,Resume Or Job Application,1.01
+Virginia,Resume Or Job Application,2.25
+Oklahoma,Resume Or Job Application,1.51
+Alabama,Resume Or Job Application,1.75
+Rhode Island,Resume Or Job Application,2.81
+South Carolina,Resume Or Job Application,1.58
+Georgia,Resume Or Job Application,2.22
+Massachusetts,Resume Or Job Application,2.4
+North Carolina,Resume Or Job Application,2.2
+Kentucky,Resume Or Job Application,1.21
+Wisconsin,Resume Or Job Application,1.41
+Florida,Script Or Snippet,2.16
+Washington,Script Or Snippet,2.29
+Georgia,Script Or Snippet,2.05
+Arizona,Script Or Snippet,2.15
+Alaska,Script Or Snippet,1.69
+Nevada,Script Or Snippet,2.25
+Utah,Script Or Snippet,2.24
+Colorado,Sql Or Database Query,0.3
+Virginia,Sql Or Database Query,0.3
+Kentucky,Sql Or Database Query,0.29
+Pennsylvania,Sql Or Database Query,0.27
+Indiana,Sql Or Database Query,0.31
+Minnesota,Sql Or Database Query,0.13
+Wyoming,Sql Or Database Query,0.34
+Ohio,Sql Or Database Query,0.36
+Alabama,Sql Or Database Query,0.31
+New Jersey,Sql Or Database Query,0.3
+Florida,Sql Or Database Query,0.29
+Massachusetts,Sql Or Database Query,0.2
+Virginia,Translation,0.34
+Washington,Translation,0.3
+North Carolina,Translation,0.21
+Minnesota,Translation,0.2
+Oklahoma,Translation,0.17
+Montana,Translation,0.06
+Alaska,Translation,0.45
+Tennessee,Translation,0.22
+District of Columbia,Translation,0.32
+New York,Translation,0.41
+Utah,Translation,0.22
+Idaho,Translation,0.16
+New Mexico,Ui Or Design Mockup,0.45
+New York,Ui Or Design Mockup,0.62
+Vermont,Ui Or Design Mockup,0.53
+Kentucky,Ui Or Design Mockup,0.59
+Oklahoma,Ui Or Design Mockup,0.68
+North Carolina,Ui Or Design Mockup,0.67
+Missouri,Ui Or Design Mockup,0.62
+South Carolina,Ui Or Design Mockup,0.72
+Wisconsin,Video Or Animation,0.11
+Delaware,Video Or Animation,0.12
+Tennessee,Video Or Animation,0.18
+Indiana,Video Or Animation,0.11
+Pennsylvania,Video Or Animation,0.13
+Hawaii,Video Or Animation,0.16
+Virginia,Video Or Animation,0.15
+Arkansas,Video Or Animation,0.21
+North Dakota,Video Or Animation,0.29
+Idaho,Sql Or Database Query,0.41
+Vermont,Sql Or Database Query,0.23
+Tennessee,Sql Or Database Query,0.35
+Oregon,Sql Or Database Query,0.17
+Mississippi,Sql Or Database Query,0.05
+Nebraska,Sql Or Database Query,0.44
+Louisiana,Sql Or Database Query,0.25
+Oklahoma,Sql Or Database Query,0.37
+Georgia,Sql Or Database Query,0.29
+Utah,Sql Or Database Query,0.4
+Puerto Rico,Sql Or Database Query,0.3
+Maryland,Translation,0.2
+California,Translation,0.39
+Arizona,Translation,0.26
+Kentucky,Translation,0.17
+Pennsylvania,Translation,0.32
+Alabama,Translation,0.19
+South Dakota,Translation,0.0
+New Jersey,Translation,0.37
+New Mexico,Translation,0.37
+Connecticut,Translation,0.27
+New Jersey,Ui Or Design Mockup,0.64
+Georgia,Ui Or Design Mockup,0.7
+Nevada,Ui Or Design Mockup,0.61
+Maine,Ui Or Design Mockup,0.47
+Arkansas,Ui Or Design Mockup,0.8
+Indiana,Ui Or Design Mockup,0.51
+West Virginia,Ui Or Design Mockup,0.29
+Illinois,Video Or Animation,0.12
+Georgia,Video Or Animation,0.18
+Iowa,Video Or Animation,0.13
+Maine,Video Or Animation,0.0
+California,Video Or Animation,0.16
+Washington,Video Or Animation,0.17
+New Jersey,Video Or Animation,0.12
+Maryland,Video Or Animation,0.15
+Oregon,Video Or Animation,0.13
+Rhode Island,Video Or Animation,0.12
+Mississippi,Marketing Or Social Content,2.42
+Arizona,Email Or Message,5.6
+Nevada,Sql Or Database Query,0.35
+Montana,Chart Or Visualization,1.86
+New York,Config Or Infra,1.08
+West Virginia,Other,0.0
+Utah,Other,0.12
+Illinois,Other,0.22
+Indiana,None,9.31
+Massachusetts,Code Fix Or Debug,2.52
+Kentucky,Data Or Spreadsheet,2.77
+South Carolina,Audio Or Music,0.02
+Arizona,Data Or Spreadsheet,2.71
+Ohio,Code Fix Or Debug,2.42
+Texas,Math Or Calculation,1.87
+Florida,Config Or Infra,1.57
+Kentucky,Ml Or Ai System,0.19
+Puerto Rico,Recipe Or Meal Plan,0.65
+Washington,Idea Or Brainstorm,1.05
+Arkansas,Plan Or Strategy,4.46
+New Hampshire,Explanation Or Answer,17.19
+Maryland,Marketing Or Social Content,1.98
+Colorado,Game Or Interactive,0.34
+South Dakota,Script Or Snippet,4.33
+Tennessee,Chart Or Visualization,1.65
+Arkansas,Sql Or Database Query,0.52
+Wyoming,Game Or Interactive,0.0
+Nevada,Document Or Report,13.32
+North Carolina,App Or Website,3.36
+Indiana,Ml Or Ai System,0.32
+North Dakota,Ml Or Ai System,0.0
+Michigan,Resume Or Job Application,1.91
+Mississippi,Math Or Calculation,1.62
+District of Columbia,Other,0.1
+Oklahoma,Game Or Interactive,0.5
+Tennessee,Idea Or Brainstorm,0.93
+North Dakota,Ui Or Design Mockup,0.54
+Alaska,Presentation Or Slides,0.72
+Connecticut,Presentation Or Slides,2.02
+Montana,Video Or Animation,0.08
+Alabama,Recipe Or Meal Plan,0.74
+New Mexico,Analysis Or Summary,6.69
+Maryland,Other,0.11
+New York,Audio Or Music,0.02
+Nevada,Blog Or Article,0.59
+Vermont,Resume Or Job Application,2.24
+Pennsylvania,Analysis Or Summary,6.14
+Alabama,Code Fix Or Debug,2.66
+North Dakota,Academic Paper Or Thesis,0.72
+Michigan,Chart Or Visualization,1.73
+West Virginia,Advice Or Recommendation,14.29
+Rhode Island,Presentation Or Slides,1.8
+Oregon,Explanation Or Answer,19.5
+Wyoming,Other,0.25
+Arkansas,Data Or Spreadsheet,2.77
+Montana,Blog Or Article,0.42
+Alaska,Translation,0.14
+Michigan,Image Or Graphic,0.64
+Utah,Blog Or Article,0.4
+Nevada,Presentation Or Slides,1.25
+Hawaii,None,9.0
+Missouri,Config Or Infra,1.91
+North Dakota,Blog Or Article,0.18
+Kansas,Script Or Snippet,3.26
+Tennessee,Blog Or Article,0.43
+Puerto Rico,Academic Paper Or Thesis,0.56
+Wyoming,Recipe Or Meal Plan,1.23
+Utah,Video Or Animation,0.13
+Iowa,Math Or Calculation,2.59
+Massachusetts,Data Or Spreadsheet,2.76
+Georgia,Ui Or Design Mockup,0.76
+Maryland,Email Or Message,5.55
+Nebraska,Analysis Or Summary,5.67
+Utah,Academic Paper Or Thesis,0.54
+Wyoming,Data Or Spreadsheet,2.45
+Rhode Island,Document Or Report,14.17
+Connecticut,Creative Writing,1.3
+Rhode Island,Recipe Or Meal Plan,0.6
+South Carolina,App Or Website,4.18
+Illinois,Ml Or Ai System,0.24
+Missouri,Marketing Or Social Content,2.25
+Maryland,Video Or Animation,0.17
+District of Columbia,Video Or Animation,0.15
+Nevada,Translation,0.32
+Virginia,Email Or Message,5.25
+Pennsylvania,Ml Or Ai System,0.33
+Mississippi,Data Or Spreadsheet,2.56
+Oregon,Resume Or Job Application,1.73
+Delaware,Plan Or Strategy,4.54
+Maine,Idea Or Brainstorm,1.11
+Minnesota,Email Or Message,5.11
+Kansas,None,7.11
+Wyoming,Sql Or Database Query,0.0
+Nebraska,Chart Or Visualization,1.63
+Hawaii,Explanation Or Answer,17.86
+Texas,Explanation Or Answer,17.43
+Florida,Translation,0.29
+Wyoming,Document Or Report,12.01
+Alaska,Plan Or Strategy,4.02
+Puerto Rico,Chart Or Visualization,2.33
+Colorado,Plan Or Strategy,4.39
+New York,Creative Writing,1.35
+Iowa,Educational Material,1.89
+New Hampshire,Email Or Message,5.7
+Hawaii,Academic Paper Or Thesis,0.82
+North Carolina,Idea Or Brainstorm,0.97
+New Hampshire,Ml Or Ai System,0.47
+Oregon,Chart Or Visualization,1.64
+Idaho,Recipe Or Meal Plan,0.77
+Virginia,Creative Writing,1.72
+Alaska,Marketing Or Social Content,2.16
+Tennessee,Ui Or Design Mockup,0.67
+West Virginia,Game Or Interactive,1.32
+New Mexico,Resume Or Job Application,1.49
+Pennsylvania,Video Or Animation,0.1
+South Carolina,Analysis Or Summary,5.96
+Maine,Script Or Snippet,2.61
+Tennessee,Analysis Or Summary,6.04
+South Dakota,Plan Or Strategy,3.29
+Delaware,None,7.12
+Minnesota,Explanation Or Answer,19.35
+Texas,Video Or Animation,0.11
+Illinois,Recipe Or Meal Plan,0.74
+Illinois,Academic Paper Or Thesis,0.78
+New York,Presentation Or Slides,1.98
+Colorado,Video Or Animation,0.1
+New Hampshire,Math Or Calculation,1.68
+Oregon,Idea Or Brainstorm,1.21
+Massachusetts,Plan Or Strategy,3.69
+Delaware,Image Or Graphic,0.78
+Pennsylvania,Creative Writing,1.76
+Virginia,Script Or Snippet,2.86
+Tennessee,Image Or Graphic,0.68
+Wyoming,Blog Or Article,0.74
+District of Columbia,Analysis Or Summary,7.77
+Idaho,None,9.81
+Pennsylvania,Image Or Graphic,0.66
+Illinois,Advice Or Recommendation,13.82
+Missouri,Idea Or Brainstorm,0.71
+Maine,Analysis Or Summary,6.86
+Delaware,Ui Or Design Mockup,0.45
+Texas,Email Or Message,5.58
+Tennessee,Data Or Spreadsheet,2.85
+Virginia,Educational Material,2.18
+Missouri,Ml Or Ai System,0.4
+Puerto Rico,Video Or Animation,0.09
+Virginia,Ml Or Ai System,0.32
+California,Explanation Or Answer,18.5
+Wisconsin,Advice Or Recommendation,14.17
+Wyoming,Image Or Graphic,0.98
+Illinois,Educational Material,1.86
+Florida,Sql Or Database Query,0.4
+California,None,7.57
+Arizona,Math Or Calculation,1.83
+Nevada,Plan Or Strategy,4.82
+Vermont,Code Fix Or Debug,2.63
+California,Ml Or Ai System,0.33
+New Jersey,App Or Website,3.37
+Massachusetts,Ui Or Design Mockup,0.55
+New Jersey,Translation,0.26
+Virginia,Ui Or Design Mockup,0.49
+District of Columbia,Creative Writing,1.2
+Hawaii,Script Or Snippet,2.55
+Utah,Marketing Or Social Content,2.77
+Illinois,Marketing Or Social Content,1.84
+Louisiana,App Or Website,3.87
+Rhode Island,Educational Material,2.54
+Delaware,Creative Writing,1.46
+New York,Educational Material,1.84
+Utah,Audio Or Music,0.05
+Louisiana,Video Or Animation,0.08
+Nevada,Code Fix Or Debug,2.85
+Washington,Marketing Or Social Content,1.8
+Alabama,Academic Paper Or Thesis,0.94
+Massachusetts,None,6.65
+Puerto Rico,Plan Or Strategy,3.93
+North Dakota,App Or Website,3.76
+Montana,Sql Or Database Query,0.17
+New Hampshire,Audio Or Music,0.0
+Hawaii,Analysis Or Summary,5.53
+Georgia,Resume Or Job Application,2.22
+Montana,Ui Or Design Mockup,0.51
+California,Game Or Interactive,0.28
+District of Columbia,App Or Website,2.29
+Minnesota,Academic Paper Or Thesis,0.62
+Colorado,Code Fix Or Debug,2.23
+California,Educational Material,1.67
+Wyoming,App Or Website,3.92
+Illinois,None,9.11
+Puerto Rico,Game Or Interactive,0.35
+South Dakota,Data Or Spreadsheet,3.63
+Washington,Creative Writing,1.68
+Michigan,Ml Or Ai System,0.3
+New York,Email Or Message,6.37
+Nevada,Script Or Snippet,3.08
+Minnesota,Creative Writing,2.09
+Wyoming,Resume Or Job Application,1.96
+Alabama,Sql Or Database Query,0.31
+Wyoming,Plan Or Strategy,5.15
+North Dakota,Recipe Or Meal Plan,0.9
+Colorado,Ui Or Design Mockup,0.63
+Puerto Rico,Translation,0.35
+Oregon,Document Or Report,13.41
+Ohio,Image Or Graphic,0.72
+South Carolina,Creative Writing,1.96
+New York,Image Or Graphic,0.55
+Rhode Island,Data Or Spreadsheet,2.58
+Georgia,Data Or Spreadsheet,2.66
+Kansas,Data Or Spreadsheet,2.25
+Delaware,Math Or Calculation,1.85
+Oklahoma,Translation,0.18
+Virginia,Resume Or Job Application,1.98
+South Dakota,Email Or Message,4.5
+Wisconsin,Game Or Interactive,0.58
+New Mexico,Chart Or Visualization,1.83
+Massachusetts,Ml Or Ai System,0.26
+Texas,Config Or Infra,1.51
+Mississippi,Idea Or Brainstorm,0.74
+Wyoming,Email Or Message,3.92
+West Virginia,Audio Or Music,0.0
+Connecticut,Idea Or Brainstorm,0.98
+Texas,Script Or Snippet,2.62
+Iowa,Recipe Or Meal Plan,0.86
+Massachusetts,Chart Or Visualization,2.02
+Montana,None,8.2
+South Carolina,Game Or Interactive,0.63
+Alaska,Math Or Calculation,2.16
+Maryland,Explanation Or Answer,17.84
+Georgia,Audio Or Music,0.05
+North Carolina,Blog Or Article,0.41
+New Mexico,Idea Or Brainstorm,0.86
+Maine,Email Or Message,5.88
+Idaho,Video Or Animation,0.2
+Oregon,Other,0.1
+Vermont,Data Or Spreadsheet,3.02
+Nevada,Other,0.18
+Kentucky,Config Or Infra,1.68
+Texas,Sql Or Database Query,0.36
+Alaska,Document Or Report,15.66
+Florida,Script Or Snippet,2.56
+District of Columbia,Plan Or Strategy,3.89
+District of Columbia,Script Or Snippet,2.73
+Ohio,Other,0.15
+New Jersey,None,7.41
+Connecticut,Ml Or Ai System,0.33
+Michigan,Data Or Spreadsheet,2.35
+Utah,Creative Writing,1.96
+Nevada,Creative Writing,2.05
+Pennsylvania,Script Or Snippet,2.78
+California,Academic Paper Or Thesis,0.74
+Virginia,Idea Or Brainstorm,0.88
+Pennsylvania,Translation,0.28
+Alaska,Ml Or Ai System,0.29
+Tennessee,Marketing Or Social Content,2.74
+Kansas,Code Fix Or Debug,2.84
+Arizona,Marketing Or Social Content,2.41
+Colorado,Blog Or Article,0.37
+Kansas,Audio Or Music,0.08
+Ohio,Ml Or Ai System,0.3
+Oregon,Advice Or Recommendation,14.05
+Texas,Translation,0.27
+Washington,Video Or Animation,0.1
+Illinois,Blog Or Article,0.46
+Nebraska,Ml Or Ai System,0.47
+Wyoming,Config Or Infra,2.45
+New York,Academic Paper Or Thesis,0.89
+South Dakota,Sql Or Database Query,0.52
+Nebraska,Image Or Graphic,0.73
+Idaho,Idea Or Brainstorm,1.05
+Montana,Marketing Or Social Content,1.69
+Kentucky,Resume Or Job Application,1.43
+North Carolina,Creative Writing,1.97
+Wisconsin,Document Or Report,12.34
+Kentucky,Other,0.22
+North Carolina,Image Or Graphic,0.71
+Idaho,Other,0.24
+Georgia,Game Or Interactive,0.37
+Arizona,Audio Or Music,0.05
+Mississippi,Image Or Graphic,0.67
+Colorado,Advice Or Recommendation,13.95
+Iowa,Advice Or Recommendation,12.42
+Oklahoma,Analysis Or Summary,5.37
+Massachusetts,Educational Material,1.88
+Kansas,Academic Paper Or Thesis,0.62
+Colorado,Presentation Or Slides,1.72
+South Carolina,Code Fix Or Debug,2.34
+Wyoming,Math Or Calculation,0.98
+South Carolina,Plan Or Strategy,3.74
+Rhode Island,Math Or Calculation,2.72
+Minnesota,Game Or Interactive,0.47
+Rhode Island,Marketing Or Social Content,2.08
+North Dakota,None,6.27
+Louisiana,Chart Or Visualization,1.52
+Wisconsin,Translation,0.31
+Vermont,Other,0.19
+Arkansas,Game Or Interactive,0.65
+Vermont,Audio Or Music,0.0
+South Dakota,Presentation Or Slides,1.04
+Alabama,Chart Or Visualization,1.79
+Arkansas,Ui Or Design Mockup,0.39
+Wisconsin,Data Or Spreadsheet,2.51
+New York,Math Or Calculation,1.67
+Massachusetts,Document Or Report,13.42
+Louisiana,Config Or Infra,1.33
+Hawaii,Presentation Or Slides,1.31
+Michigan,Recipe Or Meal Plan,0.73
+New York,Video Or Animation,0.16
+Arkansas,None,7.67
+Idaho,App Or Website,3.63
+Hawaii,Recipe Or Meal Plan,0.82
+South Dakota,Recipe Or Meal Plan,1.21
+North Dakota,Explanation Or Answer,16.49
+North Dakota,Translation,0.0
+Delaware,App Or Website,3.92
+District of Columbia,Explanation Or Answer,15.13
+Ohio,Ui Or Design Mockup,0.67
+South Carolina,Blog Or Article,0.5
+Texas,Blog Or Article,0.37
+Connecticut,Game Or Interactive,0.42
+New York,Resume Or Job Application,2.09
+Rhode Island,Ml Or Ai System,0.42
+Vermont,Explanation Or Answer,17.12
+California,Image Or Graphic,0.61
+Wisconsin,Email Or Message,5.21
+Arkansas,Academic Paper Or Thesis,0.65
+California,Audio Or Music,0.02
+South Carolina,Math Or Calculation,1.44
+Pennsylvania,Audio Or Music,0.0
+Montana,Creative Writing,1.86
+Mississippi,Ui Or Design Mockup,0.81
+Alaska,Audio Or Music,0.0
+Rhode Island,Analysis Or Summary,6.0
+Washington,Ml Or Ai System,0.24
+Illinois,Code Fix Or Debug,2.64
+Missouri,App Or Website,3.25
+Michigan,Other,0.12
+Connecticut,Sql Or Database Query,0.18
+District of Columbia,Math Or Calculation,1.53
+Colorado,App Or Website,2.98
+Washington,Document Or Report,12.99
+Ohio,Math Or Calculation,2.06
+Indiana,Academic Paper Or Thesis,1.23
+West Virginia,Script Or Snippet,3.04
+Arkansas,Analysis Or Summary,6.93
+Colorado,Chart Or Visualization,1.72
+Connecticut,Config Or Infra,1.27
+Louisiana,Script Or Snippet,2.87
+New Hampshire,Academic Paper Or Thesis,0.75
+Michigan,Blog Or Article,0.37
+South Carolina,Educational Material,2.05
+Oklahoma,Educational Material,2.18
+Utah,Sql Or Database Query,0.4
+South Dakota,Other,0.0
+Maine,Advice Or Recommendation,12.93
+Delaware,Idea Or Brainstorm,0.95
+Virginia,Video Or Animation,0.12
+Pennsylvania,Chart Or Visualization,1.82
+Mississippi,Creative Writing,3.36
+Virginia,Marketing Or Social Content,1.97
+Connecticut,Plan Or Strategy,3.89
+New Hampshire,Creative Writing,1.59
+Idaho,Document Or Report,15.79
+Puerto Rico,Ui Or Design Mockup,0.73
+Illinois,Math Or Calculation,2.07
+Michigan,Marketing Or Social Content,2.02
+Georgia,Image Or Graphic,0.7
+Virginia,Document Or Report,13.88
+New York,Translation,0.37
+Massachusetts,Sql Or Database Query,0.2
+Hawaii,Plan Or Strategy,4.82
+Wisconsin,Chart Or Visualization,1.93
+Louisiana,Code Fix Or Debug,2.71
+District of Columbia,Config Or Infra,1.16
+Georgia,Academic Paper Or Thesis,0.85
+Louisiana,Blog Or Article,0.54
+Wyoming,Creative Writing,2.45
+Montana,Ml Or Ai System,0.51
+Colorado,Marketing Or Social Content,2.35
+New Hampshire,Data Or Spreadsheet,2.52
+Nebraska,Script Or Snippet,3.05
+Mississippi,Academic Paper Or Thesis,0.67
+Missouri,Image Or Graphic,0.56
+New Hampshire,Script Or Snippet,2.57
+North Carolina,Data Or Spreadsheet,2.66
+Colorado,Other,0.15
+Kansas,Config Or Infra,1.63
+Tennessee,Translation,0.23
+Texas,Other,0.11
+Iowa,App Or Website,3.33
+New Mexico,Academic Paper Or Thesis,0.91
+Maine,Game Or Interactive,0.59
+Georgia,Ml Or Ai System,0.37
+Illinois,Config Or Infra,1.44
+Arizona,Blog Or Article,0.4
+Wisconsin,Academic Paper Or Thesis,0.84
+Arkansas,Email Or Message,4.37
+Florida,Audio Or Music,0.04
+Idaho,Marketing Or Social Content,3.19
+Alabama,App Or Website,3.64
+Colorado,None,7.9
+Texas,Resume Or Job Application,2.24
+Puerto Rico,Resume Or Job Application,1.08
+Ohio,None,7.44
+Kansas,Other,0.12
+Georgia,Explanation Or Answer,16.72
+Delaware,Presentation Or Slides,2.13
+Kentucky,Game Or Interactive,0.56
+Oklahoma,Document Or Report,14.47
+Oklahoma,Explanation Or Answer,18.36
+West Virginia,Marketing Or Social Content,2.12
+New Mexico,Plan Or Strategy,3.43
+Florida,Idea Or Brainstorm,0.79
+Wisconsin,Code Fix Or Debug,2.49
+Utah,Advice Or Recommendation,13.17
+West Virginia,Code Fix Or Debug,2.12
+California,Math Or Calculation,1.71
+Michigan,Analysis Or Summary,6.07
+North Dakota,Config Or Infra,2.33
+Indiana,Data Or Spreadsheet,2.35
+Arizona,Resume Or Job Application,1.88
+Washington,Chart Or Visualization,1.92
+Vermont,Document Or Report,14.3
+Maryland,Blog Or Article,0.33
+Delaware,Data Or Spreadsheet,2.58
+Ohio,Marketing Or Social Content,2.08
+Alaska,Script Or Snippet,2.73
+Virginia,Explanation Or Answer,17.74
+Maine,Sql Or Database Query,0.13
+Texas,Audio Or Music,0.03
+Arizona,Other,0.17
+Arkansas,Code Fix Or Debug,2.9
+Ohio,Advice Or Recommendation,13.63
+South Carolina,Translation,0.25
+Oklahoma,Plan Or Strategy,4.31
+New Mexico,Game Or Interactive,0.46
+Minnesota,Educational Material,1.82
+Idaho,Audio Or Music,0.08
+Wisconsin,Marketing Or Social Content,2.23
+Montana,Recipe Or Meal Plan,0.85
+Rhode Island,Game Or Interactive,0.55
+New Jersey,Explanation Or Answer,17.32
+District of Columbia,Resume Or Job Application,2.71
+New Jersey,Creative Writing,1.37
+Michigan,Creative Writing,2.01
+Nebraska,Game Or Interactive,0.39
+Vermont,Game Or Interactive,0.19
+Oregon,Academic Paper Or Thesis,0.52
+Minnesota,Recipe Or Meal Plan,1.02
+Utah,Analysis Or Summary,5.3
+Utah,Data Or Spreadsheet,2.8
+Indiana,Analysis Or Summary,5.15
+Nevada,Chart Or Visualization,1.96
+Ohio,Resume Or Job Application,1.44
+New York,Explanation Or Answer,17.91
+Montana,Translation,0.34
+Iowa,Chart Or Visualization,2.01
+Pennsylvania,None,7.09
+South Dakota,Math Or Calculation,2.42
+Missouri,Email Or Message,4.65
+Puerto Rico,Data Or Spreadsheet,3.07
+Puerto Rico,Code Fix Or Debug,2.03
+New Mexico,Other,0.06
+South Dakota,Advice Or Recommendation,10.21
+Missouri,Educational Material,1.79
+Maine,Audio Or Music,0.0
+New Jersey,Advice Or Recommendation,13.92
+North Dakota,Marketing Or Social Content,1.61
+Idaho,Analysis Or Summary,5.77
+Minnesota,Code Fix Or Debug,2.38
+Alabama,Marketing Or Social Content,2.21
+South Carolina,Image Or Graphic,0.75
+Rhode Island,Ui Or Design Mockup,0.46
+Virginia,Math Or Calculation,2.17
+Wisconsin,Recipe Or Meal Plan,0.69
+District of Columbia,Recipe Or Meal Plan,0.73
+New Hampshire,Document Or Report,14.76
+New Jersey,Ml Or Ai System,0.3
+Utah,Idea Or Brainstorm,0.83
+Vermont,Translation,0.19
+Delaware,Chart Or Visualization,1.51
+Virginia,Config Or Infra,1.46
+New Jersey,Audio Or Music,0.01
+California,Analysis Or Summary,6.42
+Utah,Script Or Snippet,2.58
+Kansas,Creative Writing,2.72
+Minnesota,Script Or Snippet,2.21
+Idaho,Data Or Spreadsheet,2.83
+Utah,None,7.99
+Pennsylvania,Ui Or Design Mockup,0.63
+Minnesota,Marketing Or Social Content,2.11
+Oklahoma,Code Fix Or Debug,2.08
+Vermont,Config Or Infra,2.14
+North Carolina,Academic Paper Or Thesis,0.86
+Tennessee,Math Or Calculation,1.62
+Wisconsin,Educational Material,2.12
+Kansas,Marketing Or Social Content,2.33
+Florida,Code Fix Or Debug,2.52
+North Carolina,Analysis Or Summary,5.61
+Washington,Config Or Infra,1.55
+North Carolina,Config Or Infra,1.45
+Illinois,Script Or Snippet,2.67
+Oregon,Code Fix Or Debug,2.4
+Kansas,Advice Or Recommendation,13.09
+North Carolina,Marketing Or Social Content,2.34
+North Dakota,Chart Or Visualization,2.51
+California,Plan Or Strategy,4.12
+Delaware,Config Or Infra,0.95
+Iowa,Analysis Or Summary,6.21
+North Carolina,None,7.2
+Montana,Advice Or Recommendation,12.51
+Kansas,Presentation Or Slides,1.44
+North Dakota,Analysis Or Summary,4.84
+Louisiana,Analysis Or Summary,5.58
+Massachusetts,Game Or Interactive,0.36
+Indiana,Game Or Interactive,0.52
+North Carolina,Code Fix Or Debug,2.34
+Montana,Academic Paper Or Thesis,0.42
+Iowa,Presentation Or Slides,1.77
+District of Columbia,Email Or Message,6.22
+Oregon,Translation,0.22
+Puerto Rico,Script Or Snippet,2.12
+Virginia,Game Or Interactive,0.38
+Missouri,Ui Or Design Mockup,0.68
+Missouri,Chart Or Visualization,1.68
+Kansas,App Or Website,3.03
+North Dakota,Audio Or Music,0.0
+Tennessee,Config Or Infra,1.32
+Arizona,None,7.29
+West Virginia,Academic Paper Or Thesis,1.32
+Mississippi,Translation,0.2
+Montana,Math Or Calculation,2.03
+Rhode Island,Explanation Or Answer,16.38
+Tennessee,Presentation Or Slides,1.61
+Oregon,Ml Or Ai System,0.29
+Arizona,Explanation Or Answer,17.21
+Indiana,Code Fix Or Debug,3.17
+Arkansas,Other,0.04
+Wisconsin,App Or Website,3.59
+Vermont,None,6.71
+Kansas,Math Or Calculation,1.86
+Texas,Presentation Or Slides,1.91
+Wyoming,Code Fix Or Debug,4.41
+California,Sql Or Database Query,0.3
+Maryland,Creative Writing,1.88
+Nebraska,None,7.35
+New York,Recipe Or Meal Plan,0.85
+Nebraska,Academic Paper Or Thesis,0.52
+Texas,Academic Paper Or Thesis,0.67
+South Carolina,Recipe Or Meal Plan,0.73
+Massachusetts,Script Or Snippet,3.13
+Missouri,Code Fix Or Debug,2.31
+Vermont,Presentation Or Slides,1.75
+Arizona,Script Or Snippet,2.83
+Tennessee,Recipe Or Meal Plan,0.69
+Maine,Data Or Spreadsheet,2.74
+Washington,Game Or Interactive,0.35
+Iowa,Config Or Infra,1.73
+South Dakota,Document Or Report,14.19
+Virginia,None,7.01
+Louisiana,Explanation Or Answer,16.93
+Hawaii,Audio Or Music,0.0
+Hawaii,Image Or Graphic,0.43
+Delaware,Sql Or Database Query,0.62
+Pennsylvania,Advice Or Recommendation,13.46
+Michigan,Ui Or Design Mockup,0.73
+North Carolina,Resume Or Job Application,2.08
+West Virginia,Ui Or Design Mockup,0.26
+Wyoming,Advice Or Recommendation,12.5
+Kentucky,Idea Or Brainstorm,1.06
+District of Columbia,Game Or Interactive,0.23
+New Hampshire,Blog Or Article,0.47
+New Jersey,Educational Material,1.97
+Colorado,Ml Or Ai System,0.3
+Virginia,Sql Or Database Query,0.31
+Pennsylvania,Math Or Calculation,2.18
+Washington,Presentation Or Slides,1.06
+Utah,Config Or Infra,1.61
+Delaware,Analysis Or Summary,5.33
+South Dakota,Academic Paper Or Thesis,0.69
+Nebraska,Translation,0.13
+Rhode Island,Email Or Message,5.12
+New Jersey,Idea Or Brainstorm,0.71
+Alabama,Explanation Or Answer,17.06
+Oregon,Script Or Snippet,2.56
+Delaware,Audio Or Music,0.0
+New Mexico,Advice Or Recommendation,12.75
+Oklahoma,Creative Writing,2.66
+Delaware,Marketing Or Social Content,2.19
+North Dakota,Email Or Message,1.97
+New Hampshire,Other,0.05
+South Dakota,Audio Or Music,0.0
+Texas,Chart Or Visualization,1.9
+South Dakota,Video Or Animation,0.0
+Florida,App Or Website,4.03
+Nevada,Idea Or Brainstorm,0.87
+Arkansas,Advice Or Recommendation,11.74
+New Jersey,Analysis Or Summary,6.33
+Vermont,Blog Or Article,0.97
+Hawaii,Sql Or Database Query,0.21
+Tennessee,Sql Or Database Query,0.3
+Texas,Code Fix Or Debug,2.56
+Florida,Analysis Or Summary,5.93
+Mississippi,Explanation Or Answer,15.48
+Utah,Ui Or Design Mockup,0.85
+Colorado,Creative Writing,1.36
+Utah,Explanation Or Answer,18.4
+Wyoming,Marketing Or Social Content,1.72
+North Dakota,Plan Or Strategy,3.23
+Colorado,Explanation Or Answer,17.26
+Puerto Rico,Sql Or Database Query,0.39
+Minnesota,Math Or Calculation,1.66
+Virginia,Academic Paper Or Thesis,1.12
+Washington,Email Or Message,5.05
+New Hampshire,Translation,0.33
+District of Columbia,Advice Or Recommendation,10.59
+Maine,App Or Website,3.4
+Idaho,Explanation Or Answer,16.88
+Pennsylvania,Sql Or Database Query,0.28
+West Virginia,Recipe Or Meal Plan,0.79
+New York,Chart Or Visualization,1.87
+Missouri,Video Or Animation,0.13
+Maine,Recipe Or Meal Plan,1.31
+New York,Blog Or Article,0.46
+Louisiana,Marketing Or Social Content,1.9
+New Hampshire,Code Fix Or Debug,2.52
+Massachusetts,Recipe Or Meal Plan,0.81
+Kentucky,Plan Or Strategy,3.86
+Arizona,Translation,0.23
+Oregon,Educational Material,1.45
+Maryland,App Or Website,2.87
+Iowa,Video Or Animation,0.08
+New York,Ui Or Design Mockup,0.67
+South Dakota,Image Or Graphic,0.17
+Indiana,Presentation Or Slides,2.2
+Wyoming,Video Or Animation,0.25
+Ohio,Academic Paper Or Thesis,0.84
+New Hampshire,Recipe Or Meal Plan,0.56
+Michigan,Academic Paper Or Thesis,0.84
+New Mexico,Math Or Calculation,1.72
+Nevada,None,8.17
+Mississippi,Analysis Or Summary,5.11
+Missouri,Script Or Snippet,2.91
+New Mexico,Explanation Or Answer,18.24
+Washington,Translation,0.26
+Florida,Math Or Calculation,1.53
+Indiana,Recipe Or Meal Plan,0.65
+Montana,Image Or Graphic,0.85
+Minnesota,Sql Or Database Query,0.32
+Maine,Explanation Or Answer,18.94
+West Virginia,Explanation Or Answer,16.93
+South Carolina,Document Or Report,16.15
+Nevada,Ml Or Ai System,0.52
+West Virginia,Math Or Calculation,1.46
+Montana,Game Or Interactive,0.51
+California,Other,0.15
+Alabama,Script Or Snippet,2.86
+Oregon,Config Or Infra,1.85
+Illinois,App Or Website,3.08
+Michigan,Code Fix Or Debug,2.63
+Idaho,Ml Or Ai System,0.32
+New Hampshire,None,7.24
+Puerto Rico,None,7.21
+Montana,Other,0.08
+Hawaii,App Or Website,3.08
+Georgia,Marketing Or Social Content,2.67
+Kentucky,Presentation Or Slides,1.28
+Missouri,Math Or Calculation,1.58
+Massachusetts,Idea Or Brainstorm,0.91
+Mississippi,None,6.26
+Illinois,Email Or Message,5.56
+Missouri,Academic Paper Or Thesis,0.82
+Maryland,Data Or Spreadsheet,2.39
+Nebraska,Blog Or Article,0.34
+Maryland,Code Fix Or Debug,2.33
+New York,Marketing Or Social Content,2.05
+Maine,Presentation Or Slides,1.24
+Arizona,Document Or Report,13.88
+Mississippi,Audio Or Music,0.07
+Tennessee,App Or Website,3.56
+Hawaii,Blog Or Article,0.32
+Louisiana,Audio Or Music,0.0
+District of Columbia,Translation,0.46
+New Hampshire,Plan Or Strategy,4.02
+Missouri,None,7.71
+North Carolina,Ui Or Design Mockup,0.8
+South Carolina,Ui Or Design Mockup,1.0
+Illinois,Analysis Or Summary,5.8
+South Carolina,Email Or Message,5.91
+Michigan,Educational Material,2.17
+Vermont,Ui Or Design Mockup,0.49
+Iowa,Explanation Or Answer,18.05
+Puerto Rico,Explanation Or Answer,14.81
+Pennsylvania,Config Or Infra,1.39
+Oregon,Ui Or Design Mockup,0.6
+Georgia,None,6.93
+Alabama,Ml Or Ai System,0.42
+New York,Idea Or Brainstorm,0.86
+New Hampshire,Marketing Or Social Content,2.48
+Washington,Resume Or Job Application,2.09
+Hawaii,Translation,0.5
+New Mexico,Blog Or Article,0.34
+Illinois,Ui Or Design Mockup,0.63
+Mississippi,Other,0.13
+Nebraska,Explanation Or Answer,17.83
+Alaska,Ui Or Design Mockup,0.57
+Louisiana,Game Or Interactive,0.51
+Indiana,Email Or Message,4.46
+Missouri,Data Or Spreadsheet,2.36
+Nevada,Recipe Or Meal Plan,0.69
+Georgia,Translation,0.32
+Maine,None,6.27
+Tennessee,Game Or Interactive,0.44
+Montana,Script Or Snippet,3.38
+Louisiana,Translation,0.14
+North Carolina,Educational Material,1.98
+New Hampshire,Video Or Animation,0.23
+Colorado,Document Or Report,15.35
+Ohio,Chart Or Visualization,1.59
+Nebraska,App Or Website,3.74
+Arizona,Advice Or Recommendation,13.11
+District of Columbia,Chart Or Visualization,1.98
+Alaska,Analysis Or Summary,6.75
+District of Columbia,Educational Material,2.06
+Montana,Explanation Or Answer,17.24
+Colorado,Sql Or Database Query,0.23
+Louisiana,Email Or Message,4.61
+Washington,Ui Or Design Mockup,0.64
+Hawaii,Math Or Calculation,1.59
+Colorado,Math Or Calculation,1.69
+Alaska,Chart Or Visualization,3.16
+Pennsylvania,Plan Or Strategy,3.55
+Indiana,Blog Or Article,0.38
+New Jersey,Presentation Or Slides,2.11
+Connecticut,None,7.45
+New York,Analysis Or Summary,6.19
+Tennessee,Document Or Report,14.94
+Kansas,Analysis Or Summary,6.33
+Montana,Educational Material,1.94
+New Mexico,Educational Material,1.72
+Rhode Island,Chart Or Visualization,2.22
+Puerto Rico,Creative Writing,1.94
+North Carolina,Email Or Message,5.44
+South Carolina,Data Or Spreadsheet,2.78
+Maine,Academic Paper Or Thesis,0.85
+Alaska,Academic Paper Or Thesis,0.29
+Rhode Island,None,6.65
+New Jersey,Video Or Animation,0.16
+New York,None,7.44
+Washington,Plan Or Strategy,4.0
+Washington,Educational Material,1.31
+Iowa,Translation,0.12
+Louisiana,Recipe Or Meal Plan,0.62
+Connecticut,Image Or Graphic,0.67
+Colorado,Email Or Message,5.91
+Arkansas,Explanation Or Answer,16.33
+Missouri,Translation,0.19
+Oregon,Presentation Or Slides,1.23
+Nevada,Data Or Spreadsheet,2.39
+Alaska,Educational Material,2.44
+Indiana,Advice Or Recommendation,11.54
+Louisiana,Math Or Calculation,1.52
+North Dakota,Video Or Animation,0.18
+Kentucky,Email Or Message,4.02
+Minnesota,App Or Website,2.98
+Louisiana,Presentation Or Slides,1.71
+Oregon,Email Or Message,5.01
+Illinois,Chart Or Visualization,1.83
+Utah,App Or Website,3.76
+Virginia,Image Or Graphic,0.67
+Kentucky,Marketing Or Social Content,2.21
+District of Columbia,Sql Or Database Query,0.21
+North Dakota,Presentation Or Slides,3.76
+Vermont,Ml Or Ai System,0.1
+South Carolina,Sql Or Database Query,0.44
+Kentucky,Blog Or Article,0.41
+Connecticut,Audio Or Music,0.04
+Puerto Rico,Educational Material,2.25
+Kansas,Game Or Interactive,0.66
+Louisiana,Ml Or Ai System,0.22
+Wisconsin,Audio Or Music,0.03
+Oklahoma,Presentation Or Slides,1.24
+Nevada,Image Or Graphic,0.71
+Mississippi,Presentation Or Slides,1.75
+Florida,None,8.14
+Nebraska,Math Or Calculation,1.59
+Mississippi,Code Fix Or Debug,3.84
+Iowa,Academic Paper Or Thesis,0.82
+Wyoming,Presentation Or Slides,2.94
+Nevada,Video Or Animation,0.19
+Texas,Idea Or Brainstorm,0.85
+Ohio,Document Or Report,13.19
+Colorado,Academic Paper Or Thesis,0.61
+Texas,Creative Writing,1.65
+Kansas,Ui Or Design Mockup,0.51
+Indiana,Creative Writing,1.88
+Connecticut,Educational Material,2.0
+New Mexico,Ml Or Ai System,0.34
+Michigan,Video Or Animation,0.15
+Oregon,Creative Writing,2.41
+Washington,Academic Paper Or Thesis,0.4
+Nebraska,Audio Or Music,0.04
+District of Columbia,Academic Paper Or Thesis,1.85
+Pennsylvania,Resume Or Job Application,1.89
+California,Translation,0.38
+North Dakota,Idea Or Brainstorm,1.43
+Massachusetts,Video Or Animation,0.12
+Kentucky,Code Fix Or Debug,2.59
+South Carolina,Video Or Animation,0.1
+Arkansas,Marketing Or Social Content,2.56
+District of Columbia,Ui Or Design Mockup,0.27
+Hawaii,Game Or Interactive,0.39
+Montana,Audio Or Music,0.0
+South Dakota,Blog Or Article,0.17
+Nebraska,Advice Or Recommendation,14.14
+Oklahoma,Resume Or Job Application,1.05
+Kentucky,Image Or Graphic,0.72
+Iowa,Blog Or Article,0.74
+Michigan,Advice Or Recommendation,13.33
+Utah,Plan Or Strategy,4.27
+Georgia,Chart Or Visualization,1.73
+West Virginia,Plan Or Strategy,4.1
+Idaho,Script Or Snippet,2.91
+Virginia,Audio Or Music,0.03
+Wisconsin,Analysis Or Summary,5.3
+Georgia,Code Fix Or Debug,2.69
+California,Chart Or Visualization,1.88
+District of Columbia,Data Or Spreadsheet,2.39
+Missouri,Other,0.15
+South Dakota,None,7.27
+Connecticut,Translation,0.2
+West Virginia,Analysis Or Summary,4.1
+Massachusetts,Resume Or Job Application,2.16
+Hawaii,Other,0.28
+Oregon,Image Or Graphic,0.6
+West Virginia,Translation,0.13
+Oklahoma,Image Or Graphic,0.71
+Nebraska,Resume Or Job Application,1.72
+District of Columbia,Code Fix Or Debug,1.81
+Oklahoma,Recipe Or Meal Plan,1.1
+Kansas,Plan Or Strategy,4.58
+Tennessee,Other,0.05
+Rhode Island,Code Fix Or Debug,3.92
+Vermont,Educational Material,1.46
+New Jersey,Plan Or Strategy,4.38
+Arizona,Presentation Or Slides,1.64
+Ohio,Config Or Infra,1.69
+Mississippi,Config Or Infra,1.68
+Kansas,Sql Or Database Query,0.39
+Kansas,Translation,0.58
+Idaho,Advice Or Recommendation,11.99
+Alabama,Video Or Animation,0.13
+Wyoming,Ui Or Design Mockup,0.49
+Alabama,Ui Or Design Mockup,0.63
+Connecticut,Document Or Report,13.61
+New Hampshire,Idea Or Brainstorm,1.03
+Georgia,Advice Or Recommendation,13.13
+Alaska,Other,0.0
+Minnesota,Ml Or Ai System,0.17
+Washington,App Or Website,2.84
+Alaska,Idea Or Brainstorm,0.57
+West Virginia,Blog Or Article,0.53
+Missouri,Resume Or Job Application,1.83
+Michigan,None,7.61
+Nevada,Analysis Or Summary,6.49
+Michigan,Audio Or Music,0.02
+Kansas,Document Or Report,12.43
+Massachusetts,Explanation Or Answer,18.23
+California,Config Or Infra,1.34
+Ohio,Translation,0.28
+Indiana,Explanation Or Answer,17.69
+Maine,Chart Or Visualization,1.5
+Florida,Resume Or Job Application,1.4
+North Dakota,Resume Or Job Application,1.25
+Alabama,Creative Writing,2.86
+Pennsylvania,Educational Material,2.3
+Michigan,Presentation Or Slides,1.83
+Arizona,Sql Or Database Query,0.33
+Hawaii,Ui Or Design Mockup,1.03
+Kentucky,None,6.98
+Kansas,Chart Or Visualization,1.71
+Florida,Ml Or Ai System,0.41
+North Carolina,Document Or Report,13.8
+New Hampshire,App Or Website,3.04
+North Dakota,Educational Material,3.05
+Minnesota,Plan Or Strategy,4.02
+Massachusetts,Blog Or Article,0.57
+Delaware,Game Or Interactive,0.45
+New Hampshire,Game Or Interactive,0.65
+Vermont,Idea Or Brainstorm,0.97
+New Mexico,Sql Or Database Query,0.4
+Maryland,Recipe Or Meal Plan,0.75
+Illinois,Idea Or Brainstorm,0.93
+Hawaii,Resume Or Job Application,0.74
+North Carolina,Advice Or Recommendation,13.7
+Minnesota,Idea Or Brainstorm,1.04
+Montana,Config Or Infra,1.52
+Delaware,Translation,0.17
+Arizona,Creative Writing,1.7
+Georgia,Config Or Infra,1.27
+Oregon,Marketing Or Social Content,2.18
+Kentucky,Academic Paper Or Thesis,0.84
+New Hampshire,Config Or Infra,1.63
+Nebraska,Email Or Message,4.56
+Ohio,Presentation Or Slides,1.87
+Minnesota,Presentation Or Slides,1.59
+Rhode Island,Resume Or Job Application,2.12
+Montana,App Or Website,2.37
+Minnesota,Document Or Report,12.92
+Vermont,Image Or Graphic,0.39
+Indiana,Chart Or Visualization,2.11
+South Carolina,Ml Or Ai System,0.29
+Puerto Rico,Document Or Report,17.27
+Wyoming,Chart Or Visualization,1.23
+Rhode Island,Academic Paper Or Thesis,1.52
+Washington,Sql Or Database Query,0.37
+Idaho,Academic Paper Or Thesis,0.4
+Louisiana,Resume Or Job Application,1.35
+Iowa,Other,0.12
+Missouri,Document Or Report,14.56
+Illinois,Audio Or Music,0.03
+Arkansas,Ml Or Ai System,0.09
+Rhode Island,Sql Or Database Query,0.32
+Illinois,Resume Or Job Application,2.07
+South Dakota,Ml Or Ai System,0.0
+Louisiana,Ui Or Design Mockup,0.65
+Montana,Email Or Message,6.0
+New York,Other,0.19
+Arizona,App Or Website,3.91
+Nebraska,Plan Or Strategy,4.04
+Pennsylvania,Other,0.11
+Wyoming,Audio Or Music,0.0
+South Carolina,Idea Or Brainstorm,0.69
+Arkansas,Image Or Graphic,0.56
+Nebraska,Other,0.04
+New Jersey,Config Or Infra,1.33
+Texas,Ml Or Ai System,0.39
+Kansas,Recipe Or Meal Plan,0.39
+Georgia,Document Or Report,13.96
+North Carolina,Game Or Interactive,0.38
+Florida,Ui Or Design Mockup,0.82
+Idaho,Math Or Calculation,1.82
+Illinois,Translation,0.35
+Nebraska,Marketing Or Social Content,2.19
+Texas,Marketing Or Social Content,2.23
+Texas,Image Or Graphic,0.73
+Rhode Island,Creative Writing,2.22
+Florida,Blog Or Article,0.43
+Mississippi,Plan Or Strategy,3.36
+Hawaii,Creative Writing,1.95
+Puerto Rico,Idea Or Brainstorm,0.73
+Kansas,Video Or Animation,0.19
+Nevada,Academic Paper Or Thesis,1.18
+Pennsylvania,Code Fix Or Debug,2.79
+Idaho,Plan Or Strategy,3.63
+New York,Code Fix Or Debug,2.02
+North Dakota,Document Or Report,14.7
+Texas,Analysis Or Summary,5.69
+Iowa,Creative Writing,2.22
+Virginia,Translation,0.28
+Ohio,Analysis Or Summary,5.47
+Mississippi,Script Or Snippet,2.96
+Montana,Document Or Report,15.3
+Hawaii,Advice Or Recommendation,14.1
+Illinois,Presentation Or Slides,1.77
+Arkansas,Resume Or Job Application,1.3
+West Virginia,Presentation Or Slides,1.72
+Nevada,Config Or Infra,1.87
+Ohio,Audio Or Music,0.04
+Puerto Rico,Other,0.13
+Mississippi,Sql Or Database Query,0.13
+Texas,None,7.29
+Kansas,Image Or Graphic,0.74
+Louisiana,Data Or Spreadsheet,2.57
+New Mexico,Creative Writing,2.17
+Washington,Blog Or Article,0.38
+Wisconsin,Image Or Graphic,0.52
+Iowa,Ui Or Design Mockup,0.66
+Missouri,Audio Or Music,0.03
+Kansas,Ml Or Ai System,0.12
+Colorado,Idea Or Brainstorm,0.82
+Vermont,App Or Website,1.95
+Iowa,Marketing Or Social Content,2.51
+Vermont,Chart Or Visualization,2.53
+District of Columbia,None,8.17
+Georgia,Blog Or Article,0.43
+Oregon,Plan Or Strategy,3.81
+Georgia,Presentation Or Slides,2.0
+Wisconsin,Ml Or Ai System,0.43
+New Jersey,Code Fix Or Debug,2.28
+Connecticut,Chart Or Visualization,1.86
+Indiana,Other,0.09
+Alabama,Email Or Message,4.24
+Idaho,Email Or Message,5.21
+Minnesota,Resume Or Job Application,1.56
+North Carolina,Recipe Or Meal Plan,0.79
+South Carolina,Resume Or Job Application,1.38
+Connecticut,Advice Or Recommendation,13.3
+North Carolina,Presentation Or Slides,1.84
+New Mexico,Email Or Message,5.09
+Massachusetts,Other,0.11
+West Virginia,Document Or Report,14.29
+Missouri,Blog Or Article,0.42
+California,Resume Or Job Application,1.9
+Kentucky,Advice Or Recommendation,13.59
+Arizona,Analysis Or Summary,5.74
+South Dakota,Chart Or Visualization,2.42
+Maine,Math Or Calculation,2.42
+Arizona,Video Or Animation,0.26
+Idaho,Blog Or Article,0.48
+Michigan,Explanation Or Answer,18.31
+Iowa,Data Or Spreadsheet,2.8
+South Dakota,Idea Or Brainstorm,0.87
+Arizona,Chart Or Visualization,1.66
+Massachusetts,Creative Writing,1.34
+Oklahoma,Config Or Infra,1.74
+Arkansas,Audio Or Music,0.0
+Connecticut,Academic Paper Or Thesis,1.16
+Texas,App Or Website,3.63
+Washington,Analysis Or Summary,5.75
+California,Ui Or Design Mockup,0.69
+New Hampshire,Analysis Or Summary,6.73
+Connecticut,Ui Or Design Mockup,0.6
+North Carolina,Sql Or Database Query,0.31
+Ohio,Creative Writing,2.02
+Nevada,Explanation Or Answer,16.97
+Wisconsin,Config Or Infra,1.65
+North Dakota,Math Or Calculation,2.15
+Oregon,Analysis Or Summary,6.47
+Michigan,Email Or Message,4.73
+Hawaii,Email Or Message,5.67
+North Dakota,Script Or Snippet,4.66
+Pennsylvania,Document Or Report,13.29
+Kansas,Blog Or Article,0.51
+Oklahoma,Other,0.08
+Georgia,Recipe Or Meal Plan,0.64
+Oklahoma,Sql Or Database Query,0.47
+Virginia,Code Fix Or Debug,2.79
+Minnesota,Config Or Infra,1.66
+Arizona,Ui Or Design Mockup,0.76
+Alaska,Recipe Or Meal Plan,0.86
+Pennsylvania,Marketing Or Social Content,1.95
+Texas,Ui Or Design Mockup,0.72
+New Jersey,Sql Or Database Query,0.36
+Oregon,Sql Or Database Query,0.41
+Tennessee,Ml Or Ai System,0.37
+Ohio,Data Or Spreadsheet,2.72
+Missouri,Analysis Or Summary,6.05
+New Jersey,Data Or Spreadsheet,2.97
+Colorado,Translation,0.25
+Nebraska,Educational Material,1.85
+New Mexico,None,7.38
+Tennessee,Video Or Animation,0.13
+Illinois,Game Or Interactive,0.37
+Missouri,Plan Or Strategy,3.65
+New Jersey,Chart Or Visualization,2.05
+South Carolina,Academic Paper Or Thesis,1.09
+Missouri,Presentation Or Slides,1.59
+Ohio,Plan Or Strategy,3.88
+North Carolina,Video Or Animation,0.15
+Wyoming,Idea Or Brainstorm,0.49
+Michigan,Config Or Infra,1.32
+Colorado,Data Or Spreadsheet,2.91
+Mississippi,Educational Material,4.44
+Massachusetts,Analysis Or Summary,6.47
+Florida,Game Or Interactive,0.37
+Pennsylvania,Blog Or Article,0.41
+Arkansas,Config Or Infra,1.56
+Hawaii,Data Or Spreadsheet,2.34
+South Carolina,Chart Or Visualization,1.65
+Washington,Explanation Or Answer,20.09
+Iowa,Idea Or Brainstorm,0.9
+Wisconsin,Math Or Calculation,2.06
+Nebraska,Data Or Spreadsheet,2.28
+Mississippi,App Or Website,4.37
+Arkansas,Document Or Report,15.85
+Alabama,Blog Or Article,0.58
+Oklahoma,Script Or Snippet,3.05
+New Mexico,Translation,0.23
+Maine,Marketing Or Social Content,2.35
+Iowa,Document Or Report,13.24
+Alaska,App Or Website,3.3
+Minnesota,Other,0.1
+Georgia,App Or Website,3.81
+South Carolina,Marketing Or Social Content,2.8
+New Hampshire,Image Or Graphic,0.84
+West Virginia,Video Or Animation,0.4
+Hawaii,Video Or Animation,0.11
+Delaware,Other,0.17
+Florida,Chart Or Visualization,1.59
+Alabama,Idea Or Brainstorm,1.07
+Georgia,Educational Material,1.92
+Virginia,Other,0.16
+New Hampshire,Advice Or Recommendation,13.4
+Massachusetts,Presentation Or Slides,2.45
+Delaware,Script Or Snippet,2.69
+New Hampshire,Ui Or Design Mockup,0.37
+Arkansas,Script Or Snippet,2.6
+Tennessee,Academic Paper Or Thesis,0.64
+New Mexico,Document Or Report,14.75
+Connecticut,App Or Website,3.0
+Puerto Rico,Blog Or Article,0.35
+Iowa,None,7.36
+Michigan,Document Or Report,13.8
+Alaska,Sql Or Database Query,0.14
+Texas,Data Or Spreadsheet,2.77
+Delaware,Email Or Message,4.88
+Tennessee,None,8.16
+Illinois,Sql Or Database Query,0.36
+Ohio,Sql Or Database Query,0.36
+Utah,Chart Or Visualization,1.88
+Idaho,Creative Writing,0.97
+New York,Script Or Snippet,2.39
+South Dakota,Game Or Interactive,0.69
+Florida,Presentation Or Slides,1.53
+Tennessee,Explanation Or Answer,16.51
+Oklahoma,Advice Or Recommendation,13.81
+Michigan,Translation,0.23
+Kansas,Email Or Message,4.7
+Arizona,Image Or Graphic,0.78
+Maine,Blog Or Article,0.26
+Nebraska,Document Or Report,14.31
+Wisconsin,Other,0.06
+Idaho,Chart Or Visualization,1.82
+New Hampshire,Educational Material,1.91
+Florida,Creative Writing,1.6
+Wisconsin,Ui Or Design Mockup,0.57
+Pennsylvania,App Or Website,3.26
+Oklahoma,Marketing Or Social Content,2.32
+Hawaii,Config Or Infra,1.52
+Oregon,Blog Or Article,0.46
+North Dakota,Sql Or Database Query,0.72
+Arkansas,Creative Writing,2.6
+Indiana,Sql Or Database Query,0.42
+Delaware,Recipe Or Meal Plan,0.5
+Oregon,Data Or Spreadsheet,2.49
+Indiana,Ui Or Design Mockup,0.72
+Ohio,Blog Or Article,0.4
+Oklahoma,Ml Or Ai System,0.39
+Alaska,Config Or Infra,0.86
+Maryland,Plan Or Strategy,3.78
+Tennessee,Resume Or Job Application,1.34
+Iowa,Resume Or Job Application,1.23
+Maryland,Document Or Report,14.3
+Virginia,Advice Or Recommendation,13.05
+Rhode Island,Video Or Animation,0.18
+Utah,Educational Material,2.2
+Georgia,Analysis Or Summary,5.49
+Alabama,Other,0.07
+New Jersey,Resume Or Job Application,2.34
+California,Advice Or Recommendation,13.95
+Minnesota,Translation,0.19
+Florida,Academic Paper Or Thesis,0.6
+Michigan,Script Or Snippet,2.89
+Idaho,Config Or Infra,1.33
+Tennessee,Audio Or Music,0.01
+California,Creative Writing,1.43
+Colorado,Educational Material,1.27
+District of Columbia,Idea Or Brainstorm,1.11
+New Hampshire,Sql Or Database Query,0.14
+Massachusetts,Audio Or Music,0.03
+South Dakota,Marketing Or Social Content,3.11
+Alabama,Educational Material,2.52
+Louisiana,Plan Or Strategy,4.09
+Maryland,Audio Or Music,0.03
+North Carolina,Chart Or Visualization,1.73
+Florida,Document Or Report,14.89
+Alaska,Blog Or Article,0.29
+Florida,Advice Or Recommendation,12.88
+Arizona,Config Or Infra,1.7
+Georgia,Email Or Message,5.57
+Wisconsin,None,6.04
+Washington,Audio Or Music,0.03
+Wisconsin,Resume Or Job Application,1.8
+Rhode Island,App Or Website,3.09
+Oklahoma,Math Or Calculation,1.63
+South Carolina,None,7.02
+New York,Sql Or Database Query,0.29
+Hawaii,Idea Or Brainstorm,0.71
+Connecticut,Math Or Calculation,1.95
+Pennsylvania,Explanation Or Answer,18.73
+Rhode Island,Idea Or Brainstorm,1.11
+North Dakota,Other,0.0
+Maryland,Advice Or Recommendation,14.42
+California,Blog Or Article,0.41
+Nevada,Math Or Calculation,1.34
+Illinois,Plan Or Strategy,3.88
+South Carolina,Presentation Or Slides,1.73
+Georgia,Math Or Calculation,1.74
+Maine,Code Fix Or Debug,2.09
+Oregon,Recipe Or Meal Plan,0.93
+Maryland,Script Or Snippet,2.85
+Kentucky,Translation,0.12
+Maryland,Resume Or Job Application,2.39
+Florida,Explanation Or Answer,15.65
+Oklahoma,Video Or Animation,0.21
+Hawaii,Educational Material,1.28
+South Carolina,Script Or Snippet,2.68
+Delaware,Video Or Animation,0.06
+Indiana,Config Or Infra,1.5
+Indiana,Script Or Snippet,3.31
+Vermont,Creative Writing,2.72
+Utah,Document Or Report,13.78
+Texas,Document Or Report,14.13
+Wisconsin,Idea Or Brainstorm,1.25
+Indiana,Educational Material,2.01
+Nevada,Advice Or Recommendation,12.92
+Oklahoma,Academic Paper Or Thesis,0.79
+Alabama,Config Or Infra,1.47
+Puerto Rico,Advice Or Recommendation,11.74
+Nebraska,Creative Writing,2.88
+South Carolina,Advice Or Recommendation,12.52
+Indiana,Math Or Calculation,3.05
+Virginia,App Or Website,3.35
+Kansas,Idea Or Brainstorm,1.09
+Florida,Plan Or Strategy,4.47
+Nebraska,Sql Or Database Query,0.47
+Texas,Advice Or Recommendation,13.03
+Oklahoma,Audio Or Music,0.03
+Vermont,Sql Or Database Query,0.0
+Arizona,Code Fix Or Debug,2.58
+Washington,Data Or Spreadsheet,2.29
+Idaho,Image Or Graphic,0.89
+New Mexico,Video Or Animation,0.06
+Delaware,Advice Or Recommendation,15.92
+Mississippi,Recipe Or Meal Plan,0.67
+Oklahoma,Idea Or Brainstorm,1.0
+Connecticut,Recipe Or Meal Plan,0.75
+Maryland,Idea Or Brainstorm,0.95
+New York,Advice Or Recommendation,14.73
+Kentucky,Audio Or Music,0.06
+Wisconsin,Video Or Animation,0.09
+West Virginia,Email Or Message,3.57
+Minnesota,Data Or Spreadsheet,2.44
+Alabama,Data Or Spreadsheet,2.43
+Indiana,App Or Website,3.19
+Mississippi,Ml Or Ai System,0.27
+New Hampshire,Chart Or Visualization,1.87
+Connecticut,Email Or Message,6.04
+Tennessee,Creative Writing,2.11
+Maine,Document Or Report,14.24
+New Mexico,Presentation Or Slides,1.03
+Indiana,Translation,0.26
+Wyoming,Academic Paper Or Thesis,0.49
+West Virginia,None,7.94
+Alaska,Data Or Spreadsheet,2.73
+Utah,Recipe Or Meal Plan,0.89
+Maryland,Academic Paper Or Thesis,0.81
+Vermont,Analysis Or Summary,5.93
+Colorado,Recipe Or Meal Plan,1.1
+Puerto Rico,Config Or Infra,1.55
+Delaware,Document Or Report,12.72
+Indiana,Marketing Or Social Content,1.67
+Nevada,App Or Website,3.58
+Maine,Image Or Graphic,0.39
+Connecticut,Script Or Snippet,2.68
+Iowa,Audio Or Music,0.08
+Florida,Video Or Animation,0.2
+South Dakota,Translation,0.17
+Iowa,Email Or Message,4.28
+New York,App Or Website,2.9
+Connecticut,Explanation Or Answer,18.6
+Utah,Code Fix Or Debug,2.69
+New Jersey,Game Or Interactive,0.23
+California,Marketing Or Social Content,2.05
+California,Recipe Or Meal Plan,0.73
+Ohio,Email Or Message,4.39
+Minnesota,Video Or Animation,0.16
+South Dakota,Analysis Or Summary,5.71
+California,App Or Website,2.79
+Montana,Data Or Spreadsheet,2.28
+New Mexico,Audio Or Music,0.06
+Alabama,None,7.84
+Alabama,Presentation Or Slides,1.67
+Alabama,Audio Or Music,0.02
+District of Columbia,Blog Or Article,0.8
+Kentucky,Recipe Or Meal Plan,0.78
+Massachusetts,Image Or Graphic,0.62
+Vermont,Academic Paper Or Thesis,1.56
+Alaska,Explanation Or Answer,19.83
+Vermont,Plan Or Strategy,3.6
+Alabama,Advice Or Recommendation,12.99
+Nevada,Audio Or Music,0.01
+South Carolina,Explanation Or Answer,15.3
+Ohio,Explanation Or Answer,18.77
+Iowa,Image Or Graphic,0.58
+Nevada,Resume Or Job Application,1.17
+Maine,Video Or Animation,0.07
+Wisconsin,Sql Or Database Query,0.4
+Mississippi,Document Or Report,15.88
+North Dakota,Creative Writing,2.87
+Alaska,Game Or Interactive,1.44
+Washington,Code Fix Or Debug,2.6
+Alaska,None,6.9
+Oklahoma,Email Or Message,4.13
+Maryland,Ml Or Ai System,0.31
+Missouri,Sql Or Database Query,0.38
+Maine,Other,0.0
+District of Columbia,Ml Or Ai System,0.36
+Connecticut,Data Or Spreadsheet,2.86
+Mississippi,Chart Or Visualization,2.22
+Minnesota,Chart Or Visualization,1.79
+Puerto Rico,Analysis Or Summary,5.22
+Oklahoma,Ui Or Design Mockup,0.63
+District of Columbia,Marketing Or Social Content,1.81
+Wisconsin,Script Or Snippet,3.21
+Colorado,Audio Or Music,0.01
+Iowa,Plan Or Strategy,3.78
+Indiana,Plan Or Strategy,3.64
+Illinois,Document Or Report,12.38
+Rhode Island,Other,0.28
+Maryland,Translation,0.32
+New Jersey,Script Or Snippet,2.63
+Connecticut,Other,0.15
+Delaware,Ml Or Ai System,0.34
+Arizona,Recipe Or Meal Plan,0.93
+Wisconsin,Explanation Or Answer,19.57
+Maine,Ui Or Design Mockup,0.85
+Arkansas,Recipe Or Meal Plan,1.17
+Indiana,Document Or Report,13.65
+Pennsylvania,Email Or Message,4.86
+Mississippi,Resume Or Job Application,1.35
+District of Columbia,Image Or Graphic,0.57
+Georgia,Other,0.12
+North Dakota,Data Or Spreadsheet,3.41
+Tennessee,Plan Or Strategy,4.47
+Kentucky,Creative Writing,3.33
+Pennsylvania,Data Or Spreadsheet,2.76
+Kansas,Educational Material,1.98
+Wisconsin,Presentation Or Slides,1.7
+Florida,Data Or Spreadsheet,2.88
+District of Columbia,Audio Or Music,0.02
+Wyoming,Script Or Snippet,3.68
+Alaska,Video Or Animation,0.14
+Tennessee,Educational Material,1.71
+Maryland,Game Or Interactive,0.44
+Kentucky,Educational Material,2.27
+Minnesota,Blog Or Article,0.38
+Missouri,Game Or Interactive,0.59
+Maryland,None,6.58
+Montana,Code Fix Or Debug,2.62
+Oklahoma,None,7.55
+Indiana,Idea Or Brainstorm,0.92
+New Mexico,Script Or Snippet,2.97
+Utah,Image Or Graphic,0.59
+Maine,Ml Or Ai System,0.13
+Oregon,App Or Website,3.01
+Maryland,Sql Or Database Query,0.27
+Alaska,Advice Or Recommendation,11.49
+Arizona,Ml Or Ai System,0.37
+Texas,Recipe Or Meal Plan,0.73
+Georgia,Sql Or Database Query,0.39
+Florida,Educational Material,1.88
+Arkansas,Video Or Animation,0.13
+Tennessee,Script Or Snippet,2.54
+Arizona,Educational Material,1.64
+Nebraska,Ui Or Design Mockup,0.56
+Ohio,Video Or Animation,0.16
+Texas,Game Or Interactive,0.39
+Louisiana,None,7.61
+New Jersey,Document Or Report,13.43
+Illinois,Image Or Graphic,0.59
+Wisconsin,Creative Writing,2.02
+Louisiana,Educational Material,2.25
+Connecticut,Blog Or Article,0.45
+Virginia,Recipe Or Meal Plan,0.76
+North Carolina,Audio Or Music,0.02
+Nebraska,Config Or Infra,1.38
+Minnesota,Image Or Graphic,0.68
+Arkansas,Chart Or Visualization,1.95
+Ohio,Script Or Snippet,2.95
+Idaho,Presentation Or Slides,1.09
+Puerto Rico,Ml Or Ai System,0.6
+West Virginia,Data Or Spreadsheet,2.65
+Utah,Math Or Calculation,1.62
+Nevada,Email Or Message,5.12
+Oklahoma,App Or Website,3.5
+Utah,Resume Or Job Application,1.16
+West Virginia,Sql Or Database Query,0.4
+Connecticut,Video Or Animation,0.07
+New Jersey,Marketing Or Social Content,2.08
+Nevada,Educational Material,1.36
+Hawaii,Marketing Or Social Content,2.45
+Virginia,Plan Or Strategy,4.13
+Idaho,Ui Or Design Mockup,0.93
+Maine,Creative Writing,2.02
+Missouri,Recipe Or Meal Plan,0.73
+Pennsylvania,Idea Or Brainstorm,0.8
+Mississippi,Email Or Message,5.05
+Kentucky,Script Or Snippet,2.77
+Iowa,Game Or Interactive,0.53
+Alabama,Game Or Interactive,0.67
+Oregon,Game Or Interactive,0.49
+Louisiana,Other,0.16
+Rhode Island,Blog Or Article,0.42
+Alabama,Resume Or Job Application,1.34
+Maryland,Image Or Graphic,0.72
+Maryland,Config Or Infra,1.41
+North Carolina,Script Or Snippet,2.89
+Puerto Rico,Marketing Or Social Content,2.72
+North Carolina,Other,0.05
+Tennessee,Code Fix Or Debug,2.43
+South Dakota,Ui Or Design Mockup,0.69
+Florida,Other,0.17
+Massachusetts,Translation,0.29
+Minnesota,None,7.65
+Montana,Plan Or Strategy,4.4
+Nebraska,Idea Or Brainstorm,0.95
+Virginia,Blog Or Article,0.39
+Minnesota,Audio Or Music,0.03
+Michigan,Game Or Interactive,0.56
+Massachusetts,Advice Or Recommendation,13.15
+Missouri,Creative Writing,2.36
+Montana,Presentation Or Slides,1.44
+Delaware,Blog Or Article,0.5
+Pennsylvania,Presentation Or Slides,2.07
+Alabama,Image Or Graphic,0.49
+New Mexico,App Or Website,2.57
+Oklahoma,Data Or Spreadsheet,2.42
+Maine,Resume Or Job Application,1.24
+Colorado,Resume Or Job Application,1.68
+Alabama,Document Or Report,14.4
+New Mexico,Marketing Or Social Content,3.03
+California,Data Or Spreadsheet,2.68
+Vermont,Video Or Animation,0.0
+Massachusetts,Academic Paper Or Thesis,1.68
+West Virginia,Config Or Infra,2.78
+Utah,Ml Or Ai System,0.35
+Minnesota,Ui Or Design Mockup,0.58
+Arizona,Idea Or Brainstorm,0.83
+Oregon,Audio Or Music,0.01
+Florida,Recipe Or Meal Plan,0.65
+Alaska,Resume Or Job Application,1.15
+Minnesota,Analysis Or Summary,5.55
+Florida,Image Or Graphic,0.82
+Delaware,Code Fix Or Debug,2.86
+Arkansas,Blog Or Article,0.3
+Kentucky,Document Or Report,13.65
+Texas,Educational Material,1.83
+Ohio,Recipe Or Meal Plan,0.91
+Colorado,Config Or Infra,1.35
+Maryland,Ui Or Design Mockup,0.56
+California,Presentation Or Slides,1.63
+Oregon,None,7.18
+Puerto Rico,App Or Website,4.62
+Montana,Idea Or Brainstorm,0.93
+Maine,Translation,0.2
+North Dakota,Game Or Interactive,0.72
+California,Code Fix Or Debug,2.26
+South Dakota,Config Or Infra,1.9
+Ohio,Game Or Interactive,0.45
+Vermont,Marketing Or Social Content,1.65
+Nebraska,Video Or Animation,0.26
+Vermont,Recipe Or Meal Plan,0.97
+Washington,None,7.82
+Minnesota,Advice Or Recommendation,15.33
+Michigan,Idea Or Brainstorm,0.81
+Louisiana,Academic Paper Or Thesis,1.3
+New Hampshire,Resume Or Job Application,1.4
+Delaware,Explanation Or Answer,19.06
+South Dakota,Resume Or Job Application,1.38
+District of Columbia,Presentation Or Slides,3.11
+Kentucky,App Or Website,3.86
+Michigan,Math Or Calculation,2.02
+Vermont,Math Or Calculation,2.04
+Puerto Rico,Image Or Graphic,0.99
+Michigan,Sql Or Database Query,0.23
+Maryland,Presentation Or Slides,1.87
+Massachusetts,Math Or Calculation,2.21
+Rhode Island,Image Or Graphic,0.65
+New Mexico,Data Or Spreadsheet,2.34
+Maryland,Analysis Or Summary,5.68
+Washington,Recipe Or Meal Plan,0.86
+West Virginia,Resume Or Job Application,1.32
+North Carolina,Translation,0.35
+Oklahoma,Chart Or Visualization,1.58
+New Mexico,Config Or Infra,1.49
+North Carolina,Math Or Calculation,2.07
+Missouri,Advice Or Recommendation,13.79
+Louisiana,Advice Or Recommendation,14.14
+Nevada,Marketing Or Social Content,2.76
+Kentucky,Chart Or Visualization,1.28
+South Dakota,App Or Website,4.67
+Utah,Presentation Or Slides,1.35
+Georgia,Idea Or Brainstorm,0.91
+Utah,Email Or Message,4.76
+Colorado,Image Or Graphic,0.68
+Delaware,Academic Paper Or Thesis,0.67
+Wyoming,Analysis Or Summary,5.15
+Wisconsin,Plan Or Strategy,3.9
+Delaware,Educational Material,1.68
+Georgia,Video Or Animation,0.18
+California,Video Or Animation,0.14
+West Virginia,App Or Website,4.1
+Arizona,Game Or Interactive,0.46
+Michigan,Plan Or Strategy,3.95
+Maine,Educational Material,1.7
+California,Document Or Report,13.59
+New Jersey,Email Or Message,5.48
+Alaska,Email Or Message,4.17
+Hawaii,Chart Or Visualization,1.67
+Tennessee,Advice Or Recommendation,13.77
+Mississippi,Game Or Interactive,0.67
+South Dakota,Explanation Or Answer,18.17
+Washington,Math Or Calculation,1.67
+Virginia,Chart Or Visualization,2.25
+South Dakota,Creative Writing,2.94
+Colorado,Analysis Or Summary,5.96
+Puerto Rico,Audio Or Music,0.09
+Nebraska,Presentation Or Slides,1.12
+New York,Data Or Spreadsheet,2.81
+Tennessee,Email Or Message,5.02
+Iowa,Script Or Snippet,3.5
+Vermont,Email Or Message,5.84
+Wyoming,Translation,0.74
+Arizona,Academic Paper Or Thesis,0.63
+Maryland,Math Or Calculation,2.18
+Vermont,Advice Or Recommendation,13.33
+Montana,Analysis Or Summary,6.26
+Mississippi,Video Or Animation,0.07
+Hawaii,Ml Or Ai System,0.25
+Rhode Island,Plan Or Strategy,3.92
+Arkansas,App Or Website,3.59
+Puerto Rico,Presentation Or Slides,2.81
+North Carolina,Explanation Or Answer,17.34
+New Jersey,Other,0.16
+Mississippi,Advice Or Recommendation,10.83
+Arkansas,Translation,0.17
+Virginia,Analysis Or Summary,5.84
+Wyoming,Explanation Or Answer,15.93
+New Jersey,Recipe Or Meal Plan,0.73
+Virginia,Presentation Or Slides,2.0
+Arkansas,Presentation Or Slides,1.3
+Pennsylvania,Game Or Interactive,0.48
+California,Email Or Message,6.2
+Michigan,App Or Website,3.56
+Virginia,Data Or Spreadsheet,2.44
+Puerto Rico,Email Or Message,5.61
+Georgia,Script Or Snippet,2.93
+Wyoming,None,9.8
+New York,Game Or Interactive,0.28
+Nebraska,Recipe Or Meal Plan,1.12
+Georgia,Creative Writing,1.78
+South Carolina,Other,0.23
+New Jersey,Image Or Graphic,0.56
+California,Idea Or Brainstorm,0.91
+Ohio,Idea Or Brainstorm,0.89
+Alaska,Image Or Graphic,0.43
+Nevada,Game Or Interactive,0.32
+North Carolina,Ml Or Ai System,0.23
+Massachusetts,App Or Website,2.58
+Massachusetts,Config Or Infra,1.23
+Idaho,Educational Material,1.49
+Iowa,Sql Or Database Query,0.62
+New York,Plan Or Strategy,4.15
+Arkansas,Educational Material,1.95
+Indiana,Image Or Graphic,0.61
+Alabama,Plan Or Strategy,4.06
+New Mexico,Code Fix Or Debug,2.8
+West Virginia,Educational Material,1.72
+Idaho,Translation,0.24
+North Carolina,Plan Or Strategy,4.17
+Washington,Image Or Graphic,0.69
+New York,Document Or Report,13.26
+Oklahoma,Blog Or Article,0.45
+Massachusetts,Marketing Or Social Content,1.75
+Nebraska,Code Fix Or Debug,2.66
+Idaho,Code Fix Or Debug,2.62
+Ohio,App Or Website,4.02
+New Jersey,Math Or Calculation,1.72
+Hawaii,Code Fix Or Debug,1.31
+Pennsylvania,Recipe Or Meal Plan,0.76
+Oregon,Math Or Calculation,1.64
+Louisiana,Sql Or Database Query,0.22
+New Hampshire,Presentation Or Slides,1.87
+Idaho,Sql Or Database Query,0.12
+Rhode Island,Audio Or Music,0.05
+Oregon,Video Or Animation,0.16
+Louisiana,Idea Or Brainstorm,0.79
+Hawaii,Document Or Report,15.38
+Alabama,Analysis Or Summary,5.67
+New Jersey,Academic Paper Or Thesis,0.85
+Maine,Plan Or Strategy,3.92
+Indiana,Audio Or Music,0.05
+Rhode Island,Translation,0.42
+Washington,Advice Or Recommendation,15.11
+North Dakota,Image Or Graphic,0.18
+Idaho,Resume Or Job Application,1.09
+Arkansas,Math Or Calculation,2.12
+Wisconsin,Blog Or Article,0.4
+Kentucky,Video Or Animation,0.12
+Maine,Config Or Infra,1.76
+Montana,Resume Or Job Application,1.44
+Mississippi,Blog Or Article,0.34
+Iowa,Ml Or Ai System,0.25
+Rhode Island,Script Or Snippet,3.41
+Ohio,Educational Material,2.19
+Florida,Marketing Or Social Content,3.06
+North Dakota,Code Fix Or Debug,2.33
+Illinois,Creative Writing,1.46
+Louisiana,Creative Writing,2.52
+Nevada,Ui Or Design Mockup,0.59
+Colorado,Script Or Snippet,2.42
+California,Script Or Snippet,2.61
+New Mexico,Image Or Graphic,0.46
+Florida,Email Or Message,5.91
+Delaware,Resume Or Job Application,0.95
+West Virginia,Ml Or Ai System,0.26
+District of Columbia,Document Or Report,16.58
+Kentucky,Math Or Calculation,2.06
+Louisiana,Document Or Report,15.12
+New Jersey,Ui Or Design Mockup,0.72
+South Dakota,Educational Material,0.69
+Arkansas,Idea Or Brainstorm,0.78
+Rhode Island,Advice Or Recommendation,10.57
+Illinois,Video Or Animation,0.1
+Utah,Translation,0.18
+Kansas,Explanation Or Answer,18.84
+West Virginia,Chart Or Visualization,1.19
+Utah,Game Or Interactive,0.62
+Washington,Script Or Snippet,2.75
+Massachusetts,Email Or Message,5.87
+Vermont,Script Or Snippet,3.02
+Puerto Rico,Math Or Calculation,1.68
+Missouri,Explanation Or Answer,17.95
+West Virginia,Image Or Graphic,0.4
+West Virginia,Creative Writing,3.84
+Wyoming,Ml Or Ai System,0.25
+Indiana,Resume Or Job Application,1.86
+Washington,Other,0.29
+Kentucky,Analysis Or Summary,6.86
+Kentucky,Sql Or Database Query,0.31
+Illinois,Explanation Or Answer,18.28
+West Virginia,Idea Or Brainstorm,0.93
+South Dakota,Code Fix Or Debug,2.94
+New Mexico,Ui Or Design Mockup,0.69
+Pennsylvania,Academic Paper Or Thesis,1.06
+Kansas,Resume Or Job Application,1.86
+New York,Ml Or Ai System,0.31
+Georgia,Plan Or Strategy,4.68
+Connecticut,Code Fix Or Debug,2.05
+South Carolina,Config Or Infra,1.67
+New Mexico,Recipe Or Meal Plan,1.66
+Alaska,Code Fix Or Debug,2.87
+Arizona,Plan Or Strategy,4.5
+Connecticut,Marketing Or Social Content,1.9
+Iowa,Code Fix Or Debug,2.71
+Alaska,Creative Writing,1.72
+Texas,Plan Or Strategy,4.39
+Idaho,Game Or Interactive,0.4
+North Dakota,Advice Or Recommendation,13.26
+Rhode Island,Config Or Infra,1.52
+Connecticut,Analysis Or Summary,6.2
+Alabama,Translation,0.16
+Illinois,Data Or Spreadsheet,2.63
+New Jersey,Blog Or Article,0.46
+Maryland,Educational Material,1.93
+Kentucky,Ui Or Design Mockup,0.44
+Maryland,Chart Or Visualization,1.98
+Alabama,Math Or Calculation,2.05
+Wyoming,Educational Material,1.47
+Indiana,Video Or Animation,0.1
+Louisiana,Image Or Graphic,0.57
+Kentucky,Explanation Or Answer,17.67
+Connecticut,Resume Or Job Application,2.02

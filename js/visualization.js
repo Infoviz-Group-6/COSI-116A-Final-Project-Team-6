@@ -78,4 +78,14 @@
       ? `${layerNames[state.layer]} state colors with data-center capacity circles.`
       : "Neutral state view with data-center capacity circles.";
   }
-})();
+});
+
+
+//Loading and using the Anthropic Data
+d3.json("data/Anthropic-Data-Filtered-US.csv").then((data) => {
+
+
+    })
+
+();
+
