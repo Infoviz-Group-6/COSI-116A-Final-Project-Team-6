@@ -653,6 +653,37 @@ h1, h2, h3 {
 	margin-top: 14px;
 }
 
+#model-release-view {
+	display: block;
+	overflow-x: auto;
+	padding: 12px;
+	text-align: left;
+}
+
+#model-release-view svg {
+	display: block;
+	width: 100%;
+	min-width: 760px;
+	height: auto;
+}
+
+.model-lane-note {
+	fill: var(--muted);
+	font-size: 12px;
+}
+
+.model-release-marks circle {
+	stroke: #ffffff;
+	stroke-width: 1.5;
+	cursor: pointer;
+}
+
+.model-release-marks circle:focus {
+	stroke: var(--ink);
+	stroke-width: 3;
+	outline: none;
+}
+
 .claude-heading {
 	margin-bottom: 16px;
 }
