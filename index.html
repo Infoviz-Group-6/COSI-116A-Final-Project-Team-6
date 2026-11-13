@@ -59,7 +59,11 @@
             <form id="city-search" class="city-search" role="search">
               <label for="city-query">Enter a city name</label>
               <div class="city-search__row">
-                <input id="city-query" name="city" type="search" placeholder="Richmond, VA" autocomplete="off">
+                <div class="city-search__field">
+                  <input id="city-query" name="city" type="search" placeholder="Richmond, VA" autocomplete="off"
+                    role="combobox" aria-autocomplete="list" aria-controls="city-suggestions" aria-expanded="false">
+                  <ul id="city-suggestions" class="city-suggestions" role="listbox" aria-label="City suggestions" hidden></ul>
+                </div>
                 <button type="submit">Find city</button>
               </div>
               <p id="city-search-status" class="section-note" aria-live="polite">Search will zoom to a city and identify the closest listed data center.</p>
@@ -79,11 +83,25 @@
 
               <aside class="legend-stack" aria-label="Map legends">
                 <section class="view-panel capacity-legend" aria-labelledby="capacity-legend-heading">
-                  <h3 id="capacity-legend-heading">Estimated capacity</h3>
+                  <h3 id="capacity-legend-heading">Estimated IT power</h3>
                   <p class="legend-unit">Megawatts (MW)</p>
-                  <div class="size-key"><span class="capacity-circle capacity-circle--small"></span><span>&lt; 200</span></div>
-                  <div class="size-key"><span class="capacity-circle capacity-circle--medium"></span><span>200–800</span></div>
-                  <div class="size-key"><span class="capacity-circle capacity-circle--large"></span><span>800+</span></div>
+                  <div class="size-key">
+                    <span class="capacity-circle capacity-circle--zero"></span>
+                    <span>0</span>
+                  </div>
+                  <div class="size-key">
+                    <span class="capacity-circle capacity-circle--small"></span>
+                    <span>&gt;0–&lt;200</span>
+                  </div>
+                  <div class="size-key">
+                    <span class="capacity-circle capacity-circle--medium"></span>
+                    <span>200–800</span>
+                  </div>
+                  <div class="size-key">
+                    <span class="capacity-circle capacity-circle--large"></span>
+                    <span>&gt;800</span>
+                  </div>
+                  <p class="legend-note">Hollow circles indicate zero estimated IT power.</p>
                 </section>
 
                 <section id="color-legend" class="view-panel color-legend" aria-labelledby="color-legend-heading" hidden>
@@ -171,11 +189,15 @@
   </main>
 
   <script src="lib/d3.v7/d3.v7.min.js"></script>
+  <script src="lib/d3.v7/d3.v7.min.js"></script>
+  <script src="lib/topojson-client.min.js"></script>
+  <script src="js/app-state.js"></script>
   <script src="js/app-state.js"></script>
   <script src="js/map.js"></script>
   <script src="js/timeline.js"></script>
   <script src="js/details.js"></script>
   <script src="js/treemap.js"></script>
+  <script src="js/city-search.js"></script>
   <script src="js/visualization.js"></script>
   
 </body>
