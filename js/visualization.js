@@ -16,7 +16,6 @@
     Object.values(app.views).forEach((view) => view.init?.());
     app.subscribe(renderInterfaceState);
     bindLayerControls();
-    bindCitySearch();
     renderInterfaceState(app.getState());
 
     status.textContent = "PA4 layout ready";
@@ -41,17 +40,6 @@
 
         app.setState({ layer: selectedLayer });
       });
-    });
-  }
-
-  function bindCitySearch() {
-    document.querySelector("#city-search").addEventListener("submit", (event) => {
-      event.preventDefault();
-      const searchQuery = document.querySelector("#city-query").value.trim();
-      app.setState({ searchQuery });
-      document.querySelector("#city-search-status").textContent = searchQuery
-        ? `Search target: ${searchQuery}. Map zoom and closest-facility lookup will connect here.`
-        : "Enter a city to prepare a map search.";
     });
   }
 
