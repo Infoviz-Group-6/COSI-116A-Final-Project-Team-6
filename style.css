@@ -689,3 +689,17 @@ h1, h2, h3 {
 		min-height: 380px;
 	}
 }
+
+/* Treemap SVG container adjustments */
+#treemap-view {
+	padding: 4px;
+	border-style: solid;
+	background: var(--surface);
+	text-align: left;
+}
+
+#treemap-view svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}

@@ -10,6 +10,10 @@
   const app = window.Team6App;
   const status = document.querySelector("#app-status");
 
+  let artifactData = [];
+  let currentState = "USA";
+  const container = document.getElementById("treemap-view");
+
   try {
     if (!app) throw new Error("The shared application state did not load.");
 
@@ -24,6 +28,46 @@
     console.error(error);
     status.textContent = "Dashboard could not start";
     status.classList.add("app-error");
+  }
+initVisualization();
+
+  function updateTreemap(newState = "USA") {
+    currentState = newState || "USA";
+    const heading = document.getElementById("treemap-heading");
+    if (heading) {
+      heading.textContent = `What topics were Claude chats about? (${currentState})`;
+    }
+    if (!container || !window.Treemap || !artifactData.length) return;
+
+    const chart = window.Treemap(artifactData, {
+      selectedState: currentState,
+      state: d => d.state,
+      label: d => d.artifact,
+      value: d => +d.value,
+      width: 1154,
+      height: 700
+    });
+
+    container.replaceChildren(chart);
+  }
+
+  window.updateTreemap = updateTreemap;
+
+  async function initVisualization() {
+    try {
+      // Note: If your CSV is in a "data/" subfolder, change this to "data/Anthropic-State-Artifacts.csv"
+      artifactData = await d3.csv("data/Anthropic-State-Artifacts.csv");
+      updateTreemap(currentState);
+
+      const selectEl = document.getElementById("state-select");
+      if (selectEl) {
+        const states = ["USA", ...new Set(artifactData.map(d => d.state).filter(Boolean).sort())];
+        selectEl.innerHTML = states.map(s => `<option value="${s}">${s}</option>`).join("");
+        selectEl.addEventListener("change", e => updateTreemap(e.target.value));
+      }
+    } catch (csvError) {
+      console.error("Could not load Anthropic-State-Artifacts.csv:", csvError);
+    }
   }
 
   function bindLayerControls() {
@@ -77,15 +121,9 @@
     mapSummary.textContent = state.layer
       ? `${layerNames[state.layer]} state colors with data-center capacity circles.`
       : "Neutral state view with data-center capacity circles.";
+    if (isClaudeView && artifactData.length) {
+      updateTreemap(state.selectedState || currentState);
+    }
   }
-});
-
-
-//Loading and using the Anthropic Data
-d3.json("data/Anthropic-Data-Filtered-US.csv").then((data) => {
-
-
-    })
-
-();
+})();
 
