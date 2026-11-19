@@ -68,7 +68,11 @@
           const selectedYear = Number(year);
           const today = new Date();
           const cutoff = selectedYear === today.getFullYear()
-            ? today.toISOString().slice(0, 10)
+            ? [
+                today.getFullYear(),
+                String(today.getMonth() + 1).padStart(2, "0"),
+                String(today.getDate()).padStart(2, "0")
+              ].join("-")
             : `${selectedYear}-12-31`;
 
           const visible = centers.flatMap(center => {

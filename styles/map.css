@@ -114,4 +114,14 @@
   background: #e8eef5;
 }
 
+.map-source-note {
+  margin: 10px 0 0;
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.5;
+}
 
+.map-source-note a {
+  color: #2456d8;
+  text-decoration: underline;
+}

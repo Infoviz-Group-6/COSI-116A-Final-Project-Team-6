@@ -5,9 +5,9 @@
 
   map.loadData = () => Promise.all([
     d3.json("data/us-states.topojson"),
-    d3.csv("data/epoch-us-geocoded.csv"),
+    d3.csv("data/epoch-us-locations-expanded.csv"),
     d3.csv("data/epoch-data-center-timelines.csv"),
-    d3.csv("data/epoch-us-unmatched.csv")
+    d3.csv("data/epoch-us-still-unmatched.csv")
   ]);
 
   map.normalizeName = name => String(name ?? "").trim().toLowerCase();
