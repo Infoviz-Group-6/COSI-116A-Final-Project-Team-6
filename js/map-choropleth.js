@@ -28,7 +28,7 @@
   const map = window.Team6Map = window.Team6Map || {};
 
   const NEUTRAL_FILL = "#e8eef5"; // state color when no layer is selected
-  const NO_DATA_FILL = "#c4ccd6"; // state color when a layer has no value for it
+  const NO_DATA_FILL = "#808080"; // state color when a layer has no value for it
 
   // ---------------------------------------------------------------------------
   // Layer registry: one entry per state-level layer.
