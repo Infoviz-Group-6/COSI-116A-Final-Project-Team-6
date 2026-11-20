@@ -5,6 +5,8 @@
   const app = window.Team6App;
 
   let modelReleaseView;
+  let modelReleases = [];
+  let showFullHistory = false;
   const MODEL_DISPLAY_START = new Date("2010-01-01T00:00:00Z");
 
   app.views.timeline = {
@@ -25,6 +27,7 @@
       });
 
       document.querySelector("#expand-models").addEventListener("click", toggleModelPanel);
+      document.querySelector("#model-history-toggle").addEventListener("click", toggleModelHistory);
       document.querySelector("#expand-lines").addEventListener("click", toggleLinePanel);
       app.subscribe(renderYear);
       renderYear(app.getState());
@@ -48,24 +51,25 @@
         throw new Error("No dated model-release records were found.");
       }
 
-      const organizations = d3.rollups(
-        releases.filter(row => row.date >= MODEL_DISPLAY_START),
-        values => values.length,
-        row => row.organization
-      )
-        .sort((a, b) => d3.descending(a[1], b[1]))
-        .slice(0, 8)
-        .map(([organization]) => organization);
-
-      renderModelLanes(releases, organizations);
+      modelReleases = releases;
+      renderModelLanes();
     } catch (error) {
       console.error("Could not load model-release data:", error);
       modelReleaseView.innerHTML = '<p class="empty-view-message">Model-release data could not be loaded.</p>';
     }
   }
 
-  function renderModelLanes(releases, organizations) {
-    const displayedReleases = releases.filter(row => row.date >= MODEL_DISPLAY_START);
+  function renderModelLanes() {
+    const displayedReleases = modelReleases.filter(row =>
+      showFullHistory || row.date >= MODEL_DISPLAY_START
+    );
+    const organizations = selectOrganizations(displayedReleases);
+
+    if (!displayedReleases.length || !organizations.length) {
+      modelReleaseView.innerHTML = '<p class="empty-view-message">No model-release records are available for this period.</p>';
+      return;
+    }
+
     const margin = { top: 28, right: 24, bottom: 48, left: 150 };
     const width = 1000;
     const rowHeight = 34;
@@ -94,7 +98,9 @@
       .attr("class", "model-lane-note")
       .attr("x", margin.left)
       .attr("y", 16)
-      .text("Epoch curated records, 2010 onward; top eight exact organization labels");
+      .text(showFullHistory
+        ? "Epoch curated records, 1950–2026; early-history and high-count organization labels"
+        : "Epoch curated records, 2010 onward; top eight exact organization labels");
 
     svg.append("g")
       .attr("transform", `translate(0,${height - margin.bottom})`)
@@ -121,6 +127,35 @@
       .text(row => `${row.model}\n${row.organization}\n${d3.timeFormat("%Y-%m-%d")(row.date)}${row.link ? `\n${row.link}` : ""}`);
   }
 
+  function selectOrganizations(releases) {
+    const ranked = rows => d3.rollups(
+      rows,
+      values => values.length,
+      row => row.organization
+    )
+      .sort((a, b) => d3.descending(a[1], b[1]))
+      .map(([organization]) => organization);
+
+    const rankedOverall = ranked(releases);
+    if (!showFullHistory) return rankedOverall.slice(0, 8);
+
+    const earlyOrganizations = ranked(
+      releases.filter(row => row.date < MODEL_DISPLAY_START)
+    );
+    const selected = [];
+
+    const add = organization => {
+      if (!selected.includes(organization) && selected.length < 8) {
+        selected.push(organization);
+      }
+    };
+
+    // Keep early records visible, then fill the remaining lanes by overall count.
+    earlyOrganizations.slice(0, 4).forEach(add);
+    rankedOverall.forEach(add);
+    return selected;
+  }
+
   function renderYear(state) {
     const currentYear = new Date().getFullYear();
     const label = Number(state.year) === currentYear
@@ -135,6 +170,15 @@
     panel.hidden = !willOpen;
     event.currentTarget.setAttribute("aria-expanded", String(willOpen));
     event.currentTarget.textContent = willOpen ? "Collapse model releases" : "Expand model releases";
+  }
+
+  function toggleModelHistory(event) {
+    showFullHistory = !showFullHistory;
+    event.currentTarget.setAttribute("aria-pressed", String(showFullHistory));
+    event.currentTarget.textContent = showFullHistory
+      ? "Show modern period"
+      : "Show full history";
+    renderModelLanes();
   }
 
   function toggleLinePanel(event) {
