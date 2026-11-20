@@ -58,7 +58,7 @@
 	width: 100%;
 	padding: 10px 10px 10px 34px;
 	border: 1px solid var(--border);
-	border-radius: 7px;
+	border-radius: 2px;
 	color: var(--ink);
 	background: var(--surface);
 	font: inherit;
@@ -74,7 +74,7 @@
 	width: 12px;
 	height: 12px;
 	border: 2px solid #8a96a8;
-	border-radius: 3px;
+	border-radius: 2px;
 	content: "";
 	transform: translateY(-50%);
 }

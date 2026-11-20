@@ -87,32 +87,45 @@
                     <p id="map-coverage" class="section-note">Loading mapped-facility coverage...</p>
                   </div>
                 </div>
-                <div id="map-view" class="view-canvas map-canvas" aria-label="Interactive United States map"></div>
-                <p class="map-source-note">
-                  Data:
-                  <a href="https://epoch.ai/data/ai-data-centers"
-                    target="_blank" rel="noopener noreferrer">Epoch AI</a>.
-                  Coordinates: U.S. Census Geocoder and
-                  <a href="https://app.nrgmap.com/about/data-licenses"
-                    target="_blank" rel="noopener noreferrer">NRG Map</a>
-                  (© OpenStreetMap contributors, ODbL).
-                  Some locations are approximate.
-                  State population: U.S. Census Bureau,
-                  <a href="https://www.census.gov/programs-surveys/popest.html"
-                    target="_blank" rel="noopener noreferrer">Vintage 2025 population estimates</a>;
-                  land area:
-                  <a href="https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html"
-                    target="_blank" rel="noopener noreferrer">2024 Census Gazetteer</a>.
-                  Electricity: U.S. EIA retail sales by state,
-                  <a href="https://www.eia.gov/electricity/annual/"
-                    target="_blank" rel="noopener noreferrer">Electric Power Annual</a> and
-                  <a href="https://www.eia.gov/electricity/monthly/"
-                    target="_blank" rel="noopener noreferrer">Electric Power Monthly</a>
-                  (2026 estimated from year-to-date sales).
-                  Poverty: U.S. Census Bureau,
-                  <a href="https://www.census.gov/programs-surveys/saipe.html"
-                    target="_blank" rel="noopener noreferrer">Small Area Income and Poverty Estimates</a>.
-                </p>
+                <!-- Wrapper so the legend can sit over the map's bottom-right
+                     corner (#map-view itself is cleared and redrawn by js/map.js). -->
+                <div class="map-stage">
+                  <div id="map-view" class="view-canvas map-canvas" aria-label="Interactive United States map"></div>
+
+                  <aside class="legend-stack" aria-label="Map legends">
+                    <section class="view-panel capacity-legend" aria-labelledby="capacity-legend-heading">
+                      <h3 id="capacity-legend-heading">Estimated IT power</h3>
+                      <p class="legend-unit">Megawatts (MW)</p>
+                      <div class="size-key">
+                        <span class="capacity-circle capacity-circle--zero"></span>
+                        <span>0</span>
+                      </div>
+                      <div class="size-key">
+                        <span class="capacity-circle capacity-circle--small"></span>
+                        <span>&gt;0–&lt;200</span>
+                      </div>
+                      <div class="size-key">
+                        <span class="capacity-circle capacity-circle--medium"></span>
+                        <span>200–800</span>
+                      </div>
+                      <div class="size-key">
+                        <span class="capacity-circle capacity-circle--large"></span>
+                        <span>&gt;800</span>
+                      </div>
+                      <p class="legend-note">Hollow circles indicate zero estimated IT power.</p>
+                    </section>
+
+                    <section id="color-legend" class="view-panel color-legend" aria-labelledby="color-legend-heading" hidden>
+                      <h3 id="color-legend-heading">State color</h3>
+                      <p id="color-legend-label" class="legend-unit"></p>
+                      <div class="color-ramp" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span>
+                      </div>
+                      <div class="color-ramp-labels"><span>Lower</span><span>Higher</span></div>
+                      <p id="color-legend-note" class="legend-note" hidden></p>
+                    </section>
+                  </aside>
+                </div>
                 <div class="map-timeline" aria-labelledby="data-center-timeline-heading">
                   <div class="map-timeline__heading">
                     <p class="control-kicker">Build progress</p>
@@ -120,55 +133,45 @@
                   </div>
                   <div id="timeline-view" class="timeline-view" aria-label="Data-center year slider"></div>
                 </div>
+
+                <section id="small-multiples" class="small-multiples-panel" aria-labelledby="small-multiples-heading" hidden>
+                  <div class="view-panel__heading">
+                    <div>
+                      <p class="control-kicker">Compare layers</p>
+                      <h3 id="small-multiples-heading">Population, electricity, and poverty side by side</h3>
+                      <p class="section-note">Each map has its own color scale. Hover a state to highlight it on every map. The outlined map is the layer shown above.</p>
+                    </div>
+                  </div>
+                  <div id="small-multiples-view" class="small-multiples-grid"></div>
+                </section>
               </section>
-
-              <aside class="legend-stack" aria-label="Map legends">
-                <section class="view-panel capacity-legend" aria-labelledby="capacity-legend-heading">
-                  <p class="control-kicker">Legend</p>
-                  <h3 id="capacity-legend-heading">Estimated IT power</h3>
-                  <p class="legend-unit">Megawatts (MW)</p>
-                  <div class="size-key">
-                    <span class="capacity-circle capacity-circle--zero"></span>
-                    <span>0</span>
-                  </div>
-                  <div class="size-key">
-                    <span class="capacity-circle capacity-circle--small"></span>
-                    <span>&gt;0–&lt;200</span>
-                  </div>
-                  <div class="size-key">
-                    <span class="capacity-circle capacity-circle--medium"></span>
-                    <span>200–800</span>
-                  </div>
-                  <div class="size-key">
-                    <span class="capacity-circle capacity-circle--large"></span>
-                    <span>&gt;800</span>
-                  </div>
-                  <p class="legend-note">Hollow circles indicate zero estimated IT power.</p>
-                </section>
-
-                <section id="color-legend" class="view-panel color-legend" aria-labelledby="color-legend-heading" hidden>
-                  <p class="control-kicker">Legend</p>
-                  <h3 id="color-legend-heading">State color</h3>
-                  <p id="color-legend-label" class="legend-unit"></p>
-                  <div class="color-ramp" aria-hidden="true">
-                    <span></span><span></span><span></span><span></span>
-                  </div>
-                  <div class="color-ramp-labels"><span>Lower</span><span>Higher</span></div>
-                  <p id="color-legend-note" class="legend-note" hidden></p>
-                </section>
-              </aside>
             </div>
 
-            <section id="small-multiples" class="view-panel small-multiples-panel" aria-labelledby="small-multiples-heading" hidden>
-              <div class="view-panel__heading">
-                <div>
-                  <p class="control-kicker">Compare layers</p>
-                  <h3 id="small-multiples-heading">Population, electricity, and poverty side by side</h3>
-                  <p class="section-note">Each map has its own color scale. Hover a state to highlight it on every map. The outlined map is the layer shown above.</p>
-                </div>
-              </div>
-              <div id="small-multiples-view" class="small-multiples-grid"></div>
-            </section>
+            <p class="map-source-note">
+              Data:
+              <a href="https://epoch.ai/data/ai-data-centers"
+                target="_blank" rel="noopener noreferrer">Epoch AI</a>.
+              Coordinates: U.S. Census Geocoder and
+              <a href="https://app.nrgmap.com/about/data-licenses"
+                target="_blank" rel="noopener noreferrer">NRG Map</a>
+              (© OpenStreetMap contributors, ODbL).
+              Some locations are approximate.
+              State population: U.S. Census Bureau,
+              <a href="https://www.census.gov/programs-surveys/popest.html"
+                target="_blank" rel="noopener noreferrer">Vintage 2025 population estimates</a>;
+              land area:
+              <a href="https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html"
+                target="_blank" rel="noopener noreferrer">2024 Census Gazetteer</a>.
+              Electricity: U.S. EIA retail sales by state,
+              <a href="https://www.eia.gov/electricity/annual/"
+                target="_blank" rel="noopener noreferrer">Electric Power Annual</a> and
+              <a href="https://www.eia.gov/electricity/monthly/"
+                target="_blank" rel="noopener noreferrer">Electric Power Monthly</a>
+              (2026 estimated from year-to-date sales).
+              Poverty: U.S. Census Bureau,
+              <a href="https://www.census.gov/programs-surveys/saipe.html"
+                target="_blank" rel="noopener noreferrer">Small Area Income and Poverty Estimates</a>.
+            </p>
 
           </section>
 
@@ -351,6 +354,7 @@
   <script src="js/app-state.js"></script>
   <script src="js/map-data.js"></script>
   <script src="js/map-zoom.js"></script>
+  <script src="js/map-scale-bar.js"></script>
   <script src="js/map-tooltip.js"></script>
   <script src="js/map-choropleth.js"></script>
   <script src="js/map-small-multiples.js"></script>

@@ -61,4 +61,14 @@
     if (power <= 800) return 13;
     return 22;
   };
+
+  // Fill color for the same power bins, light to dark in one hue, so size
+  // and color both show the bin. Zero-power facilities stay hollow (white).
+  // Keep in sync with the legend swatches in styles/map-layout.css.
+  map.circleColor = power => {
+    if (power === 0) return "#ffffff";
+    if (power < 200) return "#efdcc0";
+    if (power <= 800) return "#cf9f6e";
+    return "#8a5d40";
+  };
 })();
