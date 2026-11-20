@@ -41,6 +41,19 @@
   line-height: 1.4;
 }
 
+/* Hover highlight (CSS overrides the SVG stroke attributes set in js/map.js) */
+.state-layer path:hover {
+  stroke: #263348;
+  stroke-width: 2.5;
+}
+
+.data-center-layer circle:hover,
+.data-center-layer circle:focus-visible {
+  stroke: #0b1a33;
+  stroke-width: 4;
+  outline: none;
+}
+
 /* City search: closest data-center highlight */
 .data-center-layer circle.is-nearest {
   stroke: #d1495b;

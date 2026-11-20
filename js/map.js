@@ -65,6 +65,30 @@
           height
         });
         let visibleCenters = [];
+        let zoomedState = null;
+
+        // Click a state to fit it in view; click the same state again to reset.
+        stateLayer
+          .selectAll("path")
+          .style("cursor", "pointer")
+          // Bring the hovered state to the front so its whole outline shows.
+          .on("pointerenter.highlight", event => d3.select(event.currentTarget).raise())
+          .on("click", (event, feature) => {
+            // The scale check covers zooming out by other means (Reset, scroll).
+            if (zoomedState === feature && zoom.getScale() > 1) {
+              zoomedState = null;
+              zoom.resetZoom();
+            } else {
+              zoomedState = feature;
+              zoom.zoomToPoints(path.bounds(feature), 8);
+            }
+          });
+
+        // Center the clicked facility; never zoom back out if already closer.
+        function zoomToCenter(center) {
+          zoomedState = null;
+          zoom.zoomToPoints([center.position], Math.max(6, zoom.getScale()));
+        }
 
         function renderYear(year) {
           const selectedYear = Number(year);
@@ -110,6 +134,7 @@
             )
             .style("cursor", "pointer")
             .on("pointerenter", (event, d) => {
+              d3.select(event.currentTarget).raise();
               tooltip.show(d);
               tooltip.move(event);
             })
@@ -119,7 +144,14 @@
               tooltip.show(d);
               tooltip.focus(event.currentTarget);
             })
-            .on("blur", () => tooltip.hide());
+            .on("blur", () => tooltip.hide())
+            .on("click", (event, d) => zoomToCenter(d))
+            .on("keydown", (event, d) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                zoomToCenter(d);
+              }
+            });
 
           tooltip.hide();
           visibleCenters = visible;

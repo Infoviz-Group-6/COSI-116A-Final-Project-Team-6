@@ -7,13 +7,13 @@
 
   const NEUTRAL_FILL = "#e8eef5";
   const NO_DATA_FILL = "#c4ccd6";
-  // Same four colors as the .color-ramp legend in styles/map-layout.css.
-  const COLORS = ["#e7f0ff", "#a7c8f3", "#5f91d5", "#244d91"];
-
   // One entry per state-level layer. Add electricity, poverty, etc. here.
+  // `colors` is a light-to-dark ramp of four classes; the legend swatches
+  // are recolored to match while the layer is shown.
   const LAYERS = {
     population: {
       file: "data/state-population-density.csv",
+      colors: ["#edf8e9", "#bae4b3", "#74c476", "#238b45"],
       value: d => d.density_per_sq_mi,
       legendLabel: year => `People per sq mi of land (${year} Census est.)`,
       formatBreak: d3.format(",.0f"),
@@ -39,6 +39,7 @@
     const legendLabel = document.querySelector("#color-legend-label");
     const rampLabels = document.querySelector(".color-ramp-labels");
     const defaultRampLabels = rampLabels ? rampLabels.innerHTML : "";
+    const rampSwatches = document.querySelectorAll(".color-ramp span");
     let current = { key: null, year: null, rowsByState: null, config: null };
     let renderToken = 0;
 
@@ -52,7 +53,7 @@
           const years = [...byYear.keys()].sort(d3.ascending);
           const color = d3.scaleQuantile()
             .domain(rows.map(config.value))
-            .range(COLORS);
+            .range(config.colors);
           return { byYear, years, color };
         }));
       }
@@ -61,6 +62,9 @@
 
     function setLegend(config, color, year) {
       if (legendLabel) legendLabel.textContent = config.legendLabel(year);
+      rampSwatches.forEach((swatch, i) => {
+        swatch.style.background = config.colors[i];
+      });
       if (!rampLabels) return;
       const [b1, b2, b3] = color.quantiles().map(config.formatBreak);
       rampLabels.classList.add("color-ramp-labels--classes");
@@ -71,6 +75,7 @@
     }
 
     function resetLegend() {
+      rampSwatches.forEach(swatch => swatch.style.removeProperty("background"));
       if (!rampLabels) return;
       rampLabels.classList.remove("color-ramp-labels--classes");
       rampLabels.innerHTML = defaultRampLabels;
