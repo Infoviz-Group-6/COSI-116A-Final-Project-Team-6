@@ -22,11 +22,14 @@
     bindLayerControls();
     renderInterfaceState(app.getState());
 
-    status.textContent = "PA4 layout ready";
+    if (status) status.hidden = true;
   } catch (error) {
     console.error(error);
-    status.textContent = "Dashboard could not start";
-    status.classList.add("app-error");
+    if (status) {
+      status.hidden = false;
+      status.textContent = "Dashboard could not start";
+      status.classList.add("app-error");
+    }
   }
 initVisualization();
 

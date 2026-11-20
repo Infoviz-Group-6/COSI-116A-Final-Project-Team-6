@@ -6,14 +6,26 @@
 .pa4-workspace {
 	display: grid;
 	grid-template-columns: 180px minmax(0, 1fr);
-	gap: 18px;
+	grid-template-rows: auto 1fr;
+	gap: var(--panel-gap);
+	align-items: start;
+}
+
+.pa4-workspace > .city-search {
+	grid-column: 1 / -1;
+	grid-row: 1;
+	justify-self: center;
+	margin-bottom: 0;
 }
 
 .filter-rail {
 	align-self: start;
+	min-width: 0;
+	grid-column: 1;
+	grid-row: 2;
 	padding: 18px 14px;
 	border: 1px solid var(--border);
-	border-radius: 10px;
+	border-radius: var(--panel-radius);
 	background: var(--surface-soft);
 }
 
@@ -29,8 +41,8 @@
 .control-kicker {
 	margin: 0 0 4px;
 	color: var(--accent);
-	font-size: 0.72rem;
-	font-weight: 800;
+	font-size: var(--font-size-label);
+	font-weight: var(--font-weight-bold);
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 }
@@ -38,7 +50,7 @@
 .layer-controls {
 	display: grid;
 	gap: 10px;
-	margin-top: 18px;
+	margin-top: var(--panel-gap);
 }
 
 .layer-button {
@@ -50,7 +62,7 @@
 	color: var(--ink);
 	background: var(--surface);
 	font: inherit;
-	font-size: 0.82rem;
+	font-size: var(--font-size-control);
 	text-align: left;
 	cursor: pointer;
 }
@@ -75,7 +87,7 @@
 .layer-button.is-active {
 	border-color: var(--accent);
 	color: #173b91;
-	background: #edf2ff;
+	background: var(--accent-soft);
 }
 
 .layer-button.is-active::before {
@@ -87,11 +99,20 @@
 .filter-note {
 	margin: 18px 0 0;
 	color: var(--muted);
-	font-size: 0.72rem;
+	font-size: var(--font-size-note);
 	line-height: 1.4;
 }
 
 .workspace-stage {
 	min-width: 0;
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.pa4-workspace > .model-release-section {
+	grid-column: 1 / -1;
+	grid-row: 3;
+	width: 100%;
+	margin-top: 0;
 }
 

@@ -15,11 +15,11 @@
 
 .compare-layers-button[aria-pressed="true"] {
 	border-color: var(--accent);
-	background: #edf2ff;
+	background: var(--accent-soft);
 }
 
 .small-multiples-panel {
-	margin-top: 18px;
+	margin-top: var(--panel-gap);
 }
 
 /* Three equal columns. position: relative lets the shared tooltip be
@@ -50,7 +50,7 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 8px;
-	font-size: 0.8rem;
+	font-size: var(--font-size-note);
 }
 
 .small-multiple__title {
@@ -79,7 +79,7 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	color: var(--muted);
-	font-size: 0.62rem;
+	font-size: var(--font-size-label);
 	text-align: center;
 }
 
