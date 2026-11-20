@@ -90,7 +90,7 @@ initVisualization();
   function renderInterfaceState(state) {
     const layerNames = {
       electricity: "Electricity",
-      population: "Population",
+      population: "Population density",
       poverty: "Poverty",
       claude: "Claude usage per capita"
     };
@@ -102,9 +102,12 @@ initVisualization();
     document.querySelector("#claude-view").hidden = !isClaudeView;
 
     colorLegend.hidden = !state.layer || isClaudeView;
-    document.querySelector("#color-legend-label").textContent = state.layer
-      ? layerNames[state.layer]
-      : "";
+    // Layers drawn by js/map-choropleth.js write their own, more detailed label.
+    if (!window.Team6Map?.choroplethLayers?.[state.layer]) {
+      document.querySelector("#color-legend-label").textContent = state.layer
+        ? layerNames[state.layer]
+        : "";
+    }
 
     mapSummary.textContent = state.layer
       ? `${layerNames[state.layer]} state colors with data-center capacity circles.`

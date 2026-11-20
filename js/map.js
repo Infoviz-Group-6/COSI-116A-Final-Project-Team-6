@@ -44,6 +44,9 @@
           .attr("stroke", "#8798ae")
           .attr("stroke-width", 0.8);
 
+        const tooltip = map.createTooltip(container);
+        const choropleth = map.createChoropleth({ stateLayer, tooltip });
+
         const centers = map.prepareCenters(rawCenters, projection);
         const coverage = document.querySelector("#map-coverage");
         if (coverage) {
@@ -61,7 +64,6 @@
           width,
           height
         });
-        const tooltip = map.createTooltip(container);
         let visibleCenters = [];
 
         function renderYear(year) {
@@ -135,9 +137,11 @@
         });
 
         renderYear(Number(app.getState().year));
+        choropleth.render(app.getState());
         search(app.getState());
         app.subscribe(state => {
           renderYear(Number(state.year));
+          choropleth.render(state);
           search(state);
         });
 
