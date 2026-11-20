@@ -15,15 +15,17 @@
 
       container.innerHTML = `
         <div class="timeline-control">
-          <p id="timeline-current" class="timeline-current">Showing facilities through 2026</p>
-          <input id="year-slider" type="range" min="2023" max="2026" step="1" value="2026" aria-label="Data-center year">
+          <input id="year-slider" type="range" min="2023" max="2026" step="0.01" value="2026" aria-label="Data-center year" aria-valuetext="2026">
           <div class="timeline-labels"><span>2023</span><span>2024</span><span>2025</span><span>2026 (today)</span></div>
         </div>`;
       modelReleaseView = document.querySelector("#model-release-view");
       modelReleaseView.innerHTML = '<p class="empty-view-message">Loading developer release lanes...</p>';
 
       document.querySelector("#year-slider").addEventListener("input", (event) => {
-        app.setState({ year: Number(event.target.value) });
+        const year = Math.round(Number(event.target.value));
+        if (year !== app.getState().year) {
+          app.setState({ year });
+        }
       });
 
       document.querySelector("#expand-models").addEventListener("click", toggleModelPanel);
@@ -235,10 +237,14 @@
 
   function renderYear(state) {
     const currentYear = new Date().getFullYear();
-    const label = Number(state.year) === currentYear
-      ? `Showing facilities through today (${getLocalDate()})`
-      : `Showing facilities through ${state.year}`;
-    document.querySelector("#timeline-current").textContent = label;
+    const slider = document.querySelector("#year-slider");
+    const valueLabel = Number(state.year) === currentYear
+      ? `${state.year} (today)`
+      : String(state.year);
+    slider.setAttribute("aria-valuetext", valueLabel);
+    if (document.activeElement !== slider) {
+      slider.value = String(state.year);
+    }
   }
 
   function toggleModelPanel(event) {
@@ -266,13 +272,4 @@
     event.currentTarget.textContent = willOpen ? "Hide related trends" : "Show related trends";
   }
 
-  function getLocalDate() {
-    const today = new Date();
-
-    return [
-      today.getFullYear(),
-      String(today.getMonth() + 1).padStart(2, "0"),
-      String(today.getDate()).padStart(2, "0")
-    ].join("-");
-  }
 })();
