@@ -9,7 +9,7 @@
 	display: block;
 	margin-bottom: 7px;
 	color: var(--ink);
-	font-weight: 800;
+	font-weight: var(--font-weight-bold);
 }
 
 .city-search__row {
@@ -78,7 +78,8 @@
 	border-color: var(--accent);
 	color: #ffffff;
 	background: var(--accent);
-	font-weight: 700;
+	font-size: var(--font-size-control);
+	font-weight: var(--font-weight-bold);
 	cursor: pointer;
 }
 

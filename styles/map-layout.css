@@ -2,7 +2,8 @@
 .map-composition {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) 170px;
-	gap: 18px;
+	gap: var(--panel-gap);
+	align-items: start;
 }
 
 .map-canvas {
@@ -12,13 +13,19 @@
 .legend-stack {
 	display: grid;
 	align-content: start;
-	gap: 18px;
+	gap: var(--panel-gap);
+	min-width: 0;
+}
+
+.capacity-legend,
+.color-legend {
+	background: var(--surface-soft);
 }
 
 .legend-unit {
 	margin: 4px 0 14px;
 	color: var(--muted);
-	font-size: 0.75rem;
+	font-size: var(--font-size-label);
 }
 
 .size-key {
@@ -27,7 +34,7 @@
 	align-items: center;
 	min-height: 54px;
 	color: var(--ink);
-	font-size: 0.78rem;
+	font-size: var(--font-size-note);
 }
 
 .capacity-circle {
@@ -78,6 +85,6 @@
 	justify-content: space-between;
 	margin-top: 5px;
 	color: var(--muted);
-	font-size: 0.68rem;
+	font-size: var(--font-size-label);
 }
 
