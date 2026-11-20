@@ -62,7 +62,15 @@
           centerLayer,
           searchLayer,
           width,
-          height
+          height,
+          // Reset button also clears the clicked state/facility selection.
+          onReset: () => {
+            zoomedState = null;
+            const { selectedStates, selectedFacility } = app.getState();
+            if (selectedStates.length || selectedFacility) {
+              app.setState({ selectedStates: [], selectedFacility: null });
+            }
+          }
         });
         let visibleCenters = [];
         let zoomedState = null;
@@ -76,22 +84,61 @@
             d3.select(event.currentTarget).raise();
             map.highlightState?.(feature.properties.name);
           })
-          .on("pointerleave.highlight", () => map.highlightState?.(null))
+          .on("pointerleave.highlight", () => {
+            map.highlightState?.(null);
+            // Hovering raised a neighbor; put the selected outline back on top.
+            map.markSelectedState?.(app.getState().selectedStates);
+          })
+          // Click a state to select it (pink outline) and zoom to it; click the
+          // selected state again to deselect it and zoom back out.
           .on("click", (event, feature) => {
-            // The scale check covers zooming out by other means (Reset, scroll).
-            if (zoomedState === feature && zoom.getScale() > 1) {
-              zoomedState = null;
-              zoom.resetZoom();
+            const name = feature.properties.name;
+            if (app.getState().selectedStates.includes(name)) {
+              app.setState({ selectedStates: [] });
+              // The scale check covers zooming out by other means (Reset, scroll).
+              if (zoomedState === feature && zoom.getScale() > 1) {
+                zoomedState = null;
+                zoom.resetZoom();
+              }
             } else {
+              app.setState({ selectedStates: [name] });
               zoomedState = feature;
               zoom.zoomToPoints(path.bounds(feature), 8);
             }
           });
 
-        // Center the clicked facility; never zoom back out if already closer.
-        function zoomToCenter(center) {
+        // Click a facility to select it (pink highlight) and center it; click
+        // it again to deselect. Never zoom back out if already closer.
+        function toggleCenter(center) {
+          if (app.getState().selectedFacility === center.name) {
+            app.setState({ selectedFacility: null });
+            return;
+          }
+          app.setState({ selectedFacility: center.name });
           zoomedState = null;
           zoom.zoomToPoints([center.position], Math.max(6, zoom.getScale()));
+        }
+
+        // Outline the selected state on the main map and the small multiples
+        // (same pattern as map.highlightState). Also called by
+        // js/map-small-multiples.js once its maps are built.
+        map.markSelectedState = (selectedStates = []) => {
+          d3.selectAll(".state-layer path, .small-multiple-map path")
+            .classed("is-selected", d => selectedStates.includes(d?.properties?.name))
+            .filter(".is-selected")
+            .raise();
+        };
+
+        // Re-applied after every redraw so the selection survives year changes.
+        // A facility not built yet in the chosen year simply has no circle;
+        // it is highlighted again once the slider reaches a year it exists.
+        function applySelection(state) {
+          map.markSelectedState(state.selectedStates);
+          centerLayer
+            .selectAll("circle")
+            .classed("is-selected", d => d.name === state.selectedFacility)
+            .filter(".is-selected")
+            .raise();
         }
 
         function renderYear(year) {
@@ -149,11 +196,11 @@
               tooltip.focus(event.currentTarget);
             })
             .on("blur", () => tooltip.hide())
-            .on("click", (event, d) => zoomToCenter(d))
+            .on("click", (event, d) => toggleCenter(d))
             .on("keydown", (event, d) => {
               if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();
-                zoomToCenter(d);
+                toggleCenter(d);
               }
             });
 
@@ -175,10 +222,12 @@
         renderYear(Number(app.getState().year));
         choropleth.render(app.getState());
         search(app.getState());
+        applySelection(app.getState());
         app.subscribe(state => {
           renderYear(Number(state.year));
           choropleth.render(state);
           search(state);
+          applySelection(state);
         });
 
         console.log(`Loaded ${centers.length} geocoded US data centers`);

@@ -60,6 +60,21 @@
   stroke-width: 3.5;
 }
 
+/* Click selection (class set in js/map.js). The extra "svg" / ".small-multiple"
+   in each selector makes these win over the hover, nearest-search, and
+   linked-hover outlines, so a selected item stays pink. */
+svg .data-center-layer circle.is-selected {
+  fill: rgba(230, 0, 126, 0.35);
+  stroke: #e6007e;
+  stroke-width: 4;
+}
+
+svg .state-layer path.is-selected,
+.small-multiple .small-multiple-map path.is-selected {
+  stroke: #e6007e;
+  stroke-width: 3.5;
+}
+
 .search-connector {
   stroke: #d1495b;
   stroke-width: 3;
