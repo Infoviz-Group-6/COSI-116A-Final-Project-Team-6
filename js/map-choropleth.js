@@ -7,7 +7,7 @@
 
   const NEUTRAL_FILL = "#e8eef5";
   const NO_DATA_FILL = "#c4ccd6";
-  // One entry per state-level layer. Add electricity, poverty, etc. here.
+  // One entry per state-level layer (keys match the data-layer buttons).
   // `colors` is a light-to-dark ramp of four classes; the legend swatches
   // are recolored to match while the layer is shown.
   const LAYERS = {
@@ -29,6 +29,40 @@
         land_sq_mi: Number(d.land_sq_mi),
         density_per_sq_mi: Number(d.density_per_sq_mi)
       })
+    },
+    electricity: {
+      file: "data/state-electricity-per-capita.csv",
+      colors: ["#fffbd6", "#fde68a", "#facc15", "#a16207"],
+      value: d => d.mwh_per_person,
+      // The newest year is estimated from partial-year EIA sales.
+      legendLabel: (year, row) => row?.is_estimate
+        ? `MWh of electricity per person (${year} est. from year-to-date)`
+        : `MWh of electricity per person (${year}, EIA)`,
+      formatBreak: d3.format(",.1f"),
+      // Shown under the legend only for estimated years.
+      legendNote: (year, row) => row?.is_estimate
+        ? `${year} is an estimate. EIA publishes full-year electricity sales only ` +
+          `after a year ends, and ${year} is so far reported through ${row.ytd_through}. ` +
+          `We scaled each state's ${year - 1} total by how its January–${row.ytd_through} ` +
+          `${year} sales compared with the same months of ${year - 1}. ` +
+          `Per-person values use ${row.population_year} population, the latest Census estimate.`
+        : "",
+      tooltip: (d, year) =>
+        `${d.state}\n` +
+        `${d3.format(",.1f")(d.mwh_per_person)} MWh per person\n` +
+        `Retail sales ${d3.format(",.0f")(d.sales_mwh / 1e6)} million MWh (${year}${d.is_estimate ? " est." : ""})\n` +
+        `Population ${d.population.toLocaleString()} (${d.population_year} est.)` +
+        (d.is_estimate ? `\nEstimated from Jan–${d.ytd_through} sales` : ""),
+      parse: d => ({
+        state: d.state,
+        year: Number(d.year),
+        sales_mwh: Number(d.sales_mwh),
+        population: Number(d.population),
+        population_year: Number(d.population_year),
+        mwh_per_person: Number(d.mwh_per_person),
+        is_estimate: d.is_estimate === "1",
+        ytd_through: d.ytd_through
+      })
     }
   };
 
@@ -40,6 +74,7 @@
     const rampLabels = document.querySelector(".color-ramp-labels");
     const defaultRampLabels = rampLabels ? rampLabels.innerHTML : "";
     const rampSwatches = document.querySelectorAll(".color-ramp span");
+    const legendNote = document.querySelector("#color-legend-note");
     let current = { key: null, year: null, rowsByState: null, config: null };
     let renderToken = 0;
 
@@ -60,8 +95,14 @@
       return cache.get(key);
     }
 
-    function setLegend(config, color, year) {
-      if (legendLabel) legendLabel.textContent = config.legendLabel(year);
+    function setLegend(config, color, year, rowsByState) {
+      const sampleRow = rowsByState.values().next().value;
+      if (legendLabel) legendLabel.textContent = config.legendLabel(year, sampleRow);
+      if (legendNote) {
+        const note = config.legendNote?.(year, sampleRow) || "";
+        legendNote.textContent = note;
+        legendNote.hidden = !note;
+      }
       rampSwatches.forEach((swatch, i) => {
         swatch.style.background = config.colors[i];
       });
@@ -76,6 +117,7 @@
 
     function resetLegend() {
       rampSwatches.forEach(swatch => swatch.style.removeProperty("background"));
+      if (legendNote) legendNote.hidden = true;
       if (!rampLabels) return;
       rampLabels.classList.remove("color-ramp-labels--classes");
       rampLabels.innerHTML = defaultRampLabels;
@@ -123,7 +165,7 @@
       );
       current = { key, year, rowsByState, config };
 
-      setLegend(config, color, year);
+      setLegend(config, color, year, rowsByState);
       stateLayer.selectAll("path")
         .transition().duration(400)
         .attr("fill", feature => {

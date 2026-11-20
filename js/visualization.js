@@ -89,7 +89,7 @@ initVisualization();
 
   function renderInterfaceState(state) {
     const layerNames = {
-      electricity: "Electricity",
+      electricity: "Electricity use per person",
       population: "Population density",
       poverty: "Poverty",
       claude: "Claude usage per capita"
