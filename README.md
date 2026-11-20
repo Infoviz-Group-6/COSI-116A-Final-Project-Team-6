@@ -1,4 +1,4 @@
-Team 6 Group members: Grant Shubin, Charlize Villanueva, Kiya Gedamu, Mashequr Khan
+Team 6 Group members: Charlize Villanueva, Grant Shubin, Kiya Gedamu, Mashequr Khan
 
 This project is in progress, and will be completed by December 4th, 2026.
 
