@@ -29,15 +29,24 @@ OUTPUT = DATA / "state-poverty-rate.csv"
 
 
 def main():
+    # SAIPE identifies states by FIPS code (e.g. "25" = Massachusetts). Use
+    # the population CSV to translate codes to the exact state names the map
+    # uses, so all three layers join to the map the same way.
     with POPULATION.open(encoding="utf-8", newline="") as f:
         names = {r["fips"]: r["state"] for r in csv.DictReader(f)}
 
     rows = []
+    # Every SAIPE file in data/ is included automatically, so adding a new
+    # year is just: download estYYall.txt, save as census-saipe-estYYall.txt,
+    # and rerun this script. The year comes from the file name ("est24" -> 2024).
     for path in sorted(DATA.glob("census-saipe-est*all.txt")):
         year = 2000 + int(re.search(r"est(\d{2})all", path.name).group(1))
         found = set()
         with path.open(encoding="latin-1") as f:
             for line in f:
+                # Splitting on whitespace works because every column before
+                # the name is a number with no spaces. (The state name, which
+                # can contain spaces, comes later and isn't needed.)
                 tokens = line.split()
                 fips = tokens[0].zfill(2)
                 if tokens[1] != "0" or fips not in names:
@@ -48,6 +57,7 @@ def main():
                     int(tokens[2]),
                     float(tokens[5]), float(tokens[6]), float(tokens[7]),
                 ])
+        # Every state must appear in every year, or the script stops.
         missing = sorted(names[f] for f in set(names) - found)
         if missing:
             raise SystemExit(f"{path.name} is missing: {', '.join(missing)}")

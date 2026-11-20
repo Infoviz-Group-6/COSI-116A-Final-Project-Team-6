@@ -43,7 +43,13 @@ NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 
 
 def read_xlsx_rows(path):
-    """Return the first worksheet as a list of {column letter: text} dicts."""
+    """Return the first worksheet as a list of {column letter: text} dicts.
+
+    An .xlsx file is a zip of XML files, so this reads it with the standard
+    library instead of requiring openpyxl. Text cells don't hold their text
+    directly: they hold an index into xl/sharedStrings.xml, which is looked
+    up here. Numeric cells hold their value in <v>.
+    """
     with zipfile.ZipFile(path) as z:
         shared = []
         if "xl/sharedStrings.xml" in z.namelist():
@@ -73,6 +79,12 @@ def read_all_sector_sales(path, states):
     """Read 'All Sectors' sales (thousand MWh) per state for both columns.
 
     Returns ({column header: {state: thousand MWh}}, title text).
+
+    All three EIA tables share one layout: column A is the state (or a Census
+    division subtotal like "New England"), and columns J and K are "All
+    Sectors" sales for two periods, e.g. "Year 2025" / "Year 2024" or
+    "August 2026 YTD" / "August 2025 YTD". The header row is the one whose
+    column A starts with "Census Division and State".
     """
     rows = read_xlsx_rows(path)
     title = " ".join(r.get("A", "") for r in rows[:2])
@@ -81,7 +93,7 @@ def read_all_sector_sales(path, states):
     sales = {label: {} for label in labels.values()}
     for r in rows:
         state = r.get("A", "")
-        if state in states:
+        if state in states:  # skips division subtotals and the U.S. total
             for column, label in labels.items():
                 sales[label][state] = float(r[column])
     missing = states - set(sales[labels["J"]])
@@ -91,6 +103,8 @@ def read_all_sector_sales(path, states):
 
 
 def main():
+    # Population per (state, year) from the population script's output. Its
+    # state names (50 states + DC) also define which rows we keep from EIA.
     with POPULATION.open(encoding="utf-8", newline="") as f:
         pop_rows = list(csv.DictReader(f))
     population = {(r["state"], int(r["year"])): int(r["population"]) for r in pop_rows}
@@ -104,22 +118,27 @@ def main():
         for label, by_state in sales.items():
             annual[int(re.search(r"\d{4}", label).group())] = by_state
 
-    # Year-to-date, e.g. "August 2026 YTD" and "August 2025 YTD".
+    # Year-to-date, e.g. "August 2026 YTD" and "August 2025 YTD". Sorting by
+    # the "YYYY YTD" suffix puts the current year first.
     ytd, _ = read_all_sector_sales(YTD_FILE, states)
     (this_label, this_ytd), (last_label, last_ytd) = sorted(
         ytd.items(), key=lambda item: item[0][-8:], reverse=True
     )
     this_year = int(re.search(r"\d{4}", this_label).group())
-    month = this_label.split()[0]
+    month = this_label.split()[0]  # last month covered, e.g. "August"
     if this_year - 1 not in annual:
         raise SystemExit(f"Need {this_year - 1} annual data to scale the {this_year} YTD figures")
 
+    # Rows are (state, year, sales in MWh, is_estimate, ytd_through month).
+    # EIA reports thousand MWh, hence the * 1000.
     rows = []
     for year in sorted(annual):
         for state in sorted(states):
             rows.append((state, year, annual[year][state] * 1000, False, ""))
     if this_year not in annual:
-        # Last month of the year-to-date figures, e.g. "August".
+        # Estimate the full current year: take last year's full total and
+        # scale it by how this year's Jan-to-month sales compare with the
+        # same months last year. This keeps each state's seasonal pattern.
         for state in sorted(states):
             estimate = annual[this_year - 1][state] * this_ytd[state] / last_ytd[state]
             rows.append((state, this_year, estimate * 1000, True, month))
@@ -129,6 +148,8 @@ def main():
         writer.writerow(["state", "year", "sales_mwh", "population", "population_year",
                          "mwh_per_person", "is_estimate", "ytd_through"])
         for state, year, mwh, is_estimate, ytd_through in sorted(rows):
+            # No Census estimate exists yet for the newest year (2026), so
+            # fall back to the latest population year and record which one.
             pop_year = min(year, latest_pop_year)
             pop = population[(state, pop_year)]
             writer.writerow([state, year, round(mwh), pop, pop_year,
