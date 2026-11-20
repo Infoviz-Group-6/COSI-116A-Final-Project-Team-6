@@ -35,7 +35,8 @@ initVisualization();
 
     const heading = document.getElementById("treemap-section-heading");
     if (heading) {
-      heading.textContent = `What topics were Claude chats about in ${currentState}?`;
+      const displayName = currentState === "USA" ? "the USA" : currentState;
+      heading.textContent = `What topics were Claude chats about in ${displayName}?`;
     }
 
     if (!container || !window.Treemap || !artifactData.length) return;
