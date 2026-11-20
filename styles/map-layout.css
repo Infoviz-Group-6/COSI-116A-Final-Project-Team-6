@@ -61,6 +61,13 @@
 	border-radius: 4px;
 }
 
+/* Class labels written by js/map-choropleth.js, one under each ramp color */
+.color-ramp-labels.color-ramp-labels--classes {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	text-align: center;
+}
+
 .color-ramp span:nth-child(1) { background: #e7f0ff; }
 .color-ramp span:nth-child(2) { background: #a7c8f3; }
 .color-ramp span:nth-child(3) { background: #5f91d5; }

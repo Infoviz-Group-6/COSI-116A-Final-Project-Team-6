@@ -38,6 +38,9 @@
           )
           .style("display", "block");
       },
+      showText(text) {
+        tooltip.text(text).style("display", "block");
+      },
       move(event) {
         const [x, y] = d3.pointer(event, container.node());
         position(x + 12, y + 12);

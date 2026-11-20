@@ -51,6 +51,8 @@
             <button class="layer-button" type="button" data-layer="poverty" aria-pressed="false">Poverty</button>
             <button class="layer-button" type="button" data-layer="claude" aria-pressed="false">Claude usage</button>
           </div>
+          <button id="compare-layers" class="secondary-button compare-layers-button" type="button"
+            aria-pressed="false" aria-controls="small-multiples" hidden>Compare all three layers</button>
           <p class="filter-note">Data-center circles stay visible on the geographic map.</p>
         </aside>
 
@@ -89,6 +91,21 @@
                     target="_blank" rel="noopener noreferrer">NRG Map</a>
                   (© OpenStreetMap contributors, ODbL).
                   Some locations are approximate.
+                  State population: U.S. Census Bureau,
+                  <a href="https://www.census.gov/programs-surveys/popest.html"
+                    target="_blank" rel="noopener noreferrer">Vintage 2025 population estimates</a>;
+                  land area:
+                  <a href="https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html"
+                    target="_blank" rel="noopener noreferrer">2024 Census Gazetteer</a>.
+                  Electricity: U.S. EIA retail sales by state,
+                  <a href="https://www.eia.gov/electricity/annual/"
+                    target="_blank" rel="noopener noreferrer">Electric Power Annual</a> and
+                  <a href="https://www.eia.gov/electricity/monthly/"
+                    target="_blank" rel="noopener noreferrer">Electric Power Monthly</a>
+                  (2026 estimated from year-to-date sales).
+                  Poverty: U.S. Census Bureau,
+                  <a href="https://www.census.gov/programs-surveys/saipe.html"
+                    target="_blank" rel="noopener noreferrer">Small Area Income and Poverty Estimates</a>.
                 </p>
               </section>
 
@@ -122,9 +139,21 @@
                     <span></span><span></span><span></span><span></span>
                   </div>
                   <div class="color-ramp-labels"><span>Lower</span><span>Higher</span></div>
+                  <p id="color-legend-note" class="legend-note" hidden></p>
                 </section>
               </aside>
             </div>
+
+            <section id="small-multiples" class="view-panel small-multiples-panel" aria-labelledby="small-multiples-heading" hidden>
+              <div class="view-panel__heading">
+                <div>
+                  <p class="control-kicker">Compare layers</p>
+                  <h3 id="small-multiples-heading">Population, electricity, and poverty side by side</h3>
+                  <p class="section-note">Each map has its own color scale. Hover a state to highlight it on every map. The outlined map is the layer shown above.</p>
+                </div>
+              </div>
+              <div id="small-multiples-view" class="small-multiples-grid"></div>
+            </section>
 
             <section class="view-panel timeline-panel" aria-labelledby="timeline-heading">
               <div class="view-panel__heading">
@@ -205,6 +234,8 @@
   <script src="js/map-data.js"></script>
   <script src="js/map-zoom.js"></script>
   <script src="js/map-tooltip.js"></script>
+  <script src="js/map-choropleth.js"></script>
+  <script src="js/map-small-multiples.js"></script>
   <script src="js/map-search.js"></script>
   <script src="js/map.js"></script>
   <script src="js/timeline.js"></script>
