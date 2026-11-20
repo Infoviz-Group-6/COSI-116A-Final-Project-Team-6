@@ -11,10 +11,12 @@ h1, h2, h3 {
 	line-height: 1.2
 }
 
-/* Your text should be in a nice narrow column */
+/* Keep project introduction text aligned with the dashboard shell. */
 .content-column {
-	max-width: 650px;
-	margin: 20px auto;
+	width: min(var(--page-max), calc(100% - var(--page-gutter)));
+	max-width: none;
+	margin: 32px auto 28px;
+	padding: 0 24px;
 }
 
 /* But your visualization should be full-width and full-height */

@@ -1,27 +1,31 @@
 
 .claude-heading {
-	margin-bottom: 16px;
+	margin-bottom: var(--panel-gap);
 }
 
 .claude-analysis-grid {
 	display: grid;
 	grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
-	gap: 18px;
+	gap: var(--panel-gap);
+	align-items: start;
 }
 
 .claude-primary,
 .claude-overview-grid,
 .claude-detail-grid {
+	min-width: 0;
 	display: grid;
-	gap: 18px;
+	gap: var(--panel-gap);
 }
 
 .claude-overview-grid {
 	grid-template-columns: minmax(0, 3fr) minmax(180px, 1fr);
+	align-items: start;
 }
 
 .claude-detail-grid {
 	grid-template-columns: minmax(0, 3fr) minmax(230px, 2fr);
+	align-items: start;
 }
 
 .tile-map-canvas {
@@ -30,7 +34,7 @@
 
 .selected-states-panel p:not(.section-note) {
 	color: var(--ink);
-	font-weight: 700;
+	font-weight: var(--font-weight-bold);
 	line-height: 1.6;
 }
 
