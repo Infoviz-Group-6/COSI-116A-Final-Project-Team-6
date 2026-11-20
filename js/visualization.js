@@ -66,14 +66,6 @@ initVisualization();
       // On load, honour any state already parsed from the search box.
       const initialAbbr = stateFromQuery(app.getState().searchQuery);
       updateTreemap(initialAbbr || "USA");
-
-      const selectEl = document.getElementById("state-select");
-      if (selectEl) {
-        const states = ["USA", ...new Set(artifactData.map(d => d.state).filter(Boolean).sort())];
-        selectEl.innerHTML = states.map(s => `<option value="${s}">${s}</option>`).join("");
-        selectEl.value = currentState;
-        selectEl.addEventListener("change", e => updateTreemap(e.target.value));
-      }
     } catch (csvError) {
       console.error("Could not load Anthropic-State-Artifacts.csv:", csvError);
     }
@@ -117,6 +109,22 @@ initVisualization();
     const colorLegend = document.querySelector("#color-legend");
     const mapSummary = document.querySelector("#map-summary");
 
+    const treemapSection = document.querySelector("#treemap-section");
+
+    // Show the treemap only when "Usage Percentage" is active AND a state is selected.
+    const hasSelection = state.selectedStates && state.selectedStates.length > 0;
+    if (treemapSection) treemapSection.hidden = !(state.layer === "usage" && hasSelection);
+
+    // Drive the treemap from the selected state; fall back to city-search, then USA.
+    if (artifactData.length) {
+      const selectedState = state.selectedStates?.[0] || null;
+      const searchState = stateFromQuery(state.searchQuery);
+      const targetState = selectedState || searchState || "USA";
+      if (targetState !== currentState) {
+        updateTreemap(targetState);
+      }
+    }
+
     colorLegend.hidden = !state.layer;
     // Layers drawn by js/map-choropleth.js write their own, more detailed label.
     if (!window.Team6Map?.choroplethLayers?.[state.layer]) {
@@ -128,18 +136,6 @@ initVisualization();
     mapSummary.textContent = state.layer
       ? `${layerNames[state.layer]} state colors with data-center capacity circles.`
       : "Neutral state view with data-center capacity circles.";
-
-    // Keep treemap in sync with the city search box.
-    if (artifactData.length) {
-      const stateName = stateFromQuery(state.searchQuery);
-      const targetState = stateName || "USA";
-      if (targetState !== currentState) {
-        updateTreemap(targetState);
-        // Mirror the change in the dropdown if it exists.
-        const selectEl = document.getElementById("state-select");
-        if (selectEl) selectEl.value = targetState;
-      }
-    }
   }
 })();
 

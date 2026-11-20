@@ -72,7 +72,7 @@
             <button class="layer-button" type="button" data-layer="usage" aria-pressed="false">Usage Percentage</button>
           </div>
           <button id="compare-layers" class="secondary-button compare-layers-button" type="button"
-            aria-pressed="false" aria-controls="small-multiples" hidden>Compare all three layers</button>
+            aria-pressed="false" aria-controls="small-multiples" hidden>Compare all four layers</button>
           <p class="filter-note">Data-center circles stay visible on the geographic map.</p>
         </aside>
 
@@ -163,7 +163,7 @@
               <div class="view-panel__heading">
                 <div>
                   <p class="control-kicker">Compare layers</p>
-                  <h3 id="small-multiples-heading">Population, electricity, and poverty side by side</h3>
+                  <h3 id="small-multiples-heading">Population, electricity, poverty, and usage percentage side by side</h3>
                   <p class="section-note">Each map has its own color scale. Hover a state to highlight it on every map. The outlined map is the layer shown above.</p>
                 </div>
               </div>
@@ -202,17 +202,12 @@
           </section>
         </section>
       </div>
-      <div class="treemap-section__heading">
-        <p class="project-eyebrow">Claude chat topics</p>
-        <h2 id="treemap-section-heading">What topics were Claude chats about?</h2>
-        <div class="treemap-controls">
-          <label for="state-select">Filter by state:</label>
-          <select id="state-select">
-            <option value="USA">USA (All states)</option>
-          </select>
+      <section id="treemap-section" class="view-panel treemap-section" aria-labelledby="treemap-section-heading" hidden>        <div class="treemap-section__heading">
+          <p class="project-eyebrow">Claude chat topics</p>
+          <h2 id="treemap-section-heading">What topics were Claude chats about?</h2>
         </div>
-      </div>
-      <div id="treemap-view" class="view-canvas treemap-canvas" aria-label="Treemap of Claude chat topics"></div>
+        <div id="treemap-view" class="view-canvas treemap-canvas" aria-label="Treemap of Claude chat topics"></div>
+      </section>
     </section>
 
     <!-- Project writeup sections: placeholders to be replaced with the final report content. -->
