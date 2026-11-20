@@ -114,6 +114,7 @@
             .on("pointermove", event => tooltip.move(event))
             .on("pointerleave", () => {
               map.highlightState(null);
+              map.markSelectedState?.(app.getState().selectedStates);
               tooltip.hide();
             });
 
@@ -158,6 +159,8 @@
 
         // Outline the card for the layer shown on the main map.
         built.forEach(c => c.card.classed("is-active", c.key === state.layer));
+        // Show the selected state (pink outline, set in js/map.js) here too.
+        map.markSelectedState?.(state.selectedStates);
 
         // Colors only depend on the slider year, so skip if unchanged.
         const year = Number(state.year);

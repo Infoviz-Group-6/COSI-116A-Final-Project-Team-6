@@ -1,8 +1,10 @@
+/* EB Garamond web font (so Garamond renders even on machines without it installed) */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+
 /* General formatting */
 body {
 	padding: 0 10px;
-	font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next",avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
-	sans-serif;
+	font: 20px/1.5 "EB Garamond", Garamond, "Times New Roman", serif;
 }
 
 h1, h2, h3 {

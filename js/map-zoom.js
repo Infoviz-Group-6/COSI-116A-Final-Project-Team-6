@@ -10,7 +10,9 @@
     centerLayer,
     searchLayer,
     width,
-    height
+    height,
+    // Called when the Reset button is clicked (not on code-triggered resets).
+    onReset = () => {}
   }) => {
     let zoomScale = 1;
 
@@ -91,7 +93,10 @@
       .attr("type", "button")
       .attr("aria-label", "Reset zoom")
       .text("Reset")
-      .on("click", resetZoom);
+      .on("click", () => {
+        resetZoom();
+        onReset();
+      });
 
     return {
       getScale: () => zoomScale,
