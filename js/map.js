@@ -72,7 +72,11 @@
           .selectAll("path")
           .style("cursor", "pointer")
           // Bring the hovered state to the front so its whole outline shows.
-          .on("pointerenter.highlight", event => d3.select(event.currentTarget).raise())
+          .on("pointerenter.highlight", (event, feature) => {
+            d3.select(event.currentTarget).raise();
+            map.highlightState?.(feature.properties.name);
+          })
+          .on("pointerleave.highlight", () => map.highlightState?.(null))
           .on("click", (event, feature) => {
             // The scale check covers zooming out by other means (Reset, scroll).
             if (zoomedState === feature && zoom.getScale() > 1) {

@@ -51,6 +51,8 @@
             <button class="layer-button" type="button" data-layer="poverty" aria-pressed="false">Poverty</button>
             <button class="layer-button" type="button" data-layer="claude" aria-pressed="false">Claude usage</button>
           </div>
+          <button id="compare-layers" class="secondary-button compare-layers-button" type="button"
+            aria-pressed="false" aria-controls="small-multiples" hidden>Compare all three layers</button>
           <p class="filter-note">Data-center circles stay visible on the geographic map.</p>
         </aside>
 
@@ -142,6 +144,17 @@
               </aside>
             </div>
 
+            <section id="small-multiples" class="view-panel small-multiples-panel" aria-labelledby="small-multiples-heading" hidden>
+              <div class="view-panel__heading">
+                <div>
+                  <p class="control-kicker">Compare layers</p>
+                  <h3 id="small-multiples-heading">Population, electricity, and poverty side by side</h3>
+                  <p class="section-note">Each map has its own color scale. Hover a state to highlight it on every map. The outlined map is the layer shown above.</p>
+                </div>
+              </div>
+              <div id="small-multiples-view" class="small-multiples-grid"></div>
+            </section>
+
             <section class="view-panel timeline-panel" aria-labelledby="timeline-heading">
               <div class="view-panel__heading">
                 <div>
@@ -222,6 +235,7 @@
   <script src="js/map-zoom.js"></script>
   <script src="js/map-tooltip.js"></script>
   <script src="js/map-choropleth.js"></script>
+  <script src="js/map-small-multiples.js"></script>
   <script src="js/map-search.js"></script>
   <script src="js/map.js"></script>
   <script src="js/timeline.js"></script>

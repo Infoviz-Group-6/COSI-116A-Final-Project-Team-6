@@ -12,11 +12,13 @@
   // are recolored to match while the layer is shown.
   const LAYERS = {
     population: {
+      title: "Population density",
       file: "data/state-population-density.csv",
       colors: ["#edf8e9", "#bae4b3", "#74c476", "#238b45"],
       value: d => d.density_per_sq_mi,
       legendLabel: year => `People per sq mi of land (${year} Census est.)`,
       formatBreak: d3.format(",.0f"),
+      formatValue: d => `${d3.format(",.0f")(d.density_per_sq_mi)} people per sq mi`,
       tooltip: (d, year) =>
         `${d.state}\n` +
         `${d3.format(",.1f")(d.density_per_sq_mi)} people per sq mi\n` +
@@ -31,6 +33,7 @@
       })
     },
     electricity: {
+      title: "Electricity use",
       file: "data/state-electricity-per-capita.csv",
       colors: ["#fffbd6", "#fde68a", "#facc15", "#a16207"],
       value: d => d.mwh_per_person,
@@ -39,6 +42,7 @@
         ? `MWh of electricity per person (${year} est. from year-to-date)`
         : `MWh of electricity per person (${year}, EIA)`,
       formatBreak: d3.format(",.1f"),
+      formatValue: d => `${d3.format(",.1f")(d.mwh_per_person)} MWh per person`,
       // Shown under the legend only for estimated years.
       legendNote: (year, row) => row?.is_estimate
         ? `${year} is an estimate. EIA publishes full-year electricity sales only ` +
@@ -65,11 +69,13 @@
       })
     },
     poverty: {
+      title: "Poverty rate",
       file: "data/state-poverty-rate.csv",
       colors: ["#fee5d9", "#fcae91", "#fb6a4a", "#cb181d"],
       value: d => d.poverty_rate,
       legendLabel: year => `Percent of people in poverty (${year} Census SAIPE)`,
       formatBreak: d => `${d3.format(".1f")(d)}%`,
+      formatValue: d => `${d3.format(".1f")(d.poverty_rate)}% in poverty`,
       // SAIPE is released about a year after the fact, so later slider
       // years show the newest estimate and say so.
       legendNote: (year, row, requestedYear) => requestedYear > year
@@ -96,8 +102,35 @@
 
   map.choroplethLayers = LAYERS;
 
+  // Loads a layer once (shared by the main map and the small multiples) and
+  // builds a color scale from every year together, so moving the year slider
+  // shows real change instead of re-ranked classes.
+  const cache = new Map();
+  map.loadChoroplethLayer = key => {
+    if (!cache.has(key)) {
+      const config = LAYERS[key];
+      cache.set(key, d3.csv(config.file, config.parse).then(rows => {
+        const byYear = d3.group(rows, d => d.year, d => d.state);
+        const years = [...byYear.keys()].sort(d3.ascending);
+        const color = d3.scaleQuantile()
+          .domain(rows.map(config.value))
+          .range(config.colors);
+        return { byYear, years, color };
+      }));
+    }
+    return cache.get(key);
+  };
+
+  // Clamps a slider year to the layer's data and returns Map<stateName, row>.
+  map.choroplethRowsForYear = ({ byYear, years }, requestedYear) => {
+    const year = Math.max(years[0], Math.min(years.at(-1), Number(requestedYear)));
+    const rowsByState = new Map(
+      [...byYear.get(year)].map(([name, rows]) => [name, rows[0]])
+    );
+    return { year, rowsByState };
+  };
+
   map.createChoropleth = ({ stateLayer, tooltip }) => {
-    const cache = new Map();
     const legendLabel = document.querySelector("#color-legend-label");
     const rampLabels = document.querySelector(".color-ramp-labels");
     const defaultRampLabels = rampLabels ? rampLabels.innerHTML : "";
@@ -105,23 +138,6 @@
     const legendNote = document.querySelector("#color-legend-note");
     let current = { key: null, year: null, rowsByState: null, config: null };
     let renderToken = 0;
-
-    // Loads a layer once and builds a color scale from every year together,
-    // so moving the year slider shows real change instead of re-ranked classes.
-    function load(key) {
-      if (!cache.has(key)) {
-        const config = LAYERS[key];
-        cache.set(key, d3.csv(config.file, config.parse).then(rows => {
-          const byYear = d3.group(rows, d => d.year, d => d.state);
-          const years = [...byYear.keys()].sort(d3.ascending);
-          const color = d3.scaleQuantile()
-            .domain(rows.map(config.value))
-            .range(config.colors);
-          return { byYear, years, color };
-        }));
-      }
-      return cache.get(key);
-    }
 
     function setLegend(config, color, year, rowsByState, requestedYear) {
       const sampleRow = rowsByState.values().next().value;
@@ -180,18 +196,15 @@
         return;
       }
 
-      const { byYear, years, color } = await load(key);
+      const layer = await map.loadChoroplethLayer(key);
       if (token !== renderToken) return; // a newer state change won
 
-      // Clamp the slider year to the years we have data for.
       const requestedYear = Number(state.year);
-      const year = Math.max(years[0], Math.min(years.at(-1), requestedYear));
       if (current.key === key && current.requestedYear === requestedYear) return;
 
       const config = LAYERS[key];
-      const rowsByState = new Map(
-        [...byYear.get(year)].map(([name, rows]) => [name, rows[0]])
-      );
+      const { color } = layer;
+      const { year, rowsByState } = map.choroplethRowsForYear(layer, requestedYear);
       current = { key, year, requestedYear, rowsByState, config };
 
       setLegend(config, color, year, rowsByState, requestedYear);

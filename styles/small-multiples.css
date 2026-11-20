@@ -1,0 +1,92 @@
+/* Layer comparison: small multiples under the main map (js/map-small-multiples.js) */
+.compare-layers-button {
+	width: 100%;
+	margin-top: 12px;
+}
+
+.compare-layers-button[aria-pressed="true"] {
+	border-color: var(--accent);
+	background: #edf2ff;
+}
+
+.small-multiples-panel {
+	margin-top: 18px;
+}
+
+.small-multiples-grid {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 14px;
+	margin-top: 12px;
+}
+
+.small-multiple {
+	margin: 0;
+	padding: 10px;
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	background: #ffffff;
+}
+
+.small-multiple.is-active {
+	border-color: var(--accent);
+	box-shadow: 0 0 0 1px var(--accent);
+}
+
+.small-multiple figcaption {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+	font-size: 0.8rem;
+}
+
+.small-multiple__title {
+	color: var(--ink);
+	font-weight: 700;
+}
+
+.small-multiple__year {
+	color: var(--muted);
+}
+
+.small-multiple-map {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 6px 0;
+}
+
+.small-multiple-map path {
+	stroke: #8798ae;
+	stroke-width: 0.5;
+}
+
+.small-multiple__legend {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	color: var(--muted);
+	font-size: 0.62rem;
+	text-align: center;
+}
+
+.small-multiple__swatch::before {
+	content: "";
+	display: block;
+	height: 10px;
+	margin-bottom: 3px;
+	background: var(--swatch);
+}
+
+/* Linked highlight: the same state hovered on any map */
+.state-layer path.is-linked,
+.small-multiple-map path.is-linked {
+	stroke: #263348;
+	stroke-width: 2;
+}
+
+@media (max-width: 900px) {
+	.small-multiples-grid {
+		grid-template-columns: 1fr;
+	}
+}
