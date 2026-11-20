@@ -91,7 +91,7 @@ initVisualization();
     const layerNames = {
       electricity: "Electricity use per person",
       population: "Population density",
-      poverty: "Poverty",
+      poverty: "Poverty rate",
       claude: "Claude usage per capita"
     };
     const isClaudeView = state.layer === "claude";

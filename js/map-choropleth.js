@@ -63,6 +63,34 @@
         is_estimate: d.is_estimate === "1",
         ytd_through: d.ytd_through
       })
+    },
+    poverty: {
+      file: "data/state-poverty-rate.csv",
+      colors: ["#fee5d9", "#fcae91", "#fb6a4a", "#cb181d"],
+      value: d => d.poverty_rate,
+      legendLabel: year => `Percent of people in poverty (${year} Census SAIPE)`,
+      formatBreak: d => `${d3.format(".1f")(d)}%`,
+      // SAIPE is released about a year after the fact, so later slider
+      // years show the newest estimate and say so.
+      legendNote: (year, row, requestedYear) => requestedYear > year
+        ? `Showing ${year}, the latest available. The Census Bureau releases each ` +
+          `year's state poverty estimates about a year later (usually in December), ` +
+          `so ${year + 1}${requestedYear > year + 1 ? ` and ${requestedYear}` : ""} ` +
+          `${requestedYear > year + 1 ? "are" : "is"} not published yet.`
+        : "",
+      tooltip: (d, year) =>
+        `${d.state}\n` +
+        `${d3.format(".1f")(d.poverty_rate)}% of people in poverty (${year})\n` +
+        `90% confidence interval: ${d.rate_ci_low}–${d.rate_ci_high}%\n` +
+        `${d.people_in_poverty.toLocaleString()} people`,
+      parse: d => ({
+        state: d.state,
+        year: Number(d.year),
+        people_in_poverty: Number(d.people_in_poverty),
+        poverty_rate: Number(d.poverty_rate),
+        rate_ci_low: Number(d.rate_ci_low),
+        rate_ci_high: Number(d.rate_ci_high)
+      })
     }
   };
 
@@ -95,11 +123,11 @@
       return cache.get(key);
     }
 
-    function setLegend(config, color, year, rowsByState) {
+    function setLegend(config, color, year, rowsByState, requestedYear) {
       const sampleRow = rowsByState.values().next().value;
       if (legendLabel) legendLabel.textContent = config.legendLabel(year, sampleRow);
       if (legendNote) {
-        const note = config.legendNote?.(year, sampleRow) || "";
+        const note = config.legendNote?.(year, sampleRow, requestedYear) || "";
         legendNote.textContent = note;
         legendNote.hidden = !note;
       }
@@ -156,16 +184,17 @@
       if (token !== renderToken) return; // a newer state change won
 
       // Clamp the slider year to the years we have data for.
-      const year = Math.max(years[0], Math.min(years.at(-1), Number(state.year)));
-      if (current.key === key && current.year === year) return;
+      const requestedYear = Number(state.year);
+      const year = Math.max(years[0], Math.min(years.at(-1), requestedYear));
+      if (current.key === key && current.requestedYear === requestedYear) return;
 
       const config = LAYERS[key];
       const rowsByState = new Map(
         [...byYear.get(year)].map(([name, rows]) => [name, rows[0]])
       );
-      current = { key, year, rowsByState, config };
+      current = { key, year, requestedYear, rowsByState, config };
 
-      setLegend(config, color, year, rowsByState);
+      setLegend(config, color, year, rowsByState, requestedYear);
       stateLayer.selectAll("path")
         .transition().duration(400)
         .attr("fill", feature => {
