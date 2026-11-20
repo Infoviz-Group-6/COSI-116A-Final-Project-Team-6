@@ -171,7 +171,10 @@
                     <h4 id="model-release-heading">Model releases by developer</h4>
                     <p class="section-note">Developers will appear on separate rows with releases positioned over time.</p>
                   </div>
-                  <button id="expand-lines" class="secondary-button" type="button" aria-expanded="false" aria-controls="line-chart-panel">Show related trends</button>
+                  <div class="timeline-actions">
+                    <button id="model-history-toggle" class="secondary-button" type="button" aria-pressed="false">Show full history</button>
+                    <button id="expand-lines" class="secondary-button" type="button" aria-expanded="false" aria-controls="line-chart-panel">Show related trends</button>
+                  </div>
                 </div>
                 <div id="model-release-view" class="view-canvas view-canvas--short"></div>
                 <div id="line-chart-panel" class="line-chart-grid" hidden>

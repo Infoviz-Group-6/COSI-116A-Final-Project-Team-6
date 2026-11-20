@@ -33,6 +33,13 @@
 	text-align: center;
 }
 
+.timeline-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-content: flex-end;
+}
+
 .secondary-button {
 	padding: 7px 12px;
 	color: var(--accent);
@@ -56,10 +63,15 @@
 }
 
 #model-release-view {
+	position: relative;
 	display: block;
 	overflow-x: auto;
 	padding: 12px;
 	text-align: left;
+}
+
+.release-tooltip {
+	word-break: break-word;
 }
 
 #model-release-view svg {

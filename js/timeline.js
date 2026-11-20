@@ -5,6 +5,8 @@
   const app = window.Team6App;
 
   let modelReleaseView;
+  let modelReleases = [];
+  let showFullHistory = false;
   const MODEL_DISPLAY_START = new Date("2010-01-01T00:00:00Z");
 
   app.views.timeline = {
@@ -25,6 +27,7 @@
       });
 
       document.querySelector("#expand-models").addEventListener("click", toggleModelPanel);
+      document.querySelector("#model-history-toggle").addEventListener("click", toggleModelHistory);
       document.querySelector("#expand-lines").addEventListener("click", toggleLinePanel);
       app.subscribe(renderYear);
       renderYear(app.getState());
@@ -48,24 +51,25 @@
         throw new Error("No dated model-release records were found.");
       }
 
-      const organizations = d3.rollups(
-        releases.filter(row => row.date >= MODEL_DISPLAY_START),
-        values => values.length,
-        row => row.organization
-      )
-        .sort((a, b) => d3.descending(a[1], b[1]))
-        .slice(0, 8)
-        .map(([organization]) => organization);
-
-      renderModelLanes(releases, organizations);
+      modelReleases = releases;
+      renderModelLanes();
     } catch (error) {
       console.error("Could not load model-release data:", error);
       modelReleaseView.innerHTML = '<p class="empty-view-message">Model-release data could not be loaded.</p>';
     }
   }
 
-  function renderModelLanes(releases, organizations) {
-    const displayedReleases = releases.filter(row => row.date >= MODEL_DISPLAY_START);
+  function renderModelLanes() {
+    const displayedReleases = modelReleases.filter(row =>
+      showFullHistory || row.date >= MODEL_DISPLAY_START
+    );
+    const organizations = selectOrganizations(displayedReleases);
+
+    if (!displayedReleases.length || !organizations.length) {
+      modelReleaseView.innerHTML = '<p class="empty-view-message">No model-release records are available for this period.</p>';
+      return;
+    }
+
     const margin = { top: 28, right: 24, bottom: 48, left: 150 };
     const width = 1000;
     const rowHeight = 34;
@@ -90,20 +94,78 @@
       .attr("role", "img")
       .attr("aria-label", "Notable AI model releases by developer over time");
 
+    const tooltip = d3.select(modelReleaseView)
+      .append("div")
+      .attr("class", "dc-tooltip release-tooltip")
+      .style("display", "none");
+
+    function positionTooltip(left, top) {
+      const container = modelReleaseView;
+      const tip = tooltip.node();
+      const padding = 8;
+      const boundedLeft = Math.max(
+        padding,
+        Math.min(left, container.clientWidth - tip.offsetWidth - padding)
+      );
+      const boundedTop = Math.max(
+        padding,
+        Math.min(top, container.clientHeight - tip.offsetHeight - padding)
+      );
+
+      tooltip
+        .style("left", `${boundedLeft}px`)
+        .style("top", `${boundedTop}px`);
+    }
+
+    function showTooltip(row) {
+      tooltip
+        .text(
+          `${row.model}\n` +
+          `Developer: ${row.organization}\n` +
+          `Release date: ${d3.timeFormat("%Y-%m-%d")(row.date)}\n` +
+          `Source: ${row.link || "Not listed"}`
+        )
+        .style("display", "block");
+    }
+
+    function moveTooltip(event) {
+      const [x, y] = d3.pointer(event, modelReleaseView);
+      positionTooltip(x + 12, y + 12);
+    }
+
+    function focusTooltip(element) {
+      const containerRect = modelReleaseView.getBoundingClientRect();
+      const markRect = element.getBoundingClientRect();
+      positionTooltip(
+        markRect.left - containerRect.left + markRect.width / 2 + 12,
+        markRect.top - containerRect.top + markRect.height / 2 + 12
+      );
+    }
+
     svg.append("text")
       .attr("class", "model-lane-note")
       .attr("x", margin.left)
       .attr("y", 16)
-      .text("Epoch curated records, 2010 onward; top eight exact organization labels");
+      .style("font-family", "inherit")
+      .style("font-size", "0.72rem")
+      .style("font-weight", "400")
+      .style("fill", "var(--muted)")
+      .text(showFullHistory
+        ? "1950–2026 · includes organizations with pre-2010 records and high-count labels"
+        : "2010 onward · top 8 organization labels by record count");
 
-    svg.append("g")
+    const xAxis = svg.append("g")
+      .attr("class", "timeline-axis timeline-axis--x")
       .attr("transform", `translate(0,${height - margin.bottom})`)
       .call(d3.axisBottom(x).ticks(6).tickFormat(d3.timeFormat("%Y")));
+    styleAxis(xAxis);
 
-    svg.append("g")
+    const yAxis = svg.append("g")
+      .attr("class", "timeline-axis timeline-axis--y")
       .attr("transform", `translate(${margin.left},0)`)
       .call(d3.axisLeft(y).tickSize(0))
       .call(axis => axis.select(".domain").remove());
+    styleAxis(yAxis);
 
     svg.append("g")
       .attr("class", "model-release-marks")
@@ -117,8 +179,59 @@
       .attr("tabindex", 0)
       .attr("role", "img")
       .attr("aria-label", row => `${row.model}, ${row.organization}, ${d3.timeFormat("%Y-%m-%d")(row.date)}`)
-      .append("title")
-      .text(row => `${row.model}\n${row.organization}\n${d3.timeFormat("%Y-%m-%d")(row.date)}${row.link ? `\n${row.link}` : ""}`);
+      .style("cursor", "pointer")
+      .on("pointerenter", (event, row) => {
+        showTooltip(row);
+        moveTooltip(event);
+      })
+      .on("pointermove", moveTooltip)
+      .on("pointerleave", () => tooltip.style("display", "none"))
+      .on("focus", (event, row) => {
+        showTooltip(row);
+        focusTooltip(event.currentTarget);
+      })
+      .on("blur", () => tooltip.style("display", "none"));
+  }
+
+  function styleAxis(axis) {
+    axis.selectAll("text")
+      .style("font-family", "inherit")
+      .style("font-size", "0.72rem")
+      .style("font-weight", "400")
+      .style("fill", "var(--muted)");
+    axis.selectAll("line")
+      .style("stroke", "var(--border)");
+    axis.select(".domain")
+      .style("stroke", "var(--border)");
+  }
+
+  function selectOrganizations(releases) {
+    const ranked = rows => d3.rollups(
+      rows,
+      values => values.length,
+      row => row.organization
+    )
+      .sort((a, b) => d3.descending(a[1], b[1]))
+      .map(([organization]) => organization);
+
+    const rankedOverall = ranked(releases);
+    if (!showFullHistory) return rankedOverall.slice(0, 8);
+
+    const earlyOrganizations = ranked(
+      releases.filter(row => row.date < MODEL_DISPLAY_START)
+    );
+    const selected = [];
+
+    const add = organization => {
+      if (!selected.includes(organization) && selected.length < 8) {
+        selected.push(organization);
+      }
+    };
+
+    // Keep early records visible, then fill the remaining lanes by overall count.
+    earlyOrganizations.slice(0, 4).forEach(add);
+    rankedOverall.forEach(add);
+    return selected;
   }
 
   function renderYear(state) {
@@ -135,6 +248,15 @@
     panel.hidden = !willOpen;
     event.currentTarget.setAttribute("aria-expanded", String(willOpen));
     event.currentTarget.textContent = willOpen ? "Collapse model releases" : "Expand model releases";
+  }
+
+  function toggleModelHistory(event) {
+    showFullHistory = !showFullHistory;
+    event.currentTarget.setAttribute("aria-pressed", String(showFullHistory));
+    event.currentTarget.textContent = showFullHistory
+      ? "Show modern period"
+      : "Show full history";
+    renderModelLanes();
   }
 
   function toggleLinePanel(event) {
