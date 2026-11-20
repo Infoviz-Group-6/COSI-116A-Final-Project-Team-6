@@ -63,10 +63,15 @@
 }
 
 #model-release-view {
+	position: relative;
 	display: block;
 	overflow-x: auto;
 	padding: 12px;
 	text-align: left;
+}
+
+.release-tooltip {
+	word-break: break-word;
 }
 
 #model-release-view svg {
