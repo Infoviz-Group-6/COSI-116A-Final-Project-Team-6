@@ -33,8 +33,14 @@
     <section class="content-column project-writeup-section" aria-labelledby="motivation-heading">
       <h2 id="motivation-heading">Motivation</h2>
       <p>
-        We are building an interactive view of AI development and the physical infrastructure that supports it.
-        This page is the starting point for the final project and will be updated as our implementation progresses.
+        In just the past 4 years, there has been a massive increase in the influence of AI in everyday life around the world. 
+        From 2022, the global AI compute capacity grew about 3.3x every year, bringing with it a wave of datacenter construction, 
+        with the US hosting 10 times more datacenters than any other country (Stanford HAI, 2026 AI Index). 
+        Despite the expansive impact AI has on everyday life, many users do not really know if/how they are being affected by the growth of AI and the development 
+        of datacenters. Although there is a tsunami of information on the impacts of AI, most of it is framed in a global or national context. 
+        We created this visualization to allow users to explore the impact that the development of AI has had not only on the US as a whole but 
+        also close to home on an interactive map. Users can search for any city to find the datacenter closest to them, and see how their state compares in electricity use, 
+        population density, and poverty. We hope that this encourages users to think deeply about their AI usage and what further impacts it may have on the US more broadly.
       </p>
     </section>
 
@@ -240,36 +246,100 @@
     </section>
 
     <!-- Project writeup sections: placeholders to be replaced with the final report content. -->
+     <!-- Demo Video -->
     <section class="content-column project-writeup-section" aria-labelledby="demo-video-heading">
       <h2 id="demo-video-heading">Demo Video</h2>
       <p><em>Placeholder: add the final demonstration video or a link to it.</em></p>
     </section>
 
+    <!-- Visualization Explaination -->
     <section class="content-column project-writeup-section" aria-labelledby="visualization-explanation-heading">
       <h2 id="visualization-explanation-heading">Visualization Explanation</h2>
       <p><em>Placeholder: add screenshots, design reasoning, a short interface walkthrough, and links to any presentation slides.</em></p>
     </section>
 
+    <!-- Data Analysis -->
     <section class="content-column project-writeup-section" aria-labelledby="data-analysis-heading">
       <h2 id="data-analysis-heading">Data Analysis</h2>
-      <p><em>Placeholder: describe the data sources, field types, preparation steps, and important limitations.</em></p>
+
+      <h3>Data Sources</h3>
+      <p>To build this visualization, we pulled together six different datasets:</p>
+      <ul>
+        <li><strong>Epoch AI Data Centers:</strong> 407 AI datacenters around the world, along with timeline records that track how each one's construction and power have changed over time.</li>
+        <li><strong>US Census Population Estimates and Gazetteer:</strong> state populations for 2020–2025 and each state's land area.</li>
+        <li><strong>US Energy Information Administration (EIA):</strong> electricity sales for each state from the Electric Power Annual and Electric Power Monthly reports.</li>
+        <li><strong>Census Small Area Income and Poverty Estimates (SAIPE):</strong> state poverty rates for 2023 and 2024.</li>
+        <li><strong>Anthropic Claude Usage Data:</strong> state-level data from April and May 2026 on the kinds of things people create with Claude.</li>
+        <li><strong>Epoch AI Notable Models:</strong> 1,180 notable AI models and the developers who released them.</li>
+      </ul>
+      <p>We also used a US states TopoJSON file for the base map and NRG Map to fill in datacenter locations we could not find otherwise.</p>
+
+      <h3>Field Types</h3>
+      <table>
+        <thead>
+          <tr><th>Dataset</th><th>Field</th><th>Type</th></tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="6">Datacenters</td><td>Name, owner</td><td>Categorical</td></tr>
+          <tr><td>Latitude, longitude</td><td>Spatial</td></tr>
+          <tr><td>Construction status</td><td>Categorical</td></tr>
+          <tr><td>Date of record</td><td>Temporal</td></tr>
+          <tr><td>IT power (MW)</td><td>Quantitative</td></tr>
+          <tr><td>Power group (0, under 200, 200–800, over 800 MW)</td><td>Ordinal (derived)</td></tr>
+          <tr><td rowspan="7">State layers</td><td>State name, FIPS code</td><td>Categorical / Spatial</td></tr>
+          <tr><td>Year</td><td>Temporal</td></tr>
+          <tr><td>Population density (people per sq. mi.)</td><td>Quantitative</td></tr>
+          <tr><td>Electricity use per person (MWh)</td><td>Quantitative</td></tr>
+          <tr><td>Poverty rate (%)</td><td>Quantitative</td></tr>
+          <tr><td>Is estimate (2026 electricity)</td><td>Categorical (flag)</td></tr>
+          <tr><td>Color class (4 quantiles)</td><td>Ordinal (derived)</td></tr>
+          <tr><td rowspan="3">Claude usage</td><td>State, artifact type</td><td>Categorical</td></tr>
+          <tr><td>Month</td><td>Temporal</td></tr>
+          <tr><td>Share of artifacts (%)</td><td>Quantitative</td></tr>
+          <tr><td rowspan="3">Notable models</td><td>Model name, developer, domain</td><td>Categorical</td></tr>
+          <tr><td>Publication date</td><td>Temporal</td></tr>
+          <tr><td>Training compute</td><td>Quantitative</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Preparation Steps</h3>
+      <p>For the datacenters, we filtered Epoch AI's dataset down to just the US and used the US Census geocoder to find where each one is located, only keeping a location when the address matched exactly one place. That matched 34 datacenters. For the other 43, we looked them up by name in NRG Map and only kept the match if there was exactly one and it fell inside the US, which left us with 77 datacenters. In the browser, we clean up the owner names, group each datacenter's timeline records by date, and show each datacenter's most recent record for the year the user picks on the slider. Each datacenter is then sized into one of four power groups.</p>
+      <p>For population density, we added up the Census population for each state across all ages and races and divided it by the state's land area (not counting water). For electricity use, we took the "All Sectors" electricity sales for each state, converted them to MWh, and divided by the state's population. Since 2026 is not over yet, we estimated it by scaling the 2025 total by how 2026 sales through August compared to 2025 sales through August, and used 2025 population since there is no 2026 estimate yet. For poverty, we pulled out the state rows from the SAIPE files, keeping the poverty rate and its confidence interval. All three layers use the same four color breaks across every year, so if a state changes color over time, it is because something actually changed and not just because states were re-ranked.</p>
+      <p>For the Claude usage data, we pulled out the state-level artifact percentages and turned the codes into readable state names and artifact types. For the model timeline, we cleaned up the model and developer names, dropped any models without a valid date, and kept the eight developers with the most releases.</p>
+
+      <h3>Important Limitations</h3>
+      <ul>
+        <li><strong>Only a small slice of US datacenters is shown.</strong> The US has 5,427 datacenters, but Epoch AI only tracks major AI datacenters, so our map shows 77. The map shows where large AI datacenters are, not every datacenter in the country.</li>
+        <li><strong>We can't connect electricity use directly to datacenters.</strong> The electricity layer is a state's total electricity sales across all sectors, so it shows how much electricity a state uses overall. It does not show how much of that goes to datacenters.</li>
+        <li><strong>Everything is by state.</strong> The choropleth layers are state averages, so they can hide big differences within a state. A city near a datacenter might look very different from the state as a whole.</li>
+        <li><strong>Some datacenter locations are less precise.</strong> Locations from NRG Map were matched by name instead of by address, and the NRG file is not saved in our repo, so this step can't be rerun right now.</li>
+        <li><strong>Some years are estimated or missing.</strong> 2026 electricity use is estimated from partial-year sales, and poverty data only goes through 2024, so later years on the slider show the most recent available data.</li>
+        <li><strong>The Claude data only covers one AI tool over two months.</strong> It shows how people use Claude, not AI as a whole, and only for April and May 2026.</li>
+        <li><strong>The model timeline only shows the top eight developers,</strong> so smaller developers are left out.</li>
+        <li><strong>The source of our base map is not recorded.</strong></li>
+      </ul>
     </section>
 
+    <!-- Task Analysis -->
     <section class="content-column project-writeup-section" aria-labelledby="task-analysis-heading">
       <h2 id="task-analysis-heading">Task Analysis</h2>
       <p><em>Placeholder: summarize the user goals, domain tasks, and abstract tasks addressed by the visualization.</em></p>
     </section>
 
+    <!-- Design Process -->
     <section class="content-column project-writeup-section" aria-labelledby="design-process-heading">
       <h2 id="design-process-heading">Design Process</h2>
       <p><em>Placeholder: document the sketches, iterations, design choices, course concepts, and feedback that shaped the final design.</em></p>
     </section>
 
+
+    <!-- Conclusion -->
     <section class="content-column project-writeup-section" aria-labelledby="conclusion-heading">
       <h2 id="conclusion-heading">Conclusion</h2>
       <p><em>Placeholder: summarize what the project shows and identify limitations and possible future improvements.</em></p>
     </section>
 
+    <!-- Acknowledgements -->
     <section class="content-column project-writeup-section" aria-labelledby="acknowledgments-heading">
       <h2 id="acknowledgments-heading">Acknowledgments</h2>
       <p><em>Placeholder: credit libraries, datasets, code, images, design references, slides, and any AI assistance used.</em></p>
