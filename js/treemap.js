@@ -24,6 +24,14 @@
       label
     );
 
+    // Convert raw sums to percentages of the total for this state/region.
+    const total = d3.sum(rolledUp.values());
+    if (total > 0) {
+      for (const [key, sum] of rolledUp) {
+        rolledUp.set(key, (sum / total) * 100);
+      }
+    }
+
     const root = d3.hierarchy(rolledUp)
       .sum(([, val]) => (typeof val === "number" ? Math.max(0, val) : 0))
       .sort((a, b) => b.value - a.value);
@@ -52,7 +60,7 @@
       .attr("fill", "#111")
       .text(`${selectedState} — Artifact Breakdown`);
 
-    const format = d3.format(",.2~f");
+    const format = v => d3.format(".1f")(v) + "%";
 
     const leaf = svg.append("g")
       .attr("transform", `translate(0,${titleHeight})`)

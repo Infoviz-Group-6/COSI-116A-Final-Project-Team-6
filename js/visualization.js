@@ -32,10 +32,12 @@ initVisualization();
 
   function updateTreemap(newState = "USA") {
     currentState = newState || "USA";
-    const heading = document.getElementById("treemap-heading");
+
+    const heading = document.getElementById("treemap-section-heading");
     if (heading) {
-      heading.textContent = `What topics were Claude chats about? (${currentState})`;
+      heading.textContent = `What topics were Claude chats about in ${currentState}?`;
     }
+
     if (!container || !window.Treemap || !artifactData.length) return;
 
     const chart = window.Treemap(artifactData, {
@@ -56,12 +58,16 @@ initVisualization();
     try {
       // Note: If your CSV is in a "data/" subfolder, change this to "data/Anthropic-State-Artifacts.csv"
       artifactData = await d3.csv("data/Anthropic-State-Artifacts.csv");
-      updateTreemap(currentState);
+
+      // On load, honour any state already parsed from the search box.
+      const initialAbbr = stateFromQuery(app.getState().searchQuery);
+      updateTreemap(initialAbbr || "USA");
 
       const selectEl = document.getElementById("state-select");
       if (selectEl) {
         const states = ["USA", ...new Set(artifactData.map(d => d.state).filter(Boolean).sort())];
         selectEl.innerHTML = states.map(s => `<option value="${s}">${s}</option>`).join("");
+        selectEl.value = currentState;
         selectEl.addEventListener("change", e => updateTreemap(e.target.value));
       }
     } catch (csvError) {
@@ -87,21 +93,27 @@ initVisualization();
     });
   }
 
+  // Extracts a full US state name from a "City, State Name" query string.
+  // Returns null if the query is blank or no state portion is found.
+  function stateFromQuery(query) {
+    if (!query) return null;
+    const commaIdx = query.lastIndexOf(",");
+    if (commaIdx === -1) return null;
+    const stateName = query.slice(commaIdx + 1).trim();
+    return stateName.length ? stateName : null;
+  }
+
   function renderInterfaceState(state) {
     const layerNames = {
       electricity: "Electricity",
       population: "Population",
       poverty: "Poverty",
-      claude: "Claude usage per capita"
+      usage: "Usage Percentage"
     };
-    const isClaudeView = state.layer === "claude";
     const colorLegend = document.querySelector("#color-legend");
     const mapSummary = document.querySelector("#map-summary");
 
-    document.querySelector("#geographic-view").hidden = isClaudeView;
-    document.querySelector("#claude-view").hidden = !isClaudeView;
-
-    colorLegend.hidden = !state.layer || isClaudeView;
+    colorLegend.hidden = !state.layer;
     document.querySelector("#color-legend-label").textContent = state.layer
       ? layerNames[state.layer]
       : "";
@@ -109,8 +121,17 @@ initVisualization();
     mapSummary.textContent = state.layer
       ? `${layerNames[state.layer]} state colors with data-center capacity circles.`
       : "Neutral state view with data-center capacity circles.";
-    if (isClaudeView && artifactData.length) {
-      updateTreemap(state.selectedState || currentState);
+
+    // Keep treemap in sync with the city search box.
+    if (artifactData.length) {
+      const stateName = stateFromQuery(state.searchQuery);
+      const targetState = stateName || "USA";
+      if (targetState !== currentState) {
+        updateTreemap(targetState);
+        // Mirror the change in the dropdown if it exists.
+        const selectEl = document.getElementById("state-select");
+        if (selectEl) selectEl.value = targetState;
+      }
     }
   }
 })();
