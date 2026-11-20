@@ -19,7 +19,7 @@
   background: var(--surface);
   color: var(--ink);
   border: 1px solid var(--border);
-  border-radius: 7px;
+  border-radius: 2px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   white-space: pre-line;
   font-size: var(--font-size-note);
@@ -29,8 +29,8 @@
 
 /* Data-center legend: zero capacity */
 .capacity-circle--zero {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: #ffffff;
 }
 
@@ -131,7 +131,7 @@ svg .state-layer path.is-selected,
   min-height: 34px;
   padding: 4px 8px;
   border: 1px solid #8798ae;
-  border-radius: 6px;
+  border-radius: 2px;
   color: var(--ink);
   background: var(--surface);
   font-size: var(--font-size-control);

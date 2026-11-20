@@ -36,7 +36,7 @@
 	margin: 0;
 	padding: 10px;
 	border: 1px solid var(--border);
-	border-radius: 8px;
+	border-radius: 2px;
 	background: #ffffff;
 }
 
@@ -99,6 +99,13 @@
 .state-layer path.is-linked,
 .small-multiple-map path.is-linked {
 	stroke: #263348;
+	stroke-width: 2;
+}
+
+/* Selected data center, mirrored from the main map (same pink) */
+.small-multiple-facility__marker {
+	fill: rgba(230, 0, 126, 0.35);
+	stroke: #e6007e;
 	stroke-width: 2;
 }
 

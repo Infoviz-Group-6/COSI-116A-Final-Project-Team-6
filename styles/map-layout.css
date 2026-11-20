@@ -1,40 +1,104 @@
 
 .map-composition {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) 170px;
-	gap: var(--panel-gap);
-	align-items: start;
+	display: block;
 }
 
 .map-canvas {
 	min-height: 520px;
+	border: none;
+	background: transparent;
 }
 
+/* The map plus its legend; the legend is positioned against this box. */
+.map-stage {
+	position: relative;
+}
+
+/* Legend: one compact box over the map's bottom-right corner. */
 .legend-stack {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 4;
 	display: grid;
-	align-content: start;
-	gap: var(--panel-gap);
-	min-width: 0;
+	gap: 8px;
+	width: 200px;
+	padding: 8px 10px;
+	border: 1px solid var(--border);
+	border-radius: 2px;
+	background: rgba(255, 255, 255, 0.94);
 }
 
-.capacity-legend,
-.color-legend {
-	background: var(--surface-soft);
+/* The two legend sections share the one box, so drop their own frames. */
+.legend-stack .view-panel {
+	padding: 0;
+	border: none;
+	background: transparent;
+}
+
+.legend-stack h3 {
+	font-size: var(--font-size-note);
+}
+
+.legend-stack .legend-note {
+	margin-top: 4px;
+	font-size: var(--font-size-label);
+	line-height: 1.3;
+}
+
+/* Separate the state-color section from the circle-size section. */
+.legend-stack .color-legend {
+	padding-top: 8px;
+	border-top: 1px solid var(--border);
+}
+
+/* Circle sizes in a row: four columns, circle above its label. */
+.capacity-legend {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	column-gap: 4px;
+}
+
+.capacity-legend > :not(.size-key) {
+	grid-column: 1 / -1;
 }
 
 .legend-unit {
-	margin: 4px 0 14px;
+	margin: 2px 0 6px;
 	color: var(--muted);
 	font-size: var(--font-size-label);
 }
 
 .size-key {
 	display: grid;
-	grid-template-columns: 48px 1fr;
+	grid-template-rows: 34px auto;
+	justify-items: center;
 	align-items: center;
-	min-height: 54px;
+	row-gap: 2px;
 	color: var(--ink);
-	font-size: var(--font-size-note);
+	font-size: var(--font-size-label);
+	white-space: nowrap;
+}
+
+/* Bottom-left scale bar, drawn into the map SVG by js/map-scale-bar.js */
+.map-scale-bar {
+	pointer-events: none;
+}
+
+.map-scale-bar__bg {
+	fill: rgba(255, 255, 255, 0.85);
+}
+
+.map-scale-bar__line {
+	fill: none;
+	stroke: var(--ink);
+	stroke-width: 2;
+}
+
+.map-scale-bar__label {
+	fill: var(--ink);
+	font-size: 14px;
+	font-weight: var(--font-weight-bold);
 }
 
 .capacity-circle {
@@ -45,19 +109,23 @@
 	background: rgba(34, 87, 214, 0.09);
 }
 
+/* Fill colors match map.circleColor in js/map-data.js (light to dark). */
 .capacity-circle--small {
-	width: 12px;
-	height: 12px;
+	width: 10px;
+	height: 10px;
+	background: #efdcc0;
 }
 
 .capacity-circle--medium {
-	width: 26px;
-	height: 26px;
+	width: 20px;
+	height: 20px;
+	background: #cf9f6e;
 }
 
 .capacity-circle--large {
-	width: 44px;
-	height: 44px;
+	width: 34px;
+	height: 34px;
+	background: #8a5d40;
 }
 
 .color-ramp {
@@ -65,7 +133,7 @@
 	grid-template-columns: repeat(4, 1fr);
 	height: 20px;
 	overflow: hidden;
-	border-radius: 4px;
+	border-radius: 2px;
 }
 
 /* Class labels written by js/map-choropleth.js, one under each ramp color */

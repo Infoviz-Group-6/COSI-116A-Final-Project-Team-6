@@ -55,6 +55,8 @@
         }
 
         const timelines = map.prepareTimelines(rawTimelines);
+        // Bottom-left scale bar in miles; resized on every zoom below.
+        const scaleBar = map.createScaleBar({ svg, projection, height });
         const zoom = map.createZoomController({
           container,
           svg,
@@ -63,6 +65,7 @@
           searchLayer,
           width,
           height,
+          onZoom: k => scaleBar.update(k),
           // Reset button also clears the clicked state/facility selection.
           onReset: () => {
             zoomedState = null;
@@ -139,6 +142,11 @@
             .classed("is-selected", d => d.name === state.selectedFacility)
             .filter(".is-selected")
             .raise();
+          // Mirror the selected facility on the small multiples (only if it
+          // exists in the chosen year, same as the main map).
+          map.markSelectedFacility?.(
+            visibleCenters.find(d => d.name === state.selectedFacility) ?? null
+          );
         }
 
         function renderYear(year) {
@@ -173,9 +181,9 @@
             .attr("cx", d => d.position[0])
             .attr("cy", d => d.position[1])
             .attr("r", d => map.circleRadius(d.power) / zoom.getScale())
-            .attr("fill", d => d.power === 0
-              ? "white"
-              : "rgba(34, 87, 214, 0.30)")
+            .attr("fill", d => map.circleColor(d.power))
+            // Slightly see-through so overlapping circles stay visible.
+            .attr("fill-opacity", d => d.power === 0 ? 1 : 0.85)
             .attr("stroke", "#263348")
             .attr("stroke-width", 2)
             .attr("tabindex", 0)

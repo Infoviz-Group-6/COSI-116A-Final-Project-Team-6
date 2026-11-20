@@ -36,10 +36,6 @@
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	.legend-stack {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
 	.scatter-canvas {
 		min-height: 360px;
 	}
@@ -56,9 +52,15 @@
 	}
 
 	.layer-controls,
-	.legend-stack,
 	.line-chart-grid {
 		grid-template-columns: 1fr;
+	}
+
+	/* Too narrow to cover the map: put the legend under it instead. */
+	.legend-stack {
+		position: static;
+		width: auto;
+		margin-top: 10px;
 	}
 
 	.city-search__row {
