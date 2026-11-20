@@ -1,0 +1,78 @@
+name,owner,address,latitude,longitude,current_power_mw,coordinate_source,location_precision,coordinate_source_url
+Colossus 2,SpaceXAI #confident,"5420 Tulane Rd, Memphis, TN 38109",34.9994880087,-90.042976440198,946,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+OpenAI Stargate Abilene,Oracle #confident,"5502 Spinks Rd, Abilene, TX 79601",32.44645,-99.74759,824,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Anthropic-Amazon New Carlisle,Amazon #confident,"55001 Larrison Blvd, New Carlisle, IN 46552",41.693774125775,-86.460524297175,1037,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Microsoft Fairwater Atlanta,Microsoft #confident,"1435 Hwy 54 W, Fayetteville, GA 30214",33.445340546204,-84.525446609061,636,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Google Pryor (North),Google #confident,"4581 Webb St, Pryor, OK 74361",36.30843,-95.31691,368,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Meta Prometheus,Meta #confident,"1 Community Cir, New Albany, OH 43054",40.08117,-82.80879,471,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Microsoft Fairwater Wisconsin,Microsoft #confident,"4800 90th St, Mount Pleasant, WI 53403",42.674891499261,-87.894853580498,369,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Google Columbus,Google #confident,"5076 S High St, Columbus, OH 43207",39.96226,-83.00071,303,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Google New Albany,Google #confident,"1101 Beech Rd SW, New Albany, OH 43054",40.08117,-82.80879,333,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Anthropic Lake Mariner,AI XPV Platform #confident,"7725 Lake Rd, Barker, NY 14012",43.348940357577,-78.603357217695,210,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Google Mesa,Google #confident,,33.35451,-111.67806,183,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Colossus 1,SpaceXAI #confident,"3231 Riverport Rd, Memphis, TN 38109",35.14603,-90.05178,340,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Google Council Bluffs (East),Google #confident,"10410 Bunge Ave, Council Bluffs, IA 51503",41.167418141276,-95.793107634728,237,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+CoreWeave Denton TX,CoreWeave #confident,"8171 Jim Christal Rd, Denton, TX 76207",33.21504,-97.13304,262,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+QTS Richmond 1,,"6000 Technology Blvd, Sandston, VA 23150",37.51072,-77.31156,238,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Meta Rosemount,Meta #confident,"1772-2396 145th St, Rosemount, MN 55068, USA",44.7394,-93.1258,178,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Amazon Madison Mega Site,Amazon #confident,"Amazon Data Services Inc, Madison Mega Site Nissan Parkway and Highway 22 Canton, Mississippi Madison County",32.6126,-90.03675,284,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Google Bristow,Google,"13001 Rollins Ford Road, Bristow, VA 20136",38.782544165202,-77.57971701769,238,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Microsoft Goodyear,Microsoft #confident,"14250 W Broadway Rd, Goodyear, AZ 85338",33.46723,-112.38535,202,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Meta Jeffersonville,Meta #confident,"500 8th St, Jeffersonville, IN 47130, USA",38.279118096229,-85.739096631921,178,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Google Kansas City East,Google #confident,,39.1001,-94.57814,105,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Meta Temple,Meta #confident,"2310 Eberhardt Rd, Temple, TX 76504",31.09837,-97.34296,178,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+AWS New Albany,Amazon #confident,13360 Miller Rd NW,40.08117,-82.80879,213,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Google Omaha,Google #confident,"11110 State St, Omaha, NE 68142",41.335728085545,-96.088471406098,237,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Google Lincoln,Google #confident,"5475 Cloud Ct, Lincoln, NE 68514",40.80889,-96.70778,141,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+QTS Richmond 2,,"6030–6070 Technology Blvd, Sandston, VA 23150",37.51072,-77.31156,180,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Google The Dalles,Google #confident,"3500 River Rd, The Dalles, OR",45.60151,-121.18416,154,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+QTS Richmond 3,,"3525–3543 Portugee Rd, Sandston, VA 23150",37.51072,-77.31156,144,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Meta Montgomery,Meta #confident,"Co Rd 42, Montgomery, AL 36105, USA",32.26499674362,-86.363511872502,153,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Meta Kuna,Meta #confident,"601 Kuna Mora Rd,  Kuna ID 83634",43.459233402117,-116.421077193242,152,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Meta Cheyenne,Meta #confident,"Cheyenne, WY 82007, USA",41.13998,-104.82025,152,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Amazon Ridgeland,Amazon #confident,"1626 County Line Road Ridgeland, Mississippi",32.399543508385,-90.120485603023,228,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Meta Huntsville,Meta #confident,"5400 Prosperity Dr NW, Toney, AL",34.89814,-86.73357,146,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Coreweave Helios,CoreWeave #confident,"984 County Road 112, Afton, TX 79220",33.780638980867,-100.867098637288,132,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Microsoft Project Osmium,Microsoft #confident,"5855 SW Kerry St, Cumming, IA 50061",41.48332,-93.76244,190,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Meta Eagle Mountain,Meta #confident,"1275 N Community Cir, Eagle Mountain, UT 84005",40.30935,-112.01198,133,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Meta Aiken,Meta #confident,"7601 State Hwy 105, Trenton, SC 29847, USA",33.74166,-81.84234,129,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Google Midlothian,Google #confident,"3250 Railport Parkway, Midlothian, TX 76065",32.48236,-96.99445,103,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Google Storey County,Google #confident,,39.49488,-119.43174,161,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Meta Los Lunas,Meta #confident,"4250 Messenger Lp, Los Lunas, NM 87031",34.81421,-106.76131,118,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Google Lancaster,Google #confident,"105 Whiley Rd, Lancaster, OH 43130",39.727031372056,-82.683111290507,137,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Meta-QTS Hillsboro 2,Meta #likely,"4755 NE Huffman St, Hillsboro, OR 97124",45.556953477024,-122.931942381381,180,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Google Arcola,Google #confident,"42575 Arcola Blvd, Sterling, VA 20166",39.00368,-77.40831,77,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Google Red Oak,Google #confident,"330 Austin Blvd, Red Oak, TX 75154",32.529975790363,-96.799787783078,77,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Google Papillion,Google #confident,"14651-15249 Gold Coast Rd 68138 Papillion Nebraska, USA",41.15444,-96.04224,237,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Meta Gallatin,Meta #confident,"1 Meta Lp, Gallatin, TN 37066",36.3883,-86.44759,87,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+CoreWeave Ellendale ND,CoreWeave #confident,"9685 87th Ave SE, Ellendale, ND 58436",46.00614270139,-98.568735689845,68,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Meta Sarpy,Meta #confident,"14436-14998 Fairview Rd, Springfield, NE 68059, USA",41.103572416149,-96.147913090146,80,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+CoreWeave Chester VA,CoreWeave #confident,"1401 Meadowville Technology Parkway, Chester, VA",37.361745240614,-77.325259396826,82,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+AWS Berwick,Amazon #confident,"1125 Electron Ave, Berwick, PA 18603",41.0602,-76.24613,108,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+CoreWeave Marble NC,CoreWeave #confident,"155 Palmer Ln, Marble, NC 28905",35.184986531552,-83.914091369842,65,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Core42 Lake Mariner,Core42 #confident,"7725 Lake Rd, Barker, NY 14012",43.348940357577,-78.603357217695,58,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Microsoft SAT40,Microsoft #confident,"15000 Lambda Drive, San Antonio, TX 78245",29.41495,-98.80304,75,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+STACK Infrastructure NVA02,,"9590 Hornbaker Rd, Manassas, VA 20109",38.749819262609,-77.535848480473,85,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Microsoft-Nebius New Jersey,Nebius #confident,"3963 S Lincoln Ave, Vineland, New Jersey",39.428192532649,-75.018457282871,50,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Stream Phoenix,,2950 S. Litchfield Road,33.479282344597,-112.35932850694,64,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Microsoft SAT14,Microsoft #confident,"3545 Wiseman Boulevard, San Antonio, TX 78251",29.473182459994,-98.681508657437,47,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Vantage TX1,,"14720 Omicron Dr, San Antonio, TX 78245",29.416683531254,-98.788564103486,32,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+CoreWeave Dalton 1 & 2,CoreWeave #confident,"2205 Industrial South Rd, Dalton, GA, 30721",34.713506892783,-84.952184746212,28,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+xAI QTS Atlanta,SpaceXAI #confident,"1025 Jefferson Street NW, Atlanta, GA 30318",33.775662280728,-84.422576064561,17.32971,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Anthropic Barber Lake,Cipher Mining #confident,,32.39303,-100.86351,0,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+CoreWeave Lancaster Greenfield site,CoreWeave #confident,"216 Greenfield Rd, Lancaster, PA",40.048690305089,-76.256089835306,0,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+CoreWeave Muskogee OK,CoreWeave #confident,"1525 W 43rd St S, Muskogee, OK 74401, USA",35.74788,-95.36969,0,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Crusoe Abilene Expansion,Microsoft #confident,"5502 Spinks Rd, Abilene, TX 79601",32.44645,-99.74759,0,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Goodnight,Google #speculative,"10001 Lima Rd, Claude, TX 79019",35.10811,-101.36274,0,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+Google Cedar Rapids,Google #confident,"5800 EDGEWOOD RD SW CEDAR RAPIDS, IA 52404",41.921946128019,-91.715629615019,0,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Google Fort Wayne,Google #confident,"6015 Adams Center Road, Fort Wayne, IN 46806",41.031166579954,-85.057768391974,0,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Meta Bowling Green,Meta #confident,"12356 Middleton Pike, Bowling Green, OH 43402",41.45826725086,-83.636217439419,0,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+Meta Hyperion,Meta #confident,"Holly Ridge, LA 71269",32.46764,-91.62679,0,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+OpenAI Stargate Lordstown,Softbank #confident,"2300 Hallock Young Rd, Warren, OH 44481",41.143721220025,-80.883293483213,0,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+OpenAI Stargate Michigan,Oracle #confident,,42.0992,-83.8294,0,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+OpenAI Stargate Milam,Softbank #confident,,30.6552,-97.0014,0,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+OpenAI Stargate New Mexico,Oracle #confident,,31.87003,-106.68658,0,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+OpenAI Stargate Shackelford,Oracle #confident,"175 Private Road 1604, Abilene, TX 79601, Shackelford County",32.44645,-99.74759,0,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+OpenAI Stargate Wisconsin,Oracle #confident,,43.387,-87.8755,0,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
+QTS Cedar Rapids,Meta #speculative,"6200 76th Ave SW, Fairfax, IA 52228",41.905594293137,-91.751082222284,0,US Census geocoder,Address geocode; approximate,https://geocoding.geo.census.gov/
+QTS Eagle Mountain,Meta #speculative,"652 E Hyperscale Way, Eagle Mountain, UT 84013",40.30935,-112.01198,0,NRG Map / OpenStreetMap,Approximate; site precision unverified,https://app.nrgmap.com/data/data-centers.geojson
