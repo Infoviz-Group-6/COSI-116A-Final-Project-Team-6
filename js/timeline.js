@@ -122,8 +122,7 @@
         .text(
           `${row.model}\n` +
           `Developer: ${row.organization}\n` +
-          `Release date: ${d3.timeFormat("%Y-%m-%d")(row.date)}\n` +
-          `Source: ${row.link || "Not listed"}`
+          `Release date: ${d3.timeFormat("%Y-%m-%d")(row.date)}`
         )
         .style("display", "block");
     }
