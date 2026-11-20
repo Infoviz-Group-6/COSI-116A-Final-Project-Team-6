@@ -29,8 +29,8 @@
 
 /* Data-center legend: zero capacity */
 .capacity-circle--zero {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: #ffffff;
 }
 
