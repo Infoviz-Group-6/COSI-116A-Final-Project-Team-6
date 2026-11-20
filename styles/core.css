@@ -1,18 +1,22 @@
+/* EB Garamond web font (so Garamond renders even on machines without it installed) */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+
 /* General formatting */
 body {
 	padding: 0 10px;
-	font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next",avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
-	sans-serif;
+	font: 20px/1.5 "EB Garamond", Garamond, "Times New Roman", serif;
 }
 
 h1, h2, h3 {
 	line-height: 1.2
 }
 
-/* Your text should be in a nice narrow column */
+/* Keep project introduction text aligned with the dashboard shell. */
 .content-column {
-	max-width: 650px;
-	margin: 40px auto;
+	width: min(var(--page-max), calc(100% - var(--page-gutter)));
+	max-width: none;
+	margin: 32px auto 28px;
+	padding: 0 24px;
 }
 
 /* But your visualization should be full-width and full-height */

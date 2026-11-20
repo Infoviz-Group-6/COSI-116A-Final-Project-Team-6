@@ -2,7 +2,8 @@
 .map-composition {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) 170px;
-	gap: 18px;
+	gap: var(--panel-gap);
+	align-items: start;
 }
 
 .map-canvas {
@@ -12,13 +13,19 @@
 .legend-stack {
 	display: grid;
 	align-content: start;
-	gap: 18px;
+	gap: var(--panel-gap);
+	min-width: 0;
+}
+
+.capacity-legend,
+.color-legend {
+	background: var(--surface-soft);
 }
 
 .legend-unit {
 	margin: 4px 0 14px;
 	color: var(--muted);
-	font-size: 0.75rem;
+	font-size: var(--font-size-label);
 }
 
 .size-key {
@@ -27,7 +34,7 @@
 	align-items: center;
 	min-height: 54px;
 	color: var(--ink);
-	font-size: 0.78rem;
+	font-size: var(--font-size-note);
 }
 
 .capacity-circle {
@@ -61,6 +68,13 @@
 	border-radius: 4px;
 }
 
+/* Class labels written by js/map-choropleth.js, one under each ramp color */
+.color-ramp-labels.color-ramp-labels--classes {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	text-align: center;
+}
+
 .color-ramp span:nth-child(1) { background: #e7f0ff; }
 .color-ramp span:nth-child(2) { background: #a7c8f3; }
 .color-ramp span:nth-child(3) { background: #5f91d5; }
@@ -71,6 +85,6 @@
 	justify-content: space-between;
 	margin-top: 5px;
 	color: var(--muted);
-	font-size: 0.68rem;
+	font-size: var(--font-size-label);
 }
 

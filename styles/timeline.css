@@ -1,11 +1,30 @@
 
-.timeline-panel {
-	margin-top: 18px;
+.model-release-section {
+	margin-top: 0;
 }
 
 .timeline-view {
-	margin-top: 18px;
-	padding: 16px 8px 4px;
+	margin-top: 10px;
+	padding: 6px 0 2px;
+}
+
+.map-timeline {
+	margin-top: var(--panel-gap);
+	padding: 12px 14px 10px;
+	border: 1px solid var(--border);
+	border-radius: var(--panel-radius);
+	background: var(--surface-soft);
+}
+
+.map-timeline__heading h3 {
+	margin: 0;
+	color: var(--ink);
+	font-size: var(--font-size-control);
+	font-weight: var(--font-weight-bold);
+}
+
+.map-timeline__heading .control-kicker {
+	margin-bottom: 2px;
 }
 
 .timeline-control {
@@ -15,30 +34,74 @@
 
 .timeline-control input {
 	width: 100%;
+	height: 6px;
+	margin: 5px 0 2px;
+	appearance: none;
+	border-radius: 999px;
+	background: var(--border);
 	accent-color: var(--accent);
+}
+
+.timeline-control input::-webkit-slider-runnable-track {
+	height: 6px;
+	border-radius: 999px;
+	background: var(--border);
+}
+
+.timeline-control input::-webkit-slider-thumb {
+	width: 14px;
+	height: 14px;
+	margin-top: -4px;
+	appearance: none;
+	border: 2px solid var(--surface);
+	border-radius: 50%;
+	background: var(--accent);
+	box-shadow: 0 0 0 1px var(--accent);
+	cursor: pointer;
+}
+
+.timeline-control input::-moz-range-track {
+	height: 6px;
+	border-radius: 999px;
+	background: var(--border);
+}
+
+.timeline-control input::-moz-range-progress {
+	height: 6px;
+	border-radius: 999px;
+	background: var(--accent);
+}
+
+.timeline-control input::-moz-range-thumb {
+	width: 10px;
+	height: 10px;
+	border: 2px solid var(--surface);
+	border-radius: 50%;
+	background: var(--accent);
+	box-shadow: 0 0 0 1px var(--accent);
+	cursor: pointer;
 }
 
 .timeline-labels {
 	display: flex;
 	justify-content: space-between;
 	color: var(--muted);
-	font-size: 0.75rem;
+	font-size: var(--font-size-label);
 }
 
-.timeline-current {
-	margin: 0;
-	color: var(--ink);
-	font-size: 0.85rem;
-	font-weight: 700;
-	text-align: center;
+.timeline-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-content: flex-end;
 }
 
 .secondary-button {
 	padding: 7px 12px;
 	color: var(--accent);
 	background: #ffffff;
-	font-size: 0.78rem;
-	font-weight: 700;
+	font-size: var(--font-size-control);
+	font-weight: var(--font-weight-bold);
 	cursor: pointer;
 }
 
@@ -56,10 +119,15 @@
 }
 
 #model-release-view {
+	position: relative;
 	display: block;
 	overflow-x: auto;
 	padding: 12px;
 	text-align: left;
+}
+
+.release-tooltip {
+	word-break: break-word;
 }
 
 #model-release-view svg {

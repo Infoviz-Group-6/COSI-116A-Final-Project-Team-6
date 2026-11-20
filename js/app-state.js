@@ -5,6 +5,8 @@
   const listeners = new Set();
   let state = Object.freeze({
     layer: null,
+    // Show population/electricity/poverty small multiples under the map.
+    compareLayers: false,
     year: 2026,
     selectedStates: [],
     selectedFacility: null,

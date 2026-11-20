@@ -1,12 +1,23 @@
 /* Team 6 project landing page */
 :root {
 	color-scheme: light;
+	--page-max: 1320px;
+	--page-gutter: 32px;
 	--ink: #172033;
 	--muted: #596579;
 	--surface: #ffffff;
 	--surface-soft: #f3f6fa;
 	--border: #d8e0ea;
 	--accent: #2257d6;
+	--accent-soft: #edf2ff;
+	--panel-gap: 18px;
+	--panel-padding: 18px;
+	--panel-radius: 10px;
+	--font-size-label: 0.75rem;
+	--font-size-note: 0.8rem;
+	--font-size-control: 0.85rem;
+	--font-weight-regular: 400;
+	--font-weight-bold: 700;
 }
 
 * {
@@ -14,55 +25,193 @@
 }
 
 .project-header {
-	margin: 0 -10px;
-	padding: 48px 24px;
-	color: #ffffff;
-	background: linear-gradient(135deg, #16223b 0%, #234e91 100%);
+	width: min(var(--page-max), calc(100% - var(--page-gutter)));
+	margin: 18px auto 0;
+	padding: 20px 24px;
+	color: var(--ink);
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--panel-radius);
+	box-shadow: 0 8px 24px rgba(23, 32, 51, 0.05);
 }
 
-.project-header__content,
 .dashboard-shell {
-	width: min(1180px, calc(100% - 32px));
+	width: min(var(--page-max), calc(100% - var(--page-gutter)));
 	margin: 0 auto;
 }
 
+.project-header__content {
+	width: 100%;
+}
+
+.project-header__content {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	column-gap: 24px;
+	row-gap: 8px;
+	align-items: start;
+}
+
+.project-header__content > .reference-link {
+	grid-column: 2;
+	grid-row: 1 / span 3;
+	align-self: center;
+	justify-self: end;
+	max-width: 260px;
+	margin-top: 0;
+	font-size: var(--font-size-control);
+	line-height: 1.35;
+	text-align: center;
+}
+
+.project-header .project-eyebrow,
+.project-header h1,
+.project-header .project-team {
+	color: var(--ink);
+}
+
 .project-header h1 {
-	margin: 8px 0 12px;
-	font-size: clamp(2rem, 5vw, 4rem);
+	margin: 0;
+	font-size: clamp(1.4rem, 2.4vw, 2rem);
 }
 
 .project-eyebrow {
 	margin: 0;
-	font-size: 0.8rem;
-	font-weight: 700;
+	font-size: var(--font-size-label);
+	font-weight: var(--font-weight-bold);
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 }
 
 .project-team {
 	max-width: 800px;
-	color: #dbe6ff;
+	margin: 0;
+	color: var(--muted);
+	font-weight: 700;
+}
+
+.project-course-note {
+	grid-column: 1 / -1;
+	max-width: none;
+	margin: 0;
+	color: var(--ink);
+	font-family: inherit;
+	font-size: 1rem;
+	font-weight: var(--font-weight-regular);
+	line-height: 1.45;
+}
+
+.project-course-note a {
+	color: var(--accent);
+	font-family: inherit;
+	text-decoration: underline;
 }
 
 .reference-link {
 	display: inline-block;
-	margin-top: 14px;
-	padding: 10px 14px;
-	border: 1px solid rgba(255, 255, 255, 0.55);
+	margin-top: 10px;
+	padding: 8px 12px;
+	border: 1px solid var(--border);
 	border-radius: 8px;
-	color: #ffffff;
-	font-weight: 700;
+	color: var(--accent);
+	background: var(--surface);
+	font-weight: var(--font-weight-bold);
 	text-decoration: none;
 }
 
 .reference-link:hover,
 .reference-link:focus-visible {
-	background: rgba(255, 255, 255, 0.12);
+	background: var(--accent-soft);
 }
 
 .content-column h2,
 .dashboard-shell h2 {
 	margin-top: 0;
 	color: var(--ink);
+	font-family: inherit;
+	font-size: 1.35rem;
+	font-weight: var(--font-weight-bold);
+	line-height: 1.2;
 }
 
+.project-writeup-section {
+	padding: 20px 24px;
+	border: 1px solid var(--border);
+	border-radius: var(--panel-radius);
+	background: var(--surface);
+	box-shadow: 0 8px 24px rgba(23, 32, 51, 0.05);
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* Write-up section: subheadings, lists, and field-types table */
+.project-writeup-section h3 {
+	margin: 24px 0 8px;
+	color: var(--ink);
+	font-size: 1.05rem;
+	font-weight: var(--font-weight-bold);
+	line-height: 1.3;
+}
+
+.project-writeup-section p,
+.project-writeup-section li {
+	color: var(--ink);
+	line-height: 1.55;
+}
+
+.project-writeup-section ul {
+	margin: 0 0 12px;
+	padding-left: 1.25rem;
+}
+
+.project-writeup-section li + li {
+	margin-top: 6px;
+}
+
+.project-writeup-section table {
+	width: 100%;
+	margin: 8px 0 4px;
+	border-collapse: collapse;
+	font-size: 0.9rem;
+}
+
+/*Table formatting */
+.project-writeup-section th,
+.project-writeup-section td {
+	padding: 8px 12px;
+	border: 1px solid var(--border);
+	text-align: left;
+	vertical-align: top;
+}
+
+.project-writeup-section thead th {
+	background: var(--surface-soft);
+	font-size: var(--font-size-label);
+	font-weight: var(--font-weight-bold);
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.project-writeup-section td[rowspan] {
+	background: var(--surface-soft);
+	font-weight: var(--font-weight-bold);
+}
+
+/* Let the table scroll sideways instead of squishing on phones */
+@media (max-width: 640px) {
+	.project-writeup-section table {
+		display: block;
+		overflow-x: auto;
+	}
+}

@@ -1,0 +1,2 @@
+# Raw Census estimates (13.8 MB); only needed to rerun scripts/build_population_density.py
+data/sc-est2025-alldata6.csv

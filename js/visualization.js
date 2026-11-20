@@ -22,11 +22,14 @@
     bindLayerControls();
     renderInterfaceState(app.getState());
 
-    status.textContent = "PA4 layout ready";
+    if (status) status.hidden = true;
   } catch (error) {
     console.error(error);
-    status.textContent = "Dashboard could not start";
-    status.classList.add("app-error");
+    if (status) {
+      status.hidden = false;
+      status.textContent = "Dashboard could not start";
+      status.classList.add("app-error");
+    }
   }
 initVisualization();
 
@@ -106,18 +109,21 @@ initVisualization();
 
   function renderInterfaceState(state) {
     const layerNames = {
-      electricity: "Electricity",
-      population: "Population",
-      poverty: "Poverty",
+      electricity: "Electricity use per person",
+      population: "Population density",
+      poverty: "Poverty rate",
       usage: "Usage Percentage"
     };
     const colorLegend = document.querySelector("#color-legend");
     const mapSummary = document.querySelector("#map-summary");
 
     colorLegend.hidden = !state.layer;
-    document.querySelector("#color-legend-label").textContent = state.layer
-      ? layerNames[state.layer]
-      : "";
+    // Layers drawn by js/map-choropleth.js write their own, more detailed label.
+    if (!window.Team6Map?.choroplethLayers?.[state.layer]) {
+      document.querySelector("#color-legend-label").textContent = state.layer
+        ? layerNames[state.layer]
+        : "";
+    }
 
     mapSummary.textContent = state.layer
       ? `${layerNames[state.layer]} state colors with data-center capacity circles.`
