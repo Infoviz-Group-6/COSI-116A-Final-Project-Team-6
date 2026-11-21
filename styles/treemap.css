@@ -27,11 +27,9 @@
   color: #a5d8ff;
 }
 
-/* Standalone treemap section */
+/* Treemap section */
 .treemap-section {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border, #e2e8f0);
+  margin-top: 0;
 }
 
 .treemap-section__heading {

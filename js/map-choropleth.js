@@ -167,7 +167,8 @@
       colors: ["#f3e8ff", "#c084fc", "#9333ea", "#581c87"], // purples
       value: d => d.usage_pct,
       legendLabel: () => "Share of nationwide Claude usage (%)",
-      legendNote: () => "",
+      legendNote: () => "Percentages are averaged over usage data from April 2026 - May 2026.",
+      note: "Percentages are averaged over usage data from April 2026 - May 2026.",
       formatBreak: d => `${d3.format(".2f")(d)}%`,
       formatValue: d => `${d3.format(".2f")(d.usage_pct)}% of usage`,
       tooltip: (d) =>

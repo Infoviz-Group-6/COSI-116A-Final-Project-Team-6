@@ -131,6 +131,11 @@
             .style("pointer-events", "none");
 
           const legend = card.append("div").attr("class", "small-multiple__legend");
+          if (config.note) {
+            card.append("p")
+              .attr("class", "small-multiple__note")
+              .text(config.note);
+          }
           return { key, config, card, yearLabel, paths, facilityLayer, projection, legend };
           // render() later adds: rowsByState (that year's data) and yearText.
         });
