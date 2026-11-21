@@ -110,6 +110,8 @@ initVisualization();
     const mapSummary = document.querySelector("#map-summary");
     const usageMapNote = document.querySelector("#usage-map-note");
     if (usageMapNote) usageMapNote.hidden = state.layer !== "usage";
+    const treeMapHint = document.querySelector("#tree-map-hint");
+    if (treeMapHint) treeMapHint.hidden = state.layer !== "usage";
 
     const treemapSection = document.querySelector("#treemap-section");
 

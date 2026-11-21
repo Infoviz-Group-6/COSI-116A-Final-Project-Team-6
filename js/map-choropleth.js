@@ -173,8 +173,7 @@
       formatValue: d => `${d3.format(".2f")(d.usage_pct)}% of usage`,
       tooltip: (d) =>
         `${d.state}\n` +
-        `${d3.format(".2f")(d.usage_pct)}% of nationwide Claude usage\n` +
-        `Percentages are averaged over usage data from April 2026 - May 2026`,
+        `${d3.format(".2f")(d.usage_pct)}% of nationwide Claude usage`,
       parse: d => {
         const abbr = String(d.geo_id || "").replace(/^US-/, "");
         return {
