@@ -93,6 +93,14 @@
 	background: var(--swatch);
 }
 
+.small-multiple__note {
+	margin: 8px 0 0;
+	color: var(--muted);
+	font-size: var(--font-size-label);
+	line-height: 1.35;
+	text-align: center;
+}
+
 /* Linked highlight: the same state hovered on any map is outlined on all of
    them (class set by map.highlightState). CSS overrides the stroke
    attributes that the JS sets on the paths. */

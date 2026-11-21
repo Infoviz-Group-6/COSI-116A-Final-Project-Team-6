@@ -27,9 +27,16 @@
 		grid-row: 3;
 	}
 
+	.pa4-workspace > .treemap-section {
+		grid-column: 1;
+		grid-row: auto;
+		order: 10;
+	}
+
 	.pa4-workspace > .model-release-section {
 		grid-column: 1;
-		grid-row: 4;
+		grid-row: auto;
+		order: 20;
 	}
 
 	.layer-controls {

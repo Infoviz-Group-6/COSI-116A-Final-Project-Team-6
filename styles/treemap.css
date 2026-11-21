@@ -27,34 +27,9 @@
   color: #a5d8ff;
 }
 
-/* Standalone treemap section */
+/* Treemap section */
 .treemap-section {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border, #e2e8f0);
-}
-
-.treemap-section__heading {
-  margin-bottom: 1rem;
-}
-
-.treemap-section__heading h2 {
-  margin: 0.25rem 0 0.75rem;
-}
-
-.treemap-controls {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.treemap-controls select {
-  padding: 0.25rem 0.5rem;
-  border: 1px solid var(--border, #e2e8f0);
-  border-radius: 4px;
-  background: var(--surface);
-  font-size: 0.9rem;
+  margin-top: 0;
 }
 
 .treemap-canvas {

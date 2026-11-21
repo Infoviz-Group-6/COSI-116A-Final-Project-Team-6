@@ -13,6 +13,16 @@
   let artifactData = [];
   let currentState = "USA";
   const container = document.getElementById("treemap-view");
+  const expandTreemapBtn = document.getElementById("expand-treemap");
+
+  if (expandTreemapBtn && container) {
+    expandTreemapBtn.addEventListener("click", () => {
+      const willOpen = container.hidden;
+      container.hidden = !willOpen;
+      expandTreemapBtn.setAttribute("aria-expanded", String(willOpen));
+      expandTreemapBtn.textContent = willOpen ? "Collapse topics treemap" : "Expand topics treemap";
+    });
+  }
 
   try {
     if (!app) throw new Error("The shared application state did not load.");
@@ -108,12 +118,26 @@ initVisualization();
     };
     const colorLegend = document.querySelector("#color-legend");
     const mapSummary = document.querySelector("#map-summary");
+    const usageMapNote = document.querySelector("#usage-map-note");
+    if (usageMapNote) usageMapNote.hidden = state.layer !== "usage";
+    const treeMapHint = document.querySelector("#tree-map-hint");
+    if (treeMapHint) treeMapHint.hidden = state.layer !== "usage";
 
     const treemapSection = document.querySelector("#treemap-section");
 
-    // Show the treemap only when "Usage Percentage" is active AND a state is selected.
+    // Show the treemap section only when "Usage Percentage" is active AND a state is selected.
     const hasSelection = state.selectedStates && state.selectedStates.length > 0;
-    if (treemapSection) treemapSection.hidden = !(state.layer === "usage" && hasSelection);
+    const shouldShowSection = state.layer === "usage" && hasSelection;
+    if (treemapSection) {
+      if (treemapSection.hidden && shouldShowSection) {
+        if (container) container.hidden = true;
+        if (expandTreemapBtn) {
+          expandTreemapBtn.setAttribute("aria-expanded", "false");
+          expandTreemapBtn.textContent = "Expand topics treemap";
+        }
+      }
+      treemapSection.hidden = !shouldShowSection;
+    }
 
     // Drive the treemap from the selected state; fall back to city-search, then USA.
     if (artifactData.length) {

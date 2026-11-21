@@ -88,6 +88,8 @@
                   </div>
                 </div>
                 <div id="map-view" class="view-canvas map-canvas" aria-label="Interactive United States map"></div>
+                <p id="usage-map-note" class="section-note" hidden>Percentages are averaged over usage data from April 2026 - May 2026.</p>
+                <p id="tree-map-hint" class="section-note" hidden>Select a state to reveal a treemap of the top Claude topics.</p>
                 <div class="map-timeline" aria-labelledby="data-center-timeline-heading">
                   <div class="map-timeline__heading">
                     <p class="control-kicker">Build progress</p>
@@ -169,11 +171,25 @@
               Poverty: U.S. Census Bureau,
               <a href="https://www.census.gov/programs-surveys/saipe.html"
                 target="_blank" rel="noopener noreferrer">Small Area Income and Poverty Estimates</a>.
+              Usage: Anthropic,
+              <a href= "https://www.anthropic.com/economic-index"
+                target="_blank" rel="noopener noreferrer">Anthropic Economic Index</a>
             </p>
 
           </section>
 
         </div>
+
+        <section id="treemap-section" class="view-panel treemap-section" aria-labelledby="treemap-section-heading" hidden>
+          <div class="view-panel__heading">
+            <div>
+              <p class="control-kicker">Claude chat topics</p>
+              <h3 id="treemap-section-heading">What topics were Claude chats about?</h3>
+            </div>
+            <button id="expand-treemap" class="secondary-button" type="button" aria-expanded="false" aria-controls="treemap-view">Expand topics treemap</button>
+          </div>
+          <div id="treemap-view" class="view-canvas treemap-canvas" aria-label="Treemap of Claude chat topics" hidden></div>
+        </section>
 
         <section class="view-panel model-release-section" aria-labelledby="model-release-section-heading">
           <div class="view-panel__heading">
@@ -203,12 +219,6 @@
           </section>
         </section>
       </div>
-      <section id="treemap-section" class="view-panel treemap-section" aria-labelledby="treemap-section-heading" hidden>        <div class="treemap-section__heading">
-          <p class="project-eyebrow">Claude chat topics</p>
-          <h2 id="treemap-section-heading">What topics were Claude chats about?</h2>
-        </div>
-        <div id="treemap-view" class="view-canvas treemap-canvas" aria-label="Treemap of Claude chat topics"></div>
-      </section>
     </section>
 
     <!-- Project writeup sections: placeholders to be replaced with the final report content. -->
