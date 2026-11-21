@@ -76,9 +76,8 @@
       svg.transition().duration(750).call(zoom.transform, d3.zoomIdentity);
     }
 
-    const zoomControls = container
-      .append("div")
-      .attr("class", "map-zoom-controls");
+    const zoomControls = d3.select("#map-zoom-controls");
+    zoomControls.selectAll("*").remove();
 
     zoomControls.append("button")
       .attr("type", "button")
