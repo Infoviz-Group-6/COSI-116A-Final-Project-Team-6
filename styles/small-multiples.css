@@ -102,6 +102,13 @@
 	stroke-width: 2;
 }
 
+/* Selected data center, mirrored from the main map (same pink) */
+.small-multiple-facility__marker {
+	fill: rgba(230, 0, 126, 0.35);
+	stroke: #e6007e;
+	stroke-width: 2;
+}
+
 /* Responsive: wrap to 2 columns on medium screens, 1 on narrow screens */
 @media (max-width: 1100px) {
 	.small-multiples-grid {
