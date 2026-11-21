@@ -181,12 +181,14 @@
         </div>
 
         <section id="treemap-section" class="view-panel treemap-section" aria-labelledby="treemap-section-heading" hidden>
-          <div class="treemap-section__heading">
-            <p class="project-eyebrow">Claude chat topics</p>
-            <h2 id="treemap-section-heading">What topics were Claude chats about?</h2>
+          <div class="view-panel__heading">
+            <div>
+              <p class="control-kicker">Claude chat topics</p>
+              <h3 id="treemap-section-heading">What topics were Claude chats about?</h3>
+            </div>
+            <button id="expand-treemap" class="secondary-button" type="button" aria-expanded="false" aria-controls="treemap-view">Expand topics treemap</button>
           </div>
-          <div id="treemap-view" class="view-canvas treemap-canvas" aria-label="Treemap of Claude chat topics"></div>
-          
+          <div id="treemap-view" class="view-canvas treemap-canvas" aria-label="Treemap of Claude chat topics" hidden></div>
         </section>
 
         <section class="view-panel model-release-section" aria-labelledby="model-release-section-heading">
