@@ -8,6 +8,8 @@
 
 .map-canvas {
 	min-height: 520px;
+	border: none;
+	background: transparent;
 }
 
 .legend-stack {
@@ -37,6 +39,27 @@
 	font-size: var(--font-size-note);
 }
 
+/* Bottom-left scale bar, drawn into the map SVG by js/map-scale-bar.js */
+.map-scale-bar {
+	pointer-events: none;
+}
+
+.map-scale-bar__bg {
+	fill: rgba(255, 255, 255, 0.85);
+}
+
+.map-scale-bar__line {
+	fill: none;
+	stroke: var(--ink);
+	stroke-width: 2;
+}
+
+.map-scale-bar__label {
+	fill: var(--ink);
+	font-size: 14px;
+	font-weight: var(--font-weight-bold);
+}
+
 .capacity-circle {
 	display: block;
 	justify-self: center;
@@ -45,19 +68,23 @@
 	background: rgba(34, 87, 214, 0.09);
 }
 
+/* Fill colors match map.circleColor in js/map-data.js (light to dark). */
 .capacity-circle--small {
 	width: 12px;
 	height: 12px;
+	background: #efdcc0;
 }
 
 .capacity-circle--medium {
 	width: 26px;
 	height: 26px;
+	background: #cf9f6e;
 }
 
 .capacity-circle--large {
 	width: 44px;
 	height: 44px;
+	background: #8a5d40;
 }
 
 .color-ramp {
@@ -65,7 +92,7 @@
 	grid-template-columns: repeat(4, 1fr);
 	height: 20px;
 	overflow: hidden;
-	border-radius: 4px;
+	border-radius: 2px;
 }
 
 /* Class labels written by js/map-choropleth.js, one under each ramp color */

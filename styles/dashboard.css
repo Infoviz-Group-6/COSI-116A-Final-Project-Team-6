@@ -1,11 +1,7 @@
 
 .dashboard-shell {
 	margin-bottom: 28px;
-	padding: 20px 24px;
-	border: 1px solid var(--border);
-	border-radius: var(--panel-radius);
-	background: var(--surface);
-	box-shadow: 0 8px 24px rgba(23, 32, 51, 0.05);
+	padding: 0 24px;
 }
 
 .dashboard-title {
@@ -34,7 +30,7 @@
 	margin-bottom: 18px;
 	padding: 16px;
 	border: 1px solid var(--border);
-	border-radius: 10px;
+	border-radius: 2px;
 	background: var(--surface-soft);
 }
 
@@ -61,7 +57,7 @@
 .metric-button {
 	padding: 8px 12px;
 	border: 1px solid var(--border);
-	border-radius: 999px;
+	border-radius: 2px;
 	color: var(--ink);
 	background: var(--surface);
 	font: inherit;
@@ -100,7 +96,7 @@
 	margin-top: 16px;
 	place-items: center;
 	border: 2px dashed var(--border);
-	border-radius: 8px;
+	border-radius: 2px;
 	color: var(--muted);
 	background: var(--surface-soft);
 	font-size: 0.9rem;

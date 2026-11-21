@@ -23,7 +23,7 @@
 .secondary-button {
 	min-height: 42px;
 	border: 1px solid var(--border);
-	border-radius: 7px;
+	border-radius: 2px;
 	font: inherit;
 }
 
@@ -51,7 +51,7 @@
 	padding: 4px 0;
 	overflow-y: auto;
 	border: 1px solid var(--border);
-	border-radius: 7px;
+	border-radius: 2px;
 	background: #ffffff;
 	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 	list-style: none;

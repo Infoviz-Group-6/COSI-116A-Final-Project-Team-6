@@ -12,7 +12,9 @@
     width,
     height,
     // Called when the Reset button is clicked (not on code-triggered resets).
-    onReset = () => {}
+    onReset = () => {},
+    // Called with the new zoom scale after every zoom or pan (scale bar).
+    onZoom = () => {}
   }) => {
     let zoomScale = 1;
 
@@ -40,6 +42,7 @@
         zoomLayer.attr("transform", event.transform);
         zoomScale = event.transform.k;
         applyZoomScale();
+        onZoom(zoomScale);
       });
 
     svg.call(zoom);

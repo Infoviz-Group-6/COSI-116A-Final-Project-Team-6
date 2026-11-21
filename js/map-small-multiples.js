@@ -47,6 +47,13 @@
       .raise();
   };
 
+  // Selected data center, mirrored from the main map. js/map.js calls this
+  // with the selected facility (or null) after every update; it is stored so
+  // the small maps can draw it once they are built. Replaced by the drawing
+  // version inside init() below.
+  let selectedFacility = null;
+  map.markSelectedFacility = center => { selectedFacility = center; };
+
   // Registered as a dashboard view; js/visualization.js calls init() on
   // every entry in app.views at startup.
   app.views.smallMultiples = {
@@ -118,8 +125,13 @@
               tooltip.hide();
             });
 
+          // Drawn after the states so the marker stays on top of hover outlines.
+          const facilityLayer = svg.append("g")
+            .attr("class", "small-multiple-facility")
+            .style("pointer-events", "none");
+
           const legend = card.append("div").attr("class", "small-multiple__legend");
-          return { key, config, card, yearLabel, paths, legend };
+          return { key, config, card, yearLabel, paths, facilityLayer, projection, legend };
           // render() later adds: rowsByState (that year's data) and yearText.
         });
       }
@@ -136,6 +148,31 @@
         });
         if (lines.length) tooltip.showText([name, ...lines].join("\n"));
       }
+
+      // Draws the selected data center (pink, like the main map) on every
+      // small map, or clears it when nothing is selected.
+      function drawSelectedFacility() {
+        if (!Array.isArray(cards)) return; // not built yet
+        const center = selectedFacility;
+        cards.forEach(c => {
+          const point = center
+            ? c.projection([center.longitude, center.latitude])
+            : null;
+          c.facilityLayer
+            .selectAll("circle")
+            .data(point ? [point] : [])
+            .join("circle")
+            .attr("class", "small-multiple-facility__marker")
+            .attr("cx", d => d[0])
+            .attr("cy", d => d[1])
+            .attr("r", 5);
+        });
+      }
+
+      map.markSelectedFacility = center => {
+        selectedFacility = center;
+        drawSelectedFacility();
+      };
 
       // Runs on every app state change. Cheap when nothing relevant changed.
       async function render(state) {
@@ -156,6 +193,7 @@
         cards ??= build();
         const built = await cards;
         cards = built;
+        drawSelectedFacility();
 
         // Outline the card for the layer shown on the main map.
         built.forEach(c => c.card.classed("is-active", c.key === state.layer));

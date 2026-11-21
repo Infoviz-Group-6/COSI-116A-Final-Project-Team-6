@@ -88,31 +88,6 @@
                   </div>
                 </div>
                 <div id="map-view" class="view-canvas map-canvas" aria-label="Interactive United States map"></div>
-                <p class="map-source-note">
-                  Data:
-                  <a href="https://epoch.ai/data/ai-data-centers"
-                    target="_blank" rel="noopener noreferrer">Epoch AI</a>.
-                  Coordinates: U.S. Census Geocoder and
-                  <a href="https://app.nrgmap.com/about/data-licenses"
-                    target="_blank" rel="noopener noreferrer">NRG Map</a>
-                  (© OpenStreetMap contributors, ODbL).
-                  Some locations are approximate.
-                  State population: U.S. Census Bureau,
-                  <a href="https://www.census.gov/programs-surveys/popest.html"
-                    target="_blank" rel="noopener noreferrer">Vintage 2025 population estimates</a>;
-                  land area:
-                  <a href="https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html"
-                    target="_blank" rel="noopener noreferrer">2024 Census Gazetteer</a>.
-                  Electricity: U.S. EIA retail sales by state,
-                  <a href="https://www.eia.gov/electricity/annual/"
-                    target="_blank" rel="noopener noreferrer">Electric Power Annual</a> and
-                  <a href="https://www.eia.gov/electricity/monthly/"
-                    target="_blank" rel="noopener noreferrer">Electric Power Monthly</a>
-                  (2026 estimated from year-to-date sales).
-                  Poverty: U.S. Census Bureau,
-                  <a href="https://www.census.gov/programs-surveys/saipe.html"
-                    target="_blank" rel="noopener noreferrer">Small Area Income and Poverty Estimates</a>.
-                </p>
                 <div class="map-timeline" aria-labelledby="data-center-timeline-heading">
                   <div class="map-timeline__heading">
                     <p class="control-kicker">Build progress</p>
@@ -120,6 +95,17 @@
                   </div>
                   <div id="timeline-view" class="timeline-view" aria-label="Data-center year slider"></div>
                 </div>
+
+                <section id="small-multiples" class="small-multiples-panel" aria-labelledby="small-multiples-heading" hidden>
+                  <div class="view-panel__heading">
+                    <div>
+                      <p class="control-kicker">Compare layers</p>
+                      <h3 id="small-multiples-heading">Population, electricity, and poverty side by side</h3>
+                      <p class="section-note">Each map has its own color scale. Hover a state to highlight it on every map. The outlined map is the layer shown above.</p>
+                    </div>
+                  </div>
+                  <div id="small-multiples-view" class="small-multiples-grid"></div>
+                </section>
               </section>
 
               <aside class="legend-stack" aria-label="Map legends">
@@ -159,16 +145,32 @@
               </aside>
             </div>
 
-            <section id="small-multiples" class="small-multiples-panel" aria-labelledby="small-multiples-heading" hidden>
-                  <div class="view-panel__heading">
-                    <div>
-                      <p class="control-kicker">Compare layers</p>
-                      <h3 id="small-multiples-heading">Population, electricity, poverty, and usage percentage side by side</h3>
-                      <p class="section-note">Each map has its own color scale. Hover a state to highlight it on every map. The outlined map is the layer shown above.</p>
-                    </div>
-                  </div>
-                  <div id="small-multiples-view" class="small-multiples-grid"></div>
-                </section>
+            <p class="map-source-note">
+              Data:
+              <a href="https://epoch.ai/data/ai-data-centers"
+                target="_blank" rel="noopener noreferrer">Epoch AI</a>.
+              Coordinates: U.S. Census Geocoder and
+              <a href="https://app.nrgmap.com/about/data-licenses"
+                target="_blank" rel="noopener noreferrer">NRG Map</a>
+              (© OpenStreetMap contributors, ODbL).
+              Some locations are approximate.
+              State population: U.S. Census Bureau,
+              <a href="https://www.census.gov/programs-surveys/popest.html"
+                target="_blank" rel="noopener noreferrer">Vintage 2025 population estimates</a>;
+              land area:
+              <a href="https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html"
+                target="_blank" rel="noopener noreferrer">2024 Census Gazetteer</a>.
+              Electricity: U.S. EIA retail sales by state,
+              <a href="https://www.eia.gov/electricity/annual/"
+                target="_blank" rel="noopener noreferrer">Electric Power Annual</a> and
+              <a href="https://www.eia.gov/electricity/monthly/"
+                target="_blank" rel="noopener noreferrer">Electric Power Monthly</a>
+              (2026 estimated from year-to-date sales).
+              Poverty: U.S. Census Bureau,
+              <a href="https://www.census.gov/programs-surveys/saipe.html"
+                target="_blank" rel="noopener noreferrer">Small Area Income and Poverty Estimates</a>.
+            </p>
+
           </section>
 
         </div>
@@ -315,6 +317,7 @@
   <script src="js/app-state.js"></script>
   <script src="js/map-data.js"></script>
   <script src="js/map-zoom.js"></script>
+  <script src="js/map-scale-bar.js"></script>
   <script src="js/map-tooltip.js"></script>
   <script src="js/map-choropleth.js"></script>
   <script src="js/map-small-multiples.js"></script>
