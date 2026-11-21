@@ -30,7 +30,7 @@
   const app = window.Team6App;
   const map = window.Team6Map = window.Team6Map || {};
 
-  const LAYER_ORDER = ["population", "electricity", "poverty"]; // left to right
+  const LAYER_ORDER = ["population", "electricity", "poverty", "usage"]; // left to right
   const WIDTH = 320;  // SVG viewBox size of each small map; CSS scales it
   const HEIGHT = 200;
   const NO_DATA_FILL = "#c4ccd6";
@@ -184,7 +184,7 @@
         button.setAttribute("aria-pressed", String(Boolean(state.compareLayers)));
         button.textContent = state.compareLayers
           ? "Hide layer comparison"
-          : "Compare all three layers";
+          : "Compare all four layers";
         panel.hidden = !isOpen;
         if (!isOpen) return;
 

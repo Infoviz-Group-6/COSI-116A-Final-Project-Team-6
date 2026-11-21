@@ -30,6 +30,20 @@
   const NEUTRAL_FILL = "#e8eef5"; // state color when no layer is selected
   const NO_DATA_FILL = "#808080"; // state color when a layer has no value for it
 
+  const STATE_ABBR_TO_NAME = {
+    AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
+    CO: "Colorado", CT: "Connecticut", DE: "Delaware", DC: "District of Columbia",
+    FL: "Florida", GA: "Georgia", HI: "Hawaii", ID: "Idaho", IL: "Illinois",
+    IN: "Indiana", IA: "Iowa", KS: "Kansas", KY: "Kentucky", LA: "Louisiana",
+    ME: "Maine", MD: "Maryland", MA: "Massachusetts", MI: "Michigan", MN: "Minnesota",
+    MS: "Mississippi", MO: "Missouri", MT: "Montana", NE: "Nebraska", NV: "Nevada",
+    NH: "New Hampshire", NJ: "New Jersey", NM: "New Mexico", NY: "New York",
+    NC: "North Carolina", ND: "North Dakota", OH: "Ohio", OK: "Oklahoma", OR: "Oregon",
+    PA: "Pennsylvania", RI: "Rhode Island", SC: "South Carolina", SD: "South Dakota",
+    TN: "Tennessee", TX: "Texas", UT: "Utah", VT: "Vermont", VA: "Virginia",
+    WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming"
+  };
+
   // ---------------------------------------------------------------------------
   // Layer registry: one entry per state-level layer.
   // ---------------------------------------------------------------------------
@@ -143,6 +157,31 @@
         rate_ci_low: Number(d.rate_ci_low),
         rate_ci_high: Number(d.rate_ci_high)
       })
+    },
+
+    // Percent of nationwide Claude usage (from Anthropic-Usage-pct-aggregated.csv,
+    // where value is averaged over the two reported months
+    usage: {
+      title: "Usage percentage",
+      file: "data/Anthropic-Usage-pct-aggregated.csv",
+      colors: ["#f3e8ff", "#c084fc", "#9333ea", "#581c87"], // purples
+      value: d => d.usage_pct,
+      legendLabel: () => "Share of nationwide Claude usage (%)",
+      legendNote: () => "",
+      formatBreak: d => `${d3.format(".2f")(d)}%`,
+      formatValue: d => `${d3.format(".2f")(d.usage_pct)}% of usage`,
+      tooltip: (d) =>
+        `${d.state}\n` +
+        `${d3.format(".2f")(d.usage_pct)}% of nationwide Claude usage\n` +
+        `Percentages are averaged over usage data from April 2026 - May 2026`,
+      parse: d => {
+        const abbr = String(d.geo_id || "").replace(/^US-/, "");
+        return {
+          state: STATE_ABBR_TO_NAME[abbr] || abbr,
+          year: 2026,
+          usage_pct: Number(d.value) / 2
+        };
+      }
     }
   };
 

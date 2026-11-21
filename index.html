@@ -69,10 +69,10 @@
             <button class="layer-button" type="button" data-layer="electricity" aria-pressed="false">Electricity usage</button>
             <button class="layer-button" type="button" data-layer="population" aria-pressed="false">Population</button>
             <button class="layer-button" type="button" data-layer="poverty" aria-pressed="false">Poverty</button>
-            <button class="layer-button" type="button" data-layer="claude" aria-pressed="false">Claude usage</button>
+            <button class="layer-button" type="button" data-layer="usage" aria-pressed="false">Usage Percentage</button>
           </div>
           <button id="compare-layers" class="secondary-button compare-layers-button" type="button"
-            aria-pressed="false" aria-controls="small-multiples" hidden>Compare all three layers</button>
+            aria-pressed="false" aria-controls="small-multiples" hidden>Compare all four layers</button>
           <p class="filter-note">Data-center circles stay visible on the geographic map.</p>
         </aside>
 
@@ -119,7 +119,7 @@
                   </div>
                   <div class="size-key">
                     <span class="capacity-circle capacity-circle--small"></span>
-                    <span>&gt;0–&lt;200</span>
+                    <span>0–200</span>
                   </div>
                   <div class="size-key">
                     <span class="capacity-circle capacity-circle--medium"></span>
@@ -127,7 +127,7 @@
                   </div>
                   <div class="size-key">
                     <span class="capacity-circle capacity-circle--large"></span>
-                    <span>&gt;800</span>
+                    <span>800</span>
                   </div>
                   <p class="legend-note">Hollow circles indicate zero estimated IT power.</p>
                 </section>
@@ -173,47 +173,6 @@
 
           </section>
 
-          <section id="claude-view" class="claude-view" aria-labelledby="claude-heading" hidden>
-            <div class="view-panel__heading claude-heading">
-              <div>
-                <p class="control-kicker">Claude usage per capita</p>
-                <h3 id="claude-heading">Usage across the United States</h3>
-                <p class="section-note">Select one or more states to update the linked views.</p>
-              </div>
-            </div>
-
-            <div class="claude-analysis-grid">
-              <div class="claude-primary">
-                <div class="claude-overview-grid">
-                  <section class="view-panel" aria-labelledby="tile-map-heading">
-                    <h4 id="tile-map-heading">State tile map</h4>
-                    <div id="tile-map-view" class="view-canvas tile-map-canvas"></div>
-                  </section>
-                  <aside class="view-panel selected-states-panel" aria-labelledby="selected-states-heading">
-                    <h4 id="selected-states-heading">States in selection</h4>
-                    <p id="selected-states">None selected</p>
-                    <p class="section-note">Multiple-state calculation still requires a group decision.</p>
-                  </aside>
-                </div>
-
-                <div class="claude-detail-grid">
-                  <section class="view-panel" aria-labelledby="treemap-heading">
-                    <h4 id="treemap-heading">What topics were Claude chats about?</h4>
-                      <div id="treemap-view" class="view-canvas view-canvas--detail"></div>
-                  </section>
-                    <section class="view-panel" aria-labelledby="pie-heading">
-                      <h4 id="pie-heading">General use case</h4>
-                        <div id="pie-view" class="view-canvas view-canvas--detail"></div>
-                    </section>
-                </div>
-              </div>
-
-              <section class="view-panel scatter-panel" aria-labelledby="scatter-heading">
-                <h4 id="scatter-heading">Usage percent versus proportional use</h4>
-                <div id="scatter-view" class="view-canvas scatter-canvas"></div>
-              </section>
-            </div>
-          </section>
         </div>
 
         <section class="view-panel model-release-section" aria-labelledby="model-release-section-heading">
@@ -244,10 +203,16 @@
           </section>
         </section>
       </div>
+      <section id="treemap-section" class="view-panel treemap-section" aria-labelledby="treemap-section-heading" hidden>        <div class="treemap-section__heading">
+          <p class="project-eyebrow">Claude chat topics</p>
+          <h2 id="treemap-section-heading">What topics were Claude chats about?</h2>
+        </div>
+        <div id="treemap-view" class="view-canvas treemap-canvas" aria-label="Treemap of Claude chat topics"></div>
+      </section>
     </section>
 
     <!-- Project writeup sections: placeholders to be replaced with the final report content. -->
-     <!-- Demo Video -->
+    <!-- Demo Video -->
     <section class="content-column project-writeup-section" aria-labelledby="demo-video-heading">
       <h2 id="demo-video-heading">Demo Video</h2>
       <p><em>Placeholder: add the final demonstration video or a link to it.</em></p>

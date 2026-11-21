@@ -22,12 +22,12 @@
 	margin-top: var(--panel-gap);
 }
 
-/* Three equal columns. position: relative lets the shared tooltip be
+/* Four equal columns. position: relative lets the shared tooltip be
    absolutely positioned inside the grid. */
 .small-multiples-grid {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 14px;
 	margin-top: 12px;
 }
@@ -109,8 +109,14 @@
 	stroke-width: 2;
 }
 
-/* Narrow screens: stack the three maps in one column */
-@media (max-width: 900px) {
+/* Responsive: wrap to 2 columns on medium screens, 1 on narrow screens */
+@media (max-width: 1100px) {
+	.small-multiples-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 600px) {
 	.small-multiples-grid {
 		grid-template-columns: 1fr;
 	}

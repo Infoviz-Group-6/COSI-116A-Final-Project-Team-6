@@ -24,6 +24,14 @@
       label
     );
 
+    // Convert raw sums to percentages of the total for this state/region.
+    const total = d3.sum(rolledUp.values());
+    if (total > 0) {
+      for (const [key, sum] of rolledUp) {
+        rolledUp.set(key, (sum / total) * 100);
+      }
+    }
+
     const root = d3.hierarchy(rolledUp)
       .sum(([, val]) => (typeof val === "number" ? Math.max(0, val) : 0))
       .sort((a, b) => b.value - a.value);
@@ -52,17 +60,51 @@
       .attr("fill", "#111")
       .text(`${selectedState} — Artifact Breakdown`);
 
-    const format = d3.format(",.2~f");
+    const format = v => d3.format(".1f")(v) + "%";
+
+    // Create a shared floating tooltip div (reused across re-renders).
+    let tooltip = document.getElementById("treemap-tooltip");
+    if (!tooltip) {
+      tooltip = document.createElement("div");
+      tooltip.id = "treemap-tooltip";
+      tooltip.className = "treemap-tooltip";
+      document.body.appendChild(tooltip);
+    }
+
+    function showTooltip(event, d) {
+      tooltip.innerHTML =
+        `<span class="treemap-tooltip__label">${d.data[0]}</span>` +
+        `<span class="treemap-tooltip__value">${format(d.value)}</span>`;
+      tooltip.style.display = "flex";
+      moveTooltip(event);
+    }
+
+    function moveTooltip(event) {
+      const offset = 14;
+      const tw = tooltip.offsetWidth;
+      const th = tooltip.offsetHeight;
+      let x = event.clientX + offset;
+      let y = event.clientY + offset;
+      if (x + tw > window.innerWidth - 8)  x = event.clientX - tw - offset;
+      if (y + th > window.innerHeight - 8) y = event.clientY - th - offset;
+      tooltip.style.left = `${x}px`;
+      tooltip.style.top  = `${y}px`;
+    }
+
+    function hideTooltip() {
+      tooltip.style.display = "none";
+    }
 
     const leaf = svg.append("g")
       .attr("transform", `translate(0,${titleHeight})`)
       .selectAll("g")
       .data(root.leaves())
       .join("g")
-      .attr("transform", d => `translate(${d.x0},${d.y0})`);
-
-    leaf.append("title")
-      .text(d => `${selectedState}\n${d.data[0]}: ${format(d.value)}`);
+      .attr("transform", d => `translate(${d.x0},${d.y0})`)
+      .style("cursor", "default")
+      .on("pointerenter", (event, d) => showTooltip(event, d))
+      .on("pointermove",  (event, d) => moveTooltip(event))
+      .on("pointerleave", ()         => hideTooltip());
 
     leaf.append("rect")
       .attr("id", (d, i) => (d.leafUid = `leaf-${i}`))
